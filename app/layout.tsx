@@ -19,10 +19,10 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Divine Jude — AI Implementation & Workflow Automation',
+    default: 'Divine Jude — Virtual Assistant & Operations Partner',
     template: '%s | Divine Jude',
   },
-  description: 'Divine Jude designs AI-powered workflows, automated data pipelines, and system integrations that remove manual work for operations teams.',
+  description: 'Divine Jude is a virtual assistant and operations partner offering executive support, project coordination, lead generation, and e-commerce growth for busy teams.',
   generator: 'v0.app',
   metadataBase: new URL('https://divinejude.com'),
   authors: [{ name: 'Divine Jude' }],
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Divine Jude — AI Implementation & Workflow Automation',
-    description: 'Reliable AI implementation, workflow automation, and systems integration.',
+    title: 'Divine Jude — Virtual Assistant & Operations Partner',
+    description: 'Executive and virtual assistance, project coordination, lead generation, and e-commerce support for busy teams.',
     url: '/',
     siteName: 'Divine Jude',
     locale: 'en_US',
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Divine Jude — AI Implementation & Workflow Automation',
-    description: 'Reliable AI implementation, workflow automation, and systems integration.',
+    title: 'Divine Jude — Virtual Assistant & Operations Partner',
+    description: 'Executive and virtual assistance, project coordination, lead generation, and e-commerce support for busy teams.',
   },
   icons: {
     icon: [

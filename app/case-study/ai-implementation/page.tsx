@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { CaseStudyHeader } from '@/components/case-study-header'
+import { CtaSection } from '@/components/cta-section'
+import { SiteFooter } from '@/components/site-footer'
 
 export const metadata: Metadata = {
   title: 'AI Implementation Case Study',
-  description: 'Case study: event-driven AI pipelines combining vision OCR, multi-agent scoring, and human-in-the-loop validation connected to CRMs and ERPs.',
+  description: 'How I built two n8n workflows that find property deals, contact brokers, and check title documents with AI.',
   alternates: { canonical: '/case-study/ai-implementation' },
 }
 
@@ -12,43 +14,70 @@ const imageB = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-4L
 
 export default function AIImplementationCaseStudy() {
   return (
-    <main className="ai-case-study" id="top">
-      <nav className="ai-case-nav" aria-label="Case study navigation">
-        <a href="/work" className="ai-back"><ArrowLeft size={15} /> Back to portfolio</a>
-        <a href="/" className="ai-back">Home <ArrowUpRight size={15} /></a>
-            </nav>
+    <>
+      <CaseStudyHeader />
+      <main className="ai-case-study">
 
       <header className="ai-case-hero">
         <p className="ai-kicker">Case study · AI implementation</p>
         <h1>AI Implementation <em>&amp; Workflow Automation</em></h1>
-        <p className="ai-lead">How I built an enterprise-grade multi-agent n8n architecture that automates real estate deal sourcing, AI-driven investment analysis, broker outreach, and preliminary legal document verification.time by 80%.</p>
+        <p className="ai-lead">I built a set of n8n workflows that find property deals, score them, email brokers, and check title documents. It cut document review time by 80%.</p>
       </header>
 
       <section className="ai-summary ai-section">
-        <p className="ai-label">Executive summary</p>
-        <div><p>Manual real estate sourcing in fast-paced emerging markets like Lagos, Nigeria is plagued by fragmented data, slow broker communication, and severe legal risks from unverified titles.</p><p>As an AI Implementation Specialist, I engineered a production-ready, two-part autonomous n8n workflow pipeline. The architecture scrapes real estate listings, applies an AI Investment Analyst to enforce structural buy-boxes (₦50m–₦350m budget) in prime neighborhoods, handles automated broker outreach, and deploys a secondary AI Legal Analyst to programmatically verify critical title documents (Certificate of Occupancy, Governor&apos;s Consent) for authenticity and red flags.</p></div>
+        <p className="ai-label">Summary</p>
+        <div>
+          <p>Finding property deals in Lagos, Nigeria is hard. Listings are scattered, brokers are slow to reply, and fake titles are a real risk.</p>
+          <p>I built two connected n8n workflows to handle this. The first pulls listings and uses an AI analyst to keep only deals in the ₦50m–₦350m range in the right neighborhoods. Then it emails the broker. The second uses an AI legal analyst to check key title documents, like the Certificate of Occupancy and Governor&apos;s Consent, for warning signs.</p>
+        </div>
       </section>
 
       <section className="ai-friction ai-section">
-        <p className="ai-label">The problem &amp; business friction</p>
-        <div className="ai-friction-grid"><article><b>01</b><h2>Data fragmentation</h2><p>Sourcing relies on manually scraping chaotic public property platforms, yielding unstructured data and inconsistent spreadsheet logs.</p></article><article><b>02</b><h2>The outreach bottleneck</h2><p>High-potential deals are frequently lost to faster buyers because drafting individual due diligence requests to listing brokers takes hours.</p></article><article><b>03</b><h2>Severe legal compliance risks</h2><p>Fraudulent titles, missing signatures, or expired Governor&apos;s Consents require meticulous manual legal review, delaying the transactional closing sequence.</p></article></div>
+        <p className="ai-label">The problem</p>
+        <div className="ai-friction-grid">
+          <article><b>01</b><h2>Messy data</h2><p>Deals were found by copying listings from cluttered property sites by hand. The result was messy, inconsistent spreadsheets.</p></article>
+          <article><b>02</b><h2>Slow outreach</h2><p>Writing to each broker took hours. Good deals went to faster buyers.</p></article>
+          <article><b>03</b><h2>Legal risk</h2><p>Fake titles, missing signatures, and expired consents all needed careful review. That slowed every deal down.</p></article>
+        </div>
       </section>
 
       <section className="ai-architecture ai-section">
-        <div className="ai-section-intro"><p className="ai-label">System architecture &amp; tech stack</p><p>The system splits the workload across two decoupled n8n workflows to optimize API rate-limiting, handle asynchronous email replies, and distribute model costs efficiently.</p></div>
-        <div className="ai-workflow-gallery"><figure><img src={imageA} alt="n8n workflow for autonomous real estate sourcing" loading="lazy" decoding="async" /><figcaption>Workflow A · Property sourcing, screening, and broker outreach</figcaption></figure><figure><img src={imageB} alt="n8n workflow for document verification and legal analysis" loading="lazy" decoding="async" /><figcaption>Workflow B · Document verification and legal validation</figcaption></figure></div>
-        <div className="ai-stack"><p className="ai-label">Technical blueprint breakdown</p><ul><li><strong>Orchestration engine</strong><span>n8n · Advanced event-driven node architecture</span></li><li><strong>Ingestion &amp; data quality</strong><span>HTTP Client · Custom JavaScript processors</span></li><li><strong>Screening AI</strong><span>GPT-4 via LangChain Framework</span></li><li><strong>Legal review AI</strong><span>Anthropic Claude via LangChain</span></li><li><strong>Database &amp; CRM</strong><span>Airtable API · Dual-base configuration</span></li><li><strong>Communication protocols</strong><span>Gmail Developer API</span></li></ul></div>
+        <div className="ai-section-intro"><p className="ai-label">How it&apos;s built</p><p>I split the work into two separate workflows. This keeps API limits in check, handles broker replies that come days later, and keeps AI costs down.</p></div>
+        <div className="ai-workflow-gallery">
+          <figure><img src={imageA} alt="n8n workflow for finding properties, screening them, and emailing brokers" loading="lazy" decoding="async" /><figcaption>Workflow A · Find, screen, and contact brokers</figcaption></figure>
+          <figure><img src={imageB} alt="n8n workflow for checking title documents with AI" loading="lazy" decoding="async" /><figcaption>Workflow B · Check documents and flag legal risks</figcaption></figure>
+        </div>
+        <div className="ai-stack"><p className="ai-label">Tools used</p><ul>
+          <li><strong>Workflow engine</strong><span>n8n</span></li>
+          <li><strong>Data collection &amp; cleanup</strong><span>HTTP requests · Custom JavaScript</span></li>
+          <li><strong>Deal screening</strong><span>GPT-4 via LangChain</span></li>
+          <li><strong>Legal review</strong><span>Anthropic Claude via LangChain</span></li>
+          <li><strong>Database &amp; CRM</strong><span>Airtable · Two linked bases</span></li>
+          <li><strong>Email</strong><span>Gmail API</span></li>
+        </ul></div>
       </section>
 
       <section className="ai-highlights ai-section">
-        <p className="ai-label">Key engineering feats &amp; implementation highlights</p>
-        <div className="ai-highlight-list"><article><span>01</span><div><h2>The dual-agent strategy</h2><p>Instead of routing messy, raw scraped data directly to an expensive, long-context model, I built a tiered AI approach:</p><ul><li><strong>Tier 1 (GPT-4 Screening)</strong> A lightweight agent quickly parses basic text descriptions, checks financial parameters (₦50M–₦350M), and filters out low-potential options.</li><li><strong>Tier 2 (Claude Deep Legal Review)</strong> A heavy-duty legal agent triggered only when a human broker responds with complex deeds. Claude&apos;s superior legal reasoning scans the document for structural flaws, title defects, and expired validity dates.</li></ul></div></article><article><span>02</span><div><h2>Idempotency &amp; guardrails (Outreach_Status)</h2><p>To prevent the agent from spamming listing brokers during consecutive automated schedule runs, I injected a conditional boolean routing check into the n8n logic. If a deal already exists in the Airtable CRM with an active or pending outreach status, the email node safely bypasses execution.</p></div></article><article><span>03</span><div><h2>Asynchronous “Smart Merge” JavaScript algorithm</h2><p>When a broker responds to an automated outreach email days later, the inbound webhook triggers Workflow B. I wrote a custom JavaScript Sub-string Matching node that extracts tracking information from the email subject line and content. This programmatically locates the original property row ID inside Airtable and merges the AI&apos;s legal classification (VERIFIED, CAUTION, REJECT) directly back into the live pipeline.</p></div></article></div>
+        <p className="ai-label">Key decisions</p>
+        <div className="ai-highlight-list">
+          <article><span>01</span><div><h2>Two AI agents, each with one job</h2><p>Sending raw listings to an expensive model wastes money. So I split the work in two:</p><ul>
+            <li><strong>Agent 1 (GPT-4, screening)</strong> Reads the listing, checks the price range (₦50M–₦350M), and drops weak deals fast.</li>
+            <li><strong>Agent 2 (Claude, legal review)</strong> Runs only when a broker sends back title documents. It checks for flaws, title problems, and expired dates.</li>
+          </ul></div></article>
+          <article><span>02</span><div><h2>No duplicate emails to brokers</h2><p>The workflow runs on a schedule, so it could email the same broker twice. To stop this, it first checks Airtable. If a deal already has an active or pending outreach status, it skips the email.</p></div></article>
+          <article><span>03</span><div><h2>Matching late replies to the right deal</h2><p>Brokers often reply days later. When they do, Workflow B starts. A small JavaScript step reads the email subject and body, finds the matching property in Airtable, and saves the legal result there: VERIFIED, CAUTION, or REJECT.</p></div></article>
+        </div>
       </section>
 
-      <section className="ai-results ai-section"><p className="ai-label">Measurable performance metrics</p><div className="ai-metrics"><div><strong>80%</strong><span>Time reduction</span><p>The time required to review dense title deeds, survey maps, and purchase contingencies dropped significantly.</p></div><div><strong>95%</strong><span>Clean-data rate</span><p>Custom data-normalization scripts intercept incomplete or poorly formatted listings before they hit the LLM processing nodes.</p></div><div><strong>∞</strong><span>Uncapped scalability</span><p>Automated pagination routines and robust API rate-limit controls enable hundreds of concurrent listings.</p></div></div></section>
+      <section className="ai-results ai-section"><p className="ai-label">Results</p><div className="ai-metrics">
+        <div><strong>80%</strong><span>Less review time</span><p>Reviewing title deeds, survey maps, and contracts now takes a fraction of the time.</p></div>
+        <div><strong>95%</strong><span>Clean data</span><p>Cleanup scripts catch incomplete or badly formatted listings before they reach the AI.</p></div>
+        <div><strong>100+</strong><span>Listings handled</span><p>Paging and rate-limit controls let it handle hundreds of listings at once.</p></div>
+      </div></section>
 
-      <section className="ai-cta"><p className="ai-kicker">Ready to build a resilient system?</p><h2>Let&apos;s make your<br /><em>next workflow intelligent.</em></h2></section>
-      <footer><span>© 2026 Divine Jude</span><span>AI implementation · Workflow automation</span><a href="#top">Back to top ↑</a></footer>
+      <CtaSection kicker="Have a complex operational workflow holding you back?" title={<>Let&apos;s automate<br /><em>the slow parts.</em></>} />
     </main>
+      <SiteFooter />
+    </>
   )
 }

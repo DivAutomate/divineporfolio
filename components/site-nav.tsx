@@ -1,26 +1,53 @@
 'use client'
 
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
+const links = [
+  { href: '/work', label: 'Work' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+]
+
 export function SiteNav() {
+  const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = () => setMenuOpen(false)
 
+  const isActive = (href: string) =>
+    pathname === href || (href === '/work' && pathname.startsWith('/case-study'))
+
   return (
-    <nav className="site-nav" aria-label="Main navigation">
-      <a className="wordmark" href="#top" onClick={closeMenu}>
-        Divine Jude<span className="dot">.</span>
-      </a>
-      <button className="menu-button" type="button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(!menuOpen)} onKeyDown={(event) => { if (event.key === 'Escape') closeMenu() }}>
-        {menuOpen ? <X size={18} /> : <Menu size={18} />}
-      </button>
-      <div className={`nav-links ${menuOpen ? 'is-open' : ''}`} id="primary-navigation">
-        <a href="/work" onClick={closeMenu}>Work</a>
-        <a href="/about" onClick={closeMenu}>About</a>
-        <a href="/contact" onClick={closeMenu}>Contact</a>
-        <a className="nav-availability" href="/contact" onClick={closeMenu}><span />Available for work</a>
-      </div>
-    </nav>
+    <header className="site-header" id="top">
+      <nav className="site-nav container" aria-label="Main navigation">
+        <Link className="wordmark" href="/" onClick={closeMenu}>
+          Divine Jude<span>.</span>
+        </Link>
+        <button
+          className="menu-button"
+          type="button"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+          onKeyDown={(event) => { if (event.key === 'Escape') closeMenu() }}
+        >
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+        <div className={`nav-links ${menuOpen ? 'is-open' : ''}`} id="primary-navigation">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} onClick={closeMenu} aria-current={isActive(link.href) ? 'page' : undefined}>
+              {link.label}
+            </Link>
+          ))}
+          <Link className="nav-cta" href="/contact" onClick={closeMenu}>
+            <span className="status-dot" aria-hidden="true" />
+            Available for work
+          </Link>
+        </div>
+      </nav>
+    </header>
   )
 }

@@ -1,58 +1,124 @@
 import type { Metadata } from 'next'
-import { ArrowLeft } from 'lucide-react'
+import { CtaSection } from '@/components/cta-section'
+import { SiteFooter } from '@/components/site-footer'
 import { SiteNav } from '@/components/site-nav'
+import { services, site } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'About Divine Jude',
-  description: 'Learn about Divine Jude, an AI implementation and workflow automation specialist.',
+  title: 'About',
+  description: 'Divine Jude is a virtual assistant and operations partner helping busy teams with executive support, project coordination, lead generation, and e-commerce growth.',
   alternates: { canonical: '/about' },
 }
 
+const principles = [
+  { title: 'Understand the work first', text: 'Before changing anything, I learn how you already work, what matters most, and where time is being lost.' },
+  { title: 'Keep it simple', text: 'Clear routines and familiar tools beat clever setups. If your team can’t use it easily, it isn’t finished.' },
+  { title: 'Follow through', text: 'Small tasks closed on time build trust. I keep you updated, flag problems early, and finish what I start.' },
+]
+
+const experience = [
+  { period: '2023 — Present', role: 'Virtual assistant & operations partner', text: 'Supporting founders and small teams with executive assistance, lead generation, e-commerce growth, and practical automation.' },
+  { period: 'Enterprise', role: 'Project & operations coordinator', text: 'Ran 100+ multilingual projects at once for a global language services provider, across vendors, teams, and three timezones.' },
+  { period: 'Executive support', role: 'Executive & personal assistant', text: 'Managed the inbox, calendar, travel, personal administration, and weekly reporting for a manufacturing General Manager.' },
+  { period: 'E-commerce', role: 'Shopify SEO & performance marketing', text: 'Grew a small artisan brand’s organic traffic and ad returns while handling day-to-day store administration.' },
+]
+
+const tools = [
+  { name: 'Trello', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/trello/default.svg' },
+  { name: 'Airtable', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/airtable/default.svg' },
+  { name: 'Apollo', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/apollodotio/default.svg' },
+  { name: 'GoHighLevel', src: '/images/gohighlevel.png' },
+  { name: 'n8n', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/n8n/default.svg' },
+  { name: 'Zapier', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/zapier/default.svg' },
+  { name: 'Claude', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/claude/default.svg' },
+  { name: 'ChatGPT', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/openai-chatgpt/mono.svg' },
+  { name: 'LangChain', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/langchain/default.svg' },
+  { name: 'Odoo', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/odoo/default.svg' },
+  { name: 'ERPNext', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/erpnext/default.svg' },
+]
+
 export default function AboutPage() {
   return (
-    <main className="about-page" id="top">
+    <>
       <SiteNav />
-      <header className="about-hero section-shell">
-        <a className="text-link about-home-link" href="/" aria-label="Home"><ArrowLeft size={16} /> Home</a>
-        <p className="eyebrow">About me</p>
-      </header>
+      <main>
+        <header className="page-hero container">
+          <p className="label">About me</p>
+          <h1>Hi, I&apos;m <em>Divine.</em></h1>
+          <p className="lead">A virtual assistant and operations partner for founders, executives, and small teams who have more to do than hours to do it in.</p>
+        </header>
 
-      <section className="about-profile section-shell" aria-labelledby="about-profile-title">
-        <div className="about-portrait-wrap"><img className="about-portrait" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile.png-ZaiJAmZoQKIeTmHjbQRoPCXLmApWkT.jpeg" alt="Divine Jude smiling in a black shirt" /></div>
-        <div className="about-profile-copy">
-          <p>I&apos;m Divine, an AI Implementation and Workflow Automation Specialist helping teams replace manual processes with reliable, connected systems.</p>
-          <p>My work covers workflow design, AI agents and document processing, CRM and ERP integrations, and the monitoring that keeps every handoff running smoothly.</p>
-        </div>
-      </section>
+        <section className="container section-tight" aria-label="Profile">
+          <div className="about-split">
+            <div className="portrait-panel">
+              <img src={site.portrait} alt="Divine Jude smiling in a black shirt" width={300} height={300} />
+            </div>
+            <div className="about-split-copy">
+              <p>I&apos;ve spent the last few years inside other people&apos;s busy weeks. I&apos;ve run executive inboxes and calendars, coordinated global projects across timezones, researched and contacted thousands of prospects, and grown online stores through better SEO and ads.</p>
+              <p>The common thread is organization. I like turning scattered tasks into clear routines, keeping information tidy, and making sure nothing slips through the cracks. When a task repeats often enough, I&apos;ll set up a simple automation, but only when it genuinely saves time.</p>
+              <p>I work remotely from Nigeria with clients around the world, and I&apos;m comfortable adapting to your tools, your timezone, and the way your team already works.</p>
+            </div>
+          </div>
+        </section>
 
-      <section className="about-services section-shell" aria-labelledby="about-services-title">
-        <p className="eyebrow" id="about-services-title">What I do</p>
-        <div className="services"><div><span>01</span><strong>Workflow automation</strong><p>n8n, Zapier, webhooks, retries, and error monitoring that protect handoffs.</p></div><div><span>02</span><strong>AI implementation</strong><p>AI agents, OCR document processing, and human-in-the-loop review.</p></div><div><span>03</span><strong>Systems integration</strong><p>CRMs, ERPs, REST APIs, and data sync between the tools your team already uses.</p></div></div>
-      </section>
+        <section className="section container" aria-labelledby="principles-title">
+          <div className="section-head">
+            <h2 id="principles-title">How I <em>work</em></h2>
+          </div>
+          <ul className="services-grid three">
+            {principles.map((item, index) => (
+              <li className="service" key={item.title}>
+                <span className="label">{String(index + 1).padStart(2, '0')}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="about-experience section-shell" aria-labelledby="about-experience-title">
-        <p className="eyebrow" id="about-experience-title">Experience</p>
-        <div className="about-list"><div><span>2023 — Present</span><strong>AI Implementation &amp; Workflow Automation</strong><p>Designing practical systems that connect people, processes, and the tools behind them.</p></div><div><span>Enterprise operations</span><strong>Localization, document, and delivery systems</strong><p>Coordinating complex work across teams, vendors, time zones, and strict deadlines.</p></div></div>
-      </section>
+        <section className="section container" aria-labelledby="services-title">
+          <div className="section-head">
+            <h2 id="services-title">What I <em>do</em></h2>
+          </div>
+          <ul className="services-grid">
+            {services.map((service, index) => (
+              <li className="service" key={service.title}>
+                <span className="label">{String(index + 1).padStart(2, '0')}</span>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="about-tools section-shell" aria-labelledby="about-tools-title">
-        <p className="eyebrow" id="about-tools-title">Tools</p>
-        <div className="tool-list" aria-label="Tools and platforms">
-          <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/n8n/default.svg" alt="n8n" />
-          <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/trello/default.svg" alt="Trello" />
-          <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/zapier/default.svg" alt="Zapier" />
-          <img src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/langchain/default.svg" alt="LangChain" />
-        </div>
-      </section>
+        <section className="section container" aria-labelledby="experience-title">
+          <div className="section-head">
+            <h2 id="experience-title"><em>Experience</em></h2>
+          </div>
+          <ol className="timeline">
+            {experience.map((item) => (
+              <li key={item.role}>
+                <span className="label">{item.period}</span>
+                <div><h3>{item.role}</h3><p>{item.text}</p></div>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-      <section className="about-cta section-shell" aria-label="Next steps">
-        <p className="about-cta-copy">Have a workflow to improve or a system to connect? Let&apos;s talk about what you&apos;re building.</p>
-        <div className="about-cta-links">
-          <a className="about-cta-link" href="/contact">Contact me <span aria-hidden="true">↗</span></a>
-          <a className="about-cta-link" href="/work">View portfolio <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-      <footer><span>© 2026 Divine Jude</span><span>AI implementation · Workflow automation</span><a href="#top">Back to top ↑</a></footer>
-    </main>
+        <section className="section container" aria-labelledby="tools-title">
+          <div className="section-head">
+            <h2 id="tools-title">Tools I <em>use</em></h2>
+          </div>
+          <ul className="tool-list">
+            {tools.map((tool) => (
+              <li key={tool.name}><img src={tool.src} alt="" width={24} height={24} loading="lazy" />{tool.name}</li>
+            ))}
+          </ul>
+        </section>
+
+        <CtaSection kicker="Let's work together" title={<>Tell me what&apos;s<br /><em>slowing you down.</em></>} secondary={{ label: 'View portfolio', href: '/work' }} />
+      </main>
+      <SiteFooter />
+    </>
   )
 }

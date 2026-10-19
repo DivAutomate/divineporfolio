@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Divine Jude about AI implementation, workflow automation, or systems integration projects.',
+  description: 'Get in touch with Divine Jude about executive and virtual assistance, project coordination, lead generation, and e-commerce support.',
   alternates: { canonical: '/contact' },
 }
 

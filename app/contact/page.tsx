@@ -1,13 +1,17 @@
 'use client'
 
-import { ArrowLeft, ArrowUpRight, Copy, Mail } from 'lucide-react'
+import { ArrowUpRight, Check, Copy } from 'lucide-react'
 import { FormEvent, useState } from 'react'
+import { SiteFooter } from '@/components/site-footer'
+import { SiteNav } from '@/components/site-nav'
+import { SocialLinks } from '@/components/social-links'
+import { site } from '@/lib/site'
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
 
   const copyEmail = async () => {
-    await navigator.clipboard.writeText('judedivine9@gmail.com')
+    await navigator.clipboard.writeText(site.email)
     setCopied(true)
     window.setTimeout(() => setCopied(false), 1800)
   }
@@ -20,46 +24,59 @@ export default function ContactPage() {
     const message = String(form.get('message') || '')
     const subject = encodeURIComponent(`Project enquiry from ${name}`)
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-    window.location.href = `mailto:judedivine9@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
   }
 
   return (
-    <main className="contact-page" id="top">
-      <nav className="site-nav" aria-label="Main navigation">
-        <a className="wordmark" href="/">Divine Jude<span className="dot">.</span></a>
-        <a className="back-link" href="/"><ArrowLeft size={15} /> Home</a>
-      </nav>
+    <>
+      <SiteNav />
+      <main>
+        <header className="page-hero container">
+          <p className="label">Contact</p>
+          <h1>Let&apos;s make your week <em>lighter.</em></h1>
+          <p className="lead">Tell me a little about your business and what you&apos;d like to hand off. I&apos;ll reply within two working days.</p>
+        </header>
 
-      <section className="contact-page-hero">
-        <div className="eyebrow">Contact <span>Let&apos;s make something useful</span></div>
-        <div className="contact-page-grid">
-          <h1>Let&apos;s make<br /><em className="contact-highlight">something</em><br />meaningful.</h1>
-          <div className="contact-intro">
-            <p>Have a project, an idea, or just a question? Tell me a little about it and I&apos;ll get back to you within a couple of working days.</p>
-            <div className="direct-contact">
-              <span>Prefer email?</span>
-              <a href="mailto:judedivine9@gmail.com">judedivine9@gmail.com <ArrowUpRight size={14} /></a>
-              <button type="button" className="copy-contact" onClick={copyEmail}><Copy size={13} /> {copied ? 'Copied' : 'Copy address'}</button>
-            </div>
+        <section className="contact-section">
+          <div className="container contact-layout">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <label>
+                <span className="label">Your name</span>
+                <input name="name" type="text" autoComplete="name" placeholder="Jane Smith" required />
+              </label>
+              <label>
+                <span className="label">Email address</span>
+                <input name="email" type="email" autoComplete="email" placeholder="jane@company.com" required />
+              </label>
+              <label>
+                <span className="label">What do you need help with?</span>
+                <textarea name="message" rows={5} placeholder="Inbox and calendar support, a project to coordinate, a lead list to build..." required />
+              </label>
+              <button className="btn btn-primary" type="submit">Send enquiry <ArrowUpRight size={16} aria-hidden="true" /></button>
+            </form>
+
+            <aside className="contact-aside" aria-label="Other ways to reach me">
+              <div className="contact-card">
+                <p className="label">Prefer email?</p>
+                <a className="contact-email" href={`mailto:${site.email}`}>{site.email}</a>
+                <button type="button" className="copy-button" onClick={copyEmail} aria-live="polite">
+                  {copied ? <Check size={14} aria-hidden="true" /> : <Copy size={14} aria-hidden="true" />}
+                  {copied ? 'Copied' : 'Copy address'}
+                </button>
+              </div>
+              <div className="contact-card">
+                <p className="label">Availability</p>
+                <p><span className="status-dot" aria-hidden="true" /> Taking new projects for Q4 2026: executive and virtual assistance, project coordination, lead generation, SEO and e-commerce support, and workflow setup.</p>
+              </div>
+              <div className="contact-card">
+                <p className="label">Elsewhere</p>
+                <SocialLinks />
+              </div>
+            </aside>
           </div>
-        </div>
-      </section>
-
-      <section className="contact-form-section">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <label><span>01 / Your name</span><input name="name" type="text" placeholder="Jane Smith" required /></label>
-          <label><span>02 / Email address</span><input name="email" type="email" placeholder="jane@company.com" required /></label>
-          <label><span>03 / Tell me about the project</span><textarea name="message" placeholder="What are you working on?" rows={5} required /></label>
-          <button className="submit-button" type="submit">Send enquiry <ArrowUpRight size={18} /></button>
-        </form>
-        <aside className="contact-aside">
-          <div className="aside-icon"><Mail size={18} /></div>
-          <p>Currently taking on select branding, web design, and digital product projects for Q4 2026.</p>
-          <div className="social-links"><a href="https://linkedin.com/in/divinechidubem" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a><a href="https://x.com/divautomation" target="_blank" rel="noreferrer">X <ArrowUpRight size={14} /></a></div>
-        </aside>
-      </section>
-
-      <footer><span>© 2026 Divine Jude</span><span>AI implementation · Workflow automation</span><a href="#top">Back to top ↑</a></footer>
-    </main>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
   )
 }

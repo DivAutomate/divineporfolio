@@ -1,73 +1,121 @@
 import type { Metadata } from 'next'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { CaseStudyHeader } from '@/components/case-study-header'
+import { CtaSection } from '@/components/cta-section'
+import { SiteFooter } from '@/components/site-footer'
 
 export const metadata: Metadata = {
-  title: 'TransPerfect Case Study',
-  description: 'Managing large-scale translation project lifecycles with Trello workflow automation.',
+  title: 'Project Management Case Study',
+  description: 'How I ran 100+ translation projects across three timezones with a Trello system and hit 98% on-time delivery.',
   alternates: { canonical: '/case-study/transperfect' },
 }
 
 export default function TransPerfectCaseStudy() {
   return (
-    <main className="ai-case-study transperfect-case-study" id="top">
-      <nav className="ai-case-nav" aria-label="Case study navigation">
-        <a href="/work" className="ai-back"><ArrowLeft size={15} /> Back to portfolio</a>
-        <a href="/" className="ai-back">Home <ArrowUpRight size={15} /></a>
-            </nav>
+    <>
+      <CaseStudyHeader />
+      <main className="ai-case-study transperfect-case-study">
 
       <header className="ai-case-hero">
         <p className="ai-kicker">Case study · localization operations</p>
-        <h1>Managing Large-Scale Translation Project Lifecycles <em>via Trello</em></h1>
-        <p className="ai-lead">How I built a centralized tracking system to coordinate 100+ multilingual projects across global timezones, stick to strict budgets, and hit 98% on-time delivery.</p>
+        <h1>Managing Large-Scale Translation Projects <em>with Trello</em></h1>
+        <p className="ai-lead">I built one place to track 100+ translation projects across three timezones. It kept us on budget and helped us deliver 98% of projects on time.</p>
       </header>
 
       <section className="ai-summary ai-section">
         <p className="ai-label">Project at a glance</p>
         <div>
-          <p><strong>My Core Job</strong> — Managing end-to-end localization pipelines, vendor sourcing, and cross-functional client communications.</p>
-          <p><strong>Main Goal</strong> — Connect TransPerfect&apos;s localization loops with Trello to eliminate timezone lag and project bottlenecks.</p>
-          <p><strong>Scope Impact</strong> — Managed a portfolio of 30+ enterprise accounts ($5K to $250K) across EMEA, APAC, and North America.</p>
+          <p><strong>My role</strong> — I ran translation projects from start to finish. That meant picking vendors, managing timelines, and keeping clients informed.</p>
+          <p><strong>The goal</strong> — Stop work from stalling between timezones and make every project easy to track.</p>
+          <p><strong>The scale</strong> — 30+ enterprise accounts worth $5K to $250K each, across EMEA, APAC, and North America.</p>
         </div>
       </section>
 
       <section className="ai-section">
         <p className="ai-label">The situation</p>
         <div className="ai-copy">
-          <p>At TransPerfect—the world&apos;s largest provider of language and AI solutions with over 140 global offices—operational efficiency is everything. My job was to lead end-to-end localization and document production projects under tight deadlines while juggling multiple timezones (including CET, MDT, and IST).</p>
-          <p>I managed a portfolio of 30+ enterprise accounts with project values ranging from $5K to $250K. To keep these complex pipelines moving without constant manual intervention, I mapped our workflows into Trello. This bridged the gap between our core operational teams (Production, Quality Systems, Sales) and specialized industry verticals like Life Sciences, Legal Services, and Gaming.</p>
+          <p>TransPerfect is the world&apos;s largest language services company, with more than 140 offices. Deadlines are tight, and the teams doing the work are spread across CET, MDT, and IST.</p>
+          <p>I handled 30+ enterprise accounts. Our translation tools did the translating. Trello was where the team coordinated the work. I used it to connect Production, Quality, and Sales with our industry teams in Life Sciences, Legal, and Gaming.</p>
         </div>
       </section>
 
       <section className="ai-friction ai-section">
-        <p className="ai-label">The timezone &amp; workflow bottlenecks</p>
+        <p className="ai-label">What was slowing us down</p>
         <div className="ai-copy">
-          <p>Operating across continents meant our teams faced daily coordination friction points:</p>
-          <ul><li><strong>Manual Setup Fatigue:</strong> With over 100 multilingual projects running simultaneously, manually creating task sheets for translators, linguists, and QA teams caused major kickoff delays.</li><li><strong>Timezone Blind Spots:</strong> Because vendors worked in completely different timezones, project managers spent hours chasing down translation draft statuses, risking delivery dates.</li><li><strong>Unresolved Blockers:</strong> If a translator found missing source files or unclear terminology overnight, the issue would sit unnoticed for hours, stalling the entire regional launch.</li><li><strong>Messy Team Onboarding:</strong> New hires struggled to understand our fast-moving global account requirements, leading to high onboarding friction and initial production errors.</li></ul>
+          <p>Working across continents created the same problems every day:</p>
+          <ul>
+            <li><strong>Slow project setup:</strong> With 100+ projects running at once, building task lists by hand for translators, reviewers, and QA delayed every kickoff.</li>
+            <li><strong>No view across timezones:</strong> Vendors worked while we slept. Project managers lost hours chasing status updates, and deadlines slipped.</li>
+            <li><strong>Problems sat overnight:</strong> If a translator found a missing file or a confusing term, nobody saw it for hours. One small issue could hold up a whole regional launch.</li>
+            <li><strong>Hard onboarding:</strong> New hires struggled to learn each account&apos;s rules. That led to early mistakes.</li>
+          </ul>
         </div>
       </section>
 
       <section className="ai-highlights ai-section">
-        <p className="ai-label">What I did: the automated Trello solution</p>
-        <div className="ai-copy"><p>I built a practical, automated Trello workspace specifically designed to sync translation milestones with broader corporate launch timelines:</p></div>
+        <p className="ai-label">How I built the Trello system</p>
+        <div className="ai-copy"><p>I built a Trello workspace that tied every translation milestone to the client&apos;s launch date.</p></div>
         <div className="ai-highlight-list">
-          <article><span>01</span><div><h2>Automatic project creation &amp; kickoffs</h2><p><strong>Action:</strong> I set up a workflow where new content requests instantly generated structured task sets in Trello. These tasks automatically assigned clear due dates and guidelines to our global marketing, product, and legal teams.</p><p><strong>Result:</strong> This eliminated manual project setups, got our multilingual campaigns kicked off faster, and allowed me to coordinate 100+ projects across continents simultaneously.</p></div></article>
-          <article><span>02</span><div><h2>Live status tracking &amp; timezone bridges</h2><p><strong>Action:</strong> I mapped our core translation phases (drafting, review, QA, and final delivery) directly into Trello status fields. I established asynchronous handoff rules so that when an APAC linguist finished a review, the task automatically moved to an EMEA QA specialist&apos;s queue.</p><p><strong>Result:</strong> This gave us absolute visibility over progress, bypassed timezone lag, and helped me deliver 98% of projects on or before the client&apos;s strict deadline.</p></div></article>
-          <article><span>03</span><div><h2>Automated blocker &amp; escalation systems</h2><p><strong>Action:</strong> I built a dedicated &quot;Translation Blocker&quot; trigger. If a vendor flagged missing files or context issues, Trello instantly created an urgent task assigned directly to the account&apos;s operational lead.</p><p><strong>Result:</strong> This stopped stalled jobs from going unnoticed, cut down on manual follow-ups, and dramatically speeded up issue resolution.</p></div></article>
-          <article><span>04</span><div><h2>Re-engineering the onboarding blueprint</h2><p><strong>Action:</strong> I turned our complex internal workflows and account-specific SOPs into clean, repeatable Trello templates with built-in training videos and document checklists.</p><p><strong>Result:</strong> This simplified the learning curve for new hires and reduced our internal onboarding time by 40%.</p></div></article>
+          <article><span>01</span><div><h2>Projects that set themselves up</h2><p><strong>What I did:</strong> Every new request now created a full set of tasks in Trello on its own. Each task came with a due date, clear instructions, and an owner in marketing, product, or legal.</p><p><strong>What changed:</strong> No more manual setup. Projects started faster, and I could run 100+ of them at the same time.</p></div></article>
+          <article><span>02</span><div><h2>Handoffs that work while you sleep</h2><p><strong>What I did:</strong> I gave each stage its own status in Trello: draft, review, QA, and delivery. When a reviewer in APAC finished, the task moved straight to a QA specialist in EMEA.</p><p><strong>What changed:</strong> Everyone could see where every project stood. Work kept moving overnight, and we delivered 98% of projects on or before the deadline.</p></div></article>
+          <article><span>03</span><div><h2>Problems flagged in minutes, not hours</h2><p><strong>What I did:</strong> I added a &quot;Translation Blocker&quot; trigger. When a vendor flagged a missing file or unclear context, Trello created an urgent task for the account lead right away.</p><p><strong>What changed:</strong> Stuck jobs no longer went unnoticed. We spent less time chasing people and fixed issues much faster.</p></div></article>
+          <article><span>04</span><div><h2>Onboarding new hires faster</h2><p><strong>What I did:</strong> I turned our internal processes and account rules into Trello templates. Each one came with training videos and checklists.</p><p><strong>What changed:</strong> New hires learned faster, and onboarding time dropped by 40%.</p></div></article>
+        </div>
+        <figure className="transperfect-board">
+          <img src="/transperfect-trello-board.png" alt="Trello board titled Global Localization Pipeline and Timezone Sync, with columns for intake, production, a four-stage QA pipeline, timezone handoffs, and escalations" loading="lazy" decoding="async" width={2419} height={1512} />
+          <figcaption>The live board · Intake, production, QA, timezone handoffs, and escalations</figcaption>
+        </figure>
+      </section>
+
+      <section className="ai-section">
+        <p className="ai-label">How I kept it running</p>
+        <div className="ai-copy">
+          <p>A system only works if someone keeps it clean. So I set a regular routine inside Trello.</p>
+          <h2>The routine</h2>
+          <h3>Daily and weekly</h3>
+          <ul><li>Check the escalation board for open blockers and missing files.</li><li>Make sure each new request goes to the right native-speaking vendor.</li></ul>
+          <h3>As needed</h3>
+          <ul><li>Add newly approved vendors and updated rates.</li><li>Change task paths when a client changes the scope or deadline.</li></ul>
+          <h3>Every quarter</h3>
+          <ul><li>Remove inactive users to keep license costs down.</li><li>Check links to Google Drive and Slack so no automation breaks.</li><li>Review spend against each account&apos;s budget with Finance and Production.</li></ul>
+          <h3>Every year</h3>
+          <ul><li>Review how company security rules apply to boards shared with outside vendors.</li></ul>
+        </div>
+      </section>
+
+      <section className="ai-results ai-section">
+        <p className="ai-label">The results</p>
+        <div className="ai-copy">
+          <p>Here is what changed once the whole team worked from this system:</p>
+          <div className="ai-metrics-grid">
+            <article><strong>98%</strong><h2>On-time delivery</h2><p>Almost every project shipped on or before the deadline, across all regions.</p></article>
+            <article><strong>20%</strong><h2>Fewer errors</h2><p>Required QA steps in every project cut production errors. Lead times also dropped by 15%.</p></article>
+            <article><strong>40%</strong><h2>Faster onboarding</h2><p>Clear templates replaced scattered training folders.</p></article>
+            <article><strong>38%</strong><h2>Lower costs</h2><p>Better vendor assignments and tighter tracking cut production costs.</p></article>
+          </div>
         </div>
       </section>
 
       <section className="ai-section">
-        <p className="ai-label">The daily system checklist</p>
-        <div className="ai-copy"><p>To ensure our global database remained organized and production errors dropped, I turned my system framework into a live, recurring maintenance routine inside Trello.</p><h2>The operational routine schedule</h2><h3>Every day / week</h3><ul><li>Scan the escalation boards for unresolved translation blockers or missing source file flags.</li><li>Verify that incoming automated content requests are assigned to the optimal native-speaking vendor.</li></ul><h3>As needed</h3><ul><li>Update Trello custom fields with newly vetted translation vendors and updated pricing brackets.</li><li>Adjust task paths when clients request sudden changes to project scopes or delivery requirements.</li></ul><h3>Every quarter (budget &amp; system health)</h3><ul><li>Audit project member access across our 140+ global office footprints to remove inactive users and control license costs.</li><li>Review connected file repositories (Google Drive, Slack loops) to ensure no automation links are broken.</li><li>Sync with Finance and Production Leads to review project spend against our $5K–$250K account budgets.</li></ul><h3>Every year</h3><ul><li>Review how our corporate IT security rules apply to external, cross-border vendor communication boards.</li></ul></div>
+        <p className="ai-label">What I learned</p>
+        <div className="ai-copy">
+          <ul>
+            <li><strong>Plan for timezones:</strong> You can&apos;t rely on live calls across CET, MDT, and IST. Your system has to pass work along while you sleep.</li>
+            <li><strong>Protect your templates:</strong> Good templates are how you grow without losing quality or going over budget.</li>
+          </ul>
+        </div>
       </section>
 
-      <section className="ai-results ai-section"><p className="ai-label">Real, verifiable results</p><div className="ai-copy"><p>By moving our global operations into this structured Trello blueprint, we achieved massive operational wins:</p><div className="ai-metrics-grid"><article><strong>98%</strong><h2>Flawless deadlines</h2><p>Hit an elite on-time delivery rate across our entire multi-continent enterprise portfolio.</p></article><article><strong>20%</strong><h2>Higher quality</h2><p>Reduced production errors and shortened overall lead times by 15% by embedding mandatory QA steps into every project layout.</p></article><article><strong>40%</strong><h2>Faster team scaling</h2><p>Slashed new hire onboarding time by replacing messy training folders with clean Trello templates.</p></article><article><strong>38%</strong><h2>Fewer losses</h2><p>Cut operational production costs through better vendor delegation and tighter spreadsheet-backed tracking.</p></article></div></div></section>
+      <section className="ai-section transperfect-client">
+        <p className="ai-label">Client</p>
+        <div className="ai-copy">
+          <blockquote>“Divine is an outstanding Operations Assistant who consistently delivers excellence. During our time working together at TransPerfect, I was continually impressed by his organizational skills and his ability to handle complex operational challenges with ease. He acts as a central pillar for the team, keeping communication fluid and workflows running smoothly. I highly recommend Divine for any fast-paced operations role.”</blockquote>
+          <cite>— TransPerfect colleague</cite>
+        </div>
+      </section>
 
-      <section className="ai-section"><p className="ai-label">The takeaways</p><div className="ai-copy"><ul><li><strong>Build for Timezones:</strong> Don&apos;t count on real-time conversations when working across CET, MDT, and IST. Your project management tool must be automated enough to handle handoffs while you sleep.</li><li><strong>Protect Your Templates:</strong> Standardized project templates are the only way to scale a business without losing quality or blowing your budget.</li></ul></div></section>
-
-      <section className="ai-cta"><p className="ai-kicker">Ready to build a resilient system?</p><h2>Let&apos;s make your<br /><em>next workflow intelligent.</em></h2></section>
-      <footer><span>© 2026 Divine Jude</span><span>AI implementation · Workflow automation</span><a href="#top">Back to top ↑</a></footer>
+      <CtaSection kicker="Running global projects?" title={<>Let&apos;s improve<br /><em>your operations.</em></>} />
     </main>
+      <SiteFooter />
+    </>
   )
 }
