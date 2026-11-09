@@ -40,9 +40,6 @@ const tools = [
   { name: 'Clay', src: '/images/tools/clay.png' },
   { name: 'n8n', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/n8n/default.svg' },
   { name: 'Zapier', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/zapier/default.svg' },
-  { name: 'MCP', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/mcp-model-context-protocol/default.svg' },
-  { name: 'Webhooks', src: '/images/tools/webhook.svg' },
-  { name: 'APIs', src: '/images/tools/api.svg' },
   { name: 'Claude', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/claude/default.svg' },
   { name: 'ChatGPT', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/openai-chatgpt/mono.svg' },
   { name: 'LangChain', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/langchain/default.svg' },
@@ -55,9 +52,6 @@ const tools = [
   { name: 'Google Sheets', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/google-sheets/default.svg' },
   { name: 'Odoo', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/odoo/default.svg' },
   { name: 'ERPNext', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/erpnext/default.svg' },
-  { name: 'HTML5', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/html5/default.svg' },
-  { name: 'CSS3', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/css/default.svg' },
-  { name: 'JavaScript', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/javascript/default.svg' },
 ]
 
 export default function AboutPage() {
