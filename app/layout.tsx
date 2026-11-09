@@ -1,18 +1,21 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { DM_Mono, Manrope } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const manrope = Manrope({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+const manrope = localFont({
+  src: './fonts/manrope-variable-latin.woff2',
+  weight: '200 800',
+  style: 'normal',
   variable: '--font-manrope',
   display: 'swap',
 })
 
-const dmMono = DM_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500'],
+const dmMono = localFont({
+  src: [
+    { path: './fonts/dm-mono-400-latin.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/dm-mono-500-latin.woff2', weight: '500', style: 'normal' },
+  ],
   variable: '--font-dm-mono',
   display: 'swap',
 })
