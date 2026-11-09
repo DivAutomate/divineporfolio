@@ -20,7 +20,7 @@ export function SiteNav() {
     pathname === href || (href === '/work' && pathname.startsWith('/case-study'))
 
   return (
-    <header className="site-header" id="top">
+    <header className="site-header">
       <nav className="site-nav container" aria-label="Main navigation">
         <Link className="wordmark" href="/" onClick={closeMenu}>
           Divine Jude<span>.</span>
