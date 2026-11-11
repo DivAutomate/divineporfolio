@@ -61,6 +61,33 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         </div>
       </section>
 
+      <section className="ai-section support-sample-work">
+        <p className="ai-label">Sample work</p>
+        <div className="ai-copy">
+          <p>Three artefacts from the framework in use. Personal names, addresses, and account numbers are redacted; the source material is public.</p>
+        </div>
+        <div className="ai-workflow-gallery">
+          <figure>
+            <img src="/images/sample-work/inbox-triage.webp" alt="Before and after view of an inbox: 47,886 unread messages on the left, and the same inbox rebuilt with labels, filters, and colour-coded tags leaving 24 active messages" loading="lazy" decoding="async" width={1600} height={873} />
+            <figcaption>Inbox rebuild · 47,886 messages sorted into labelled views, 24 left active</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/sample-work/calendar-control.webp" alt="Google Calendar week view with daily briefings, deep work blocks, meeting preparation, reviews, and protected personal time" loading="lazy" decoding="async" width={1400} height={787} />
+            <figcaption>Calendar control · briefings, deep work, and preparation blocks protected</figcaption>
+          </figure>
+        </div>
+        <div className="support-sample-brief">
+          <figure>
+            <img src="/images/sample-work/executive-brief.webp" alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary" loading="lazy" decoding="async" width={800} height={1000} />
+            <figcaption>Executive brief · a long policy update reduced to one page</figcaption>
+          </figure>
+          <div>
+            <h2>From request to one-page brief</h2>
+            <p>A forwarded policy update arrived with a one-line ask: summarise this. I read the source article, extracted what changed, and returned a one-page brief covering how the compensation fund works, why the rules were overdue, and who they affect.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="ai-results ai-section">
         <p className="ai-label">The outcome</p>
         <div className="ai-copy">

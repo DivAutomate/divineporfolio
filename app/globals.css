@@ -421,6 +421,11 @@ main + .site-footer .container { border-top-color: transparent; }
 .ai-workflow-gallery figure { margin: 0; }
 .ai-workflow-gallery img, .invoice-workflow img, .transperfect-board img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .ai-case-study figcaption { margin-top: 12px; font: 500 11px/1.5 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.support-sample-brief { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(24px, 3vw, 44px); align-items: start; margin-top: 44px; }
+.support-sample-brief figure { margin: 0; }
+.support-sample-brief img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.support-sample-brief h2 { font-size: clamp(19px, 2vw, 24px); letter-spacing: -0.03em; }
+.support-sample-brief p { margin-top: 14px; font-size: 15px; }
 .ai-stack { margin-top: 40px; }
 .ai-stack ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; padding: 0; list-style: none; }
 .ai-stack li { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; border-top: 1px solid var(--line); font-size: 15px; }
@@ -555,7 +560,8 @@ main + .site-footer .container { border-top-color: transparent; }
   .cta-meta { grid-template-columns: 1fr; gap: 20px; }
   .site-footer .container { flex-direction: column; align-items: flex-start; }
 
-  .ai-metrics, .ai-workflow-gallery, .ai-stack ul, .mahoney-implementation ol, .windwire-reply-list, .windwire-section, .mahoney-two-column { grid-template-columns: 1fr; }
+  .ai-metrics, .ai-workflow-gallery, .ai-stack ul, .mahoney-implementation ol, .windwire-reply-list, .windwire-section, .mahoney-two-column, .support-sample-brief { grid-template-columns: 1fr; }
+  .support-sample-brief figure { max-width: 420px; }
   .mahoney-two-column { gap: 0; }
   .mahoney-two-column .mahoney-section-label { margin-bottom: 20px; }
   .mahoney-scale ul, .windwire-metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
