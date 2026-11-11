@@ -61,6 +61,26 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         </div>
       </section>
 
+      <section className="ai-results ai-section">
+        <p className="ai-label">The outcome</p>
+        <div className="ai-copy">
+          <p>The framework gave The Executive a reliable operating layer: less time sorting information, more protected strategy time, and faster access to the numbers and decisions that kept the business moving.</p>
+          <div className="ai-metrics-grid">
+            <article><strong>300+</strong><h2>Daily messages triaged</h2><p>Complex B2B correspondence organized around urgency and ownership.</p></article>
+            <article><strong>45 min</strong><h2>Daily email processing</h2><p>Reduced from 3.5 hours while maintaining zero missed revenue opportunities.</p></article>
+            <article><strong>25%</strong><h2>Calendar capacity reclaimed</h2><p>Time returned to strategy, forecasting, and expansion planning.</p></article>
+            <article><strong>4+ hrs</strong><h2>Saved per briefing</h2><p>Weekly executive reporting became faster through connected live dashboards.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section className="ai-section">
+        <p className="ai-label">The takeaway</p>
+        <div className="ai-copy">
+          <p>Executive and personal assistance is most valuable when it protects attention across the whole operating environment. By connecting inboxes, calendars, travel, personal administration, data entry, and reporting, I gave the General Manager &amp; Business Head a dependable support framework for making better decisions faster.</p>
+        </div>
+      </section>
+
       <section className="ai-section support-sample-work">
         <p className="ai-label">Sample work</p>
         <div className="ai-copy">
@@ -85,26 +105,6 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             <h2>From request to one-page brief</h2>
             <p>A forwarded policy update arrived with a one-line ask: summarise this. I read the source article, extracted what changed, and returned a one-page brief covering how the compensation fund works, why the rules were overdue, and who they affect.</p>
           </div>
-        </div>
-      </section>
-
-      <section className="ai-results ai-section">
-        <p className="ai-label">The outcome</p>
-        <div className="ai-copy">
-          <p>The framework gave The Executive a reliable operating layer: less time sorting information, more protected strategy time, and faster access to the numbers and decisions that kept the business moving.</p>
-          <div className="ai-metrics-grid">
-            <article><strong>300+</strong><h2>Daily messages triaged</h2><p>Complex B2B correspondence organized around urgency and ownership.</p></article>
-            <article><strong>45 min</strong><h2>Daily email processing</h2><p>Reduced from 3.5 hours while maintaining zero missed revenue opportunities.</p></article>
-            <article><strong>25%</strong><h2>Calendar capacity reclaimed</h2><p>Time returned to strategy, forecasting, and expansion planning.</p></article>
-            <article><strong>4+ hrs</strong><h2>Saved per briefing</h2><p>Weekly executive reporting became faster through connected live dashboards.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section className="ai-section">
-        <p className="ai-label">The takeaway</p>
-        <div className="ai-copy">
-          <p>Executive and personal assistance is most valuable when it protects attention across the whole operating environment. By connecting inboxes, calendars, travel, personal administration, data entry, and reporting, I gave the General Manager &amp; Business Head a dependable support framework for making better decisions faster.</p>
         </div>
       </section>
 
