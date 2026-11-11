@@ -390,7 +390,6 @@ main + .site-footer .container { border-top-color: transparent; }
 }
 .windwire-media figure { margin: 0; }
 .windwire-media img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
-.windwire-media figcaption { margin-top: 12px; font: 500 11px/1.5 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .ai-label, .mahoney-section-label, .windwire-label { margin-bottom: 20px; }
 
 /* Body copy */
