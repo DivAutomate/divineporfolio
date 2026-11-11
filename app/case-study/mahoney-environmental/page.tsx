@@ -24,7 +24,7 @@ export default function MahoneyEnvironmentalCaseStudy() {
 
       <section className="mahoney-quote">
         <blockquote>&ldquo;I was impressed with his ability to step into our field workflows and completely remove our scheduling bottlenecks. Building an automated system that handles complex dispatch logistics from scratch is an incredible feat. I would recommend his development expertise to any scaling logistics company that wants to eliminate manual overhead.&rdquo;</blockquote>
-        <p>— Chris Wysocki, Mahoney Environmental</p>
+        <p>— Operations manager, Mahoney Environmental</p>
       </section>
 
       <section className="mahoney-scale mahoney-content-section">
