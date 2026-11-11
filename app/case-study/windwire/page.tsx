@@ -26,14 +26,14 @@ export default function CaseStudyPage() {
         <div className="windwire-brand-mark" aria-hidden="true">W</div>
         <p className="windwire-eyebrow">WindWire Studio · Outbound Growth &amp; Revenue Operations Case Study</p>
         <h1>How I Turned <em>1,975+ Prospects</em> into a Steady Sales Pipeline</h1>
-        <div className="windwire-hero-meta"><p><span>Client</span>CEO of WindWire Studio</p><p><span>Timeline</span>12 weeks</p></div>
+        <div className="windwire-hero-meta"><p><span>Client</span>Founder of WindWire Studio</p><p><span>Timeline</span>12 weeks</p></div>
         <p className="windwire-dek">WindWire Studio designs and builds digital products. Its clients are early-stage founders, fast-growing startups, AI companies, digital health teams, and agencies that need a reliable design and development partner.</p>
       </header>
 
       <section className="windwire-testimonial section-shell">
         <p className="windwire-label">Client partner</p>
         <blockquote>&ldquo;Divine didn&apos;t just send more outreach. He gave us a reliable way to find the right companies, start relevant conversations, and turn our lead expectations into a real sales pipeline.&rdquo;</blockquote>
-        <p className="windwire-attribution">— CEO of WindWire Studio</p>
+        <p className="windwire-attribution">— Founder of WindWire Studio</p>
       </section>
 
       <section className="windwire-section section-shell" id="overview">
@@ -98,9 +98,9 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
-      <section className="windwire-replies section-shell"><p className="windwire-label">04. Real replies</p><h2>Straight from the <em>campaign inbox.</em></h2><div className="windwire-reply-list"><p>&ldquo;This is relevant. Can you send over your Calendly?&rdquo;</p><p>&ldquo;Please route this to your CEO—I think there&apos;s a fit here.&rdquo;</p><p>&ldquo;We&apos;re looking for exactly this kind of product partner. Are you free next week?&rdquo;</p><p>&ldquo;Thanks for the thoughtful note. Let&apos;s find a time to talk.&rdquo;</p><p>&ldquo;Hi there, good to connect! Send over some times for next week.&rdquo;</p></div></section>
+      <section className="windwire-replies section-shell"><p className="windwire-label">04. Real replies</p><h2>Straight from the <em>campaign inbox.</em></h2><div className="windwire-reply-list"><p>&ldquo;This is relevant. Can you send over your Calendly?&rdquo;</p><p>&ldquo;We&apos;re looking for exactly this kind of product partner. Are you free next week?&rdquo;</p><p>&ldquo;Thanks for the thoughtful note. Let&apos;s find a time to talk.&rdquo;</p><p>&ldquo;Hi Stephen, good to connect! Send over some times for next week.&rdquo;</p></div></section>
 
-      <section className="windwire-bottom-line section-shell"><p className="windwire-label">05. The bottom line</p><h2>Good data, good timing, and honest messages gave WindWire <em>a pipeline it can rely on.</em></h2><p>The CEO no longer depends on bad filters or hours of manual research. The system brought in 231 qualified leads across both campaigns, averaging 2.7 per day over 12 weeks.</p></section>
+      <section className="windwire-bottom-line section-shell"><p className="windwire-label">05. The bottom line</p><h2>Good data, good timing, and honest messages gave WindWire <em>a pipeline it can rely on.</em></h2><p>The founder no longer depends on bad filters or hours of manual research. The system brought in 231 qualified leads across both campaigns, averaging 2.7 per day over 12 weeks.</p></section>
 
       <CtaSection kicker="Need more qualified leads?" title={<>Let&apos;s build your <em>next pipeline.</em></>} />
     </main>
