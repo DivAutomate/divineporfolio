@@ -18,7 +18,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
       <header className="ai-case-hero">
         <p className="ai-kicker">Professional support framework · The Executive</p>
         <h1>Executive support that keeps <em>the business moving.</em></h1>
-        <p className="ai-lead">A structured Executive &amp; Personal Assistant framework for a General Manager &amp; Business Head managing procurement, FMCG accounts, plant operations, travel, and financial priorities.</p>
+        <p className="ai-lead">A structured Executive &amp; Personal Assistant framework for a General Manager &amp; Business Head managing procurement, FMCG accounts, plant operations, travel, and financial priorities at Prima Corporation Ltd.</p>
       </header>
 
       <section className="ai-summary ai-section">
