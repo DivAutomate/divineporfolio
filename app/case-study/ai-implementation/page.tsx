@@ -16,7 +16,7 @@ export default function AIImplementationCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
-      <main className="ai-case-study">
+      <main id="main-content" className="ai-case-study">
 
       <header className="ai-case-hero">
         <p className="ai-kicker">Case study · AI implementation</p>

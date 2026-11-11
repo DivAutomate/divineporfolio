@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="main-content">
         <section className="hero container" aria-labelledby="hero-title">
           <div className="hero-eyebrow label">
             <span>Virtual assistant · Operations partner</span>
@@ -18,8 +18,8 @@ export default function Page() {
           </div>
           <div className="hero-grid">
             <div>
-              <h1 id="hero-title">Reliable support for <span className="highlight">busy</span> <em>teams.</em></h1>
-              <p className="hero-lead">I&apos;m Divine. I take the day-to-day work off your plate: managing inboxes and calendars, coordinating projects, building lead lists, growing online stores, and setting up simple systems that keep everything running.</p>
+              <h1 id="hero-title">Work off your plate. <em>Systems in place.</em></h1>
+              <p className="hero-lead">I&apos;m Divine, an operations partner for busy teams. I run executive support, project coordination, and lead generation, then set up simple systems so the work stays handled.</p>
               <div className="btn-row">
                 <Link className="btn btn-primary" href="/contact">Start a conversation <ArrowUpRight size={16} aria-hidden="true" /></Link>
                 <Link className="btn btn-secondary" href="/work">See my work</Link>

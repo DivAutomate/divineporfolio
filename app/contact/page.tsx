@@ -9,6 +9,7 @@ import { site } from '@/lib/site'
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
+  const [drafted, setDrafted] = useState(false)
 
   const copyEmail = async () => {
     await navigator.clipboard.writeText(site.email)
@@ -24,13 +25,14 @@ export default function ContactPage() {
     const message = String(form.get('message') || '')
     const subject = encodeURIComponent(`Project enquiry from ${name}`)
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
+    setDrafted(true)
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
   }
 
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="main-content">
         <header className="page-hero container">
           <p className="label">Contact</p>
           <h1>Let&apos;s make your week <em>lighter.</em></h1>
@@ -52,7 +54,13 @@ export default function ContactPage() {
                 <span className="label">What do you need help with?</span>
                 <textarea name="message" rows={5} placeholder="Inbox and calendar support, a project to coordinate, a lead list to build..." required />
               </label>
-              <button className="btn btn-primary" type="submit">Send enquiry <ArrowUpRight size={16} aria-hidden="true" /></button>
+              <button className="btn btn-primary" type="submit">Open email draft <ArrowUpRight size={16} aria-hidden="true" /></button>
+              <p className="form-hint">This opens your email app with the message filled in. Nothing sends until you press send there.</p>
+              {drafted && (
+                <div className="form-note" role="status">
+                  <p><strong>Draft ready.</strong> Your email app should be open. If it isn&apos;t, send the same details to <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+                </div>
+              )}
             </form>
 
             <aside className="contact-aside" aria-label="Other ways to reach me">
@@ -65,8 +73,16 @@ export default function ContactPage() {
                 </button>
               </div>
               <div className="contact-card">
+                <p className="label">What happens next</p>
+                <ol className="contact-steps">
+                  <li>You send the details of what you want to hand off.</li>
+                  <li>I reply within two working days with questions or a time to talk.</li>
+                  <li>If it&apos;s a fit, we agree scope and a start date.</li>
+                </ol>
+              </div>
+              <div className="contact-card">
                 <p className="label">Availability</p>
-                <p><span className="status-dot" aria-hidden="true" /> Taking new projects for Q4 2026: executive and virtual assistance, project coordination, lead generation, SEO and e-commerce support, and workflow setup.</p>
+                <p><span className="status-dot" aria-hidden="true" /> Taking new projects for Q4 2026: executive support, project coordination, and lead generation.</p>
               </div>
               <div className="contact-card">
                 <p className="label">Elsewhere</p>
