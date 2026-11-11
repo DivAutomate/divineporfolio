@@ -13,7 +13,7 @@ export default function MahoneyEnvironmentalCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
-      <main className="mahoney-case-study">
+      <main id="main-content" className="mahoney-case-study">
 
       <header className="mahoney-editorial-hero">
         <p className="mahoney-meta">Case Study</p>

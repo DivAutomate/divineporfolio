@@ -15,7 +15,7 @@ export default function WorkPage() {
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="main-content">
         <header className="page-hero container">
           <p className="label">Portfolio</p>
           <h1>Selected <em>work.</em></h1>

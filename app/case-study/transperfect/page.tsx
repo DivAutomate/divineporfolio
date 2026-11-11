@@ -13,7 +13,7 @@ export default function TransPerfectCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
-      <main className="ai-case-study transperfect-case-study">
+      <main id="main-content" className="ai-case-study transperfect-case-study">
 
       <header className="ai-case-hero">
         <p className="ai-kicker">Case study · localization operations</p>

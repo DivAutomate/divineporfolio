@@ -46,7 +46,7 @@ export default function PuraUtzCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
-      <main className="ai-case-study support-case-study pura-case-study">
+      <main id="main-content" className="ai-case-study support-case-study pura-case-study">
 
       <header className="ai-case-hero">
         <p className="ai-kicker">Case study: Scaling a Micro-DTC Artisan Brand via Integrated Shopify SEO &amp; Meta Ads Tuning</p>

@@ -13,7 +13,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
-      <main className="ai-case-study support-case-study">
+      <main id="main-content" className="ai-case-study support-case-study">
 
       <header className="ai-case-hero">
         <p className="ai-kicker">Professional support framework · The Executive</p>

@@ -7,7 +7,7 @@ export function ProjectCard({ project, index, featured = false }: { project: Pro
     <article className={`project-card ${featured ? 'is-featured' : ''}`}>
       <Link href={project.href} className="project-link">
         <div className="project-media">
-          <img src={project.image} alt={project.imageAlt} loading={index < 2 ? 'eager' : 'lazy'} decoding="async" />
+          <img src={project.image} alt={project.imageAlt} loading="lazy" decoding="async" width={1376} height={768} />
           <span className="project-number">{String(index + 1).padStart(2, '0')}</span>
         </div>
         <div className="project-body">

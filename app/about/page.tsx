@@ -17,10 +17,10 @@ const principles = [
 ]
 
 const experience = [
-  { period: 'Enterprise', role: 'Project & operations coordinator', text: 'Ran 100+ multilingual projects at once for a global language services provider, across vendors, teams, and three timezones.' },
+  { period: 'Project management', role: 'Project & operations coordinator', text: 'Ran 100+ multilingual projects at once for a global language services provider, across vendors, teams, and three timezones.' },
   { period: 'Executive support', role: 'Executive & personal assistant', text: 'Managed the inbox, calendar, travel, personal administration, and weekly reporting for a manufacturing General Manager.' },
   { period: 'E-commerce', role: 'Shopify SEO & performance marketing', text: 'Grew a small artisan brand’s organic traffic and ad returns while handling day-to-day store administration.' },
-  { period: 'Others', role: 'Lead generation, CRM automation & invoice processing', text: 'Built outbound pipelines that turned 1,975+ prospects into 231 qualified leads, moved 2,000+ service sites from paper onto CRM routing, and cut invoice processing from 40 minutes to under 10.' },
+  { period: 'Automation & outreach', role: 'Lead generation, CRM automation & invoice processing', text: 'Built outbound pipelines that turned 1,975+ prospects into 231 qualified leads, moved 2,000+ service sites from paper onto CRM routing, and cut invoice processing from 40 minutes to under 10.' },
 ]
 
 const tools = [
@@ -58,14 +58,14 @@ export default function AboutPage() {
   return (
     <>
       <SiteNav />
-      <main>
+      <main id="main-content">
         <header className="page-hero container">
           <p className="label">About me</p>
           <h1>Hi, I&apos;m <em>Divine.</em></h1>
           <p className="lead">A virtual assistant and operations partner for founders, executives, and small teams who have more to do than hours to do it in.</p>
         </header>
 
-        <section className="container section-tight" aria-label="Profile">
+        <section className="container" aria-label="Profile">
           <div className="about-split">
             <div className="portrait-panel">
               <img src={site.portrait} alt="Divine Jude smiling in a black shirt" width={300} height={300} />

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
-import { projects } from '@/lib/site'
+import { projects, siteUrl } from '@/lib/site'
 
-const baseUrl = 'https://divinejude.com'
+const baseUrl = siteUrl
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
