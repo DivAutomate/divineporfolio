@@ -68,6 +68,14 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
+      <section className="windwire-media section-shell" id="workspace">
+        <p className="windwire-label">The workspace</p>
+        <figure>
+          <img src="/images/sample-work/instantly-campaigns.webp" alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns" loading="lazy" decoding="async" width={1600} height={1120} />
+          <figcaption>Instantly workspace · seven founder segments, 600 emails at $0.04 each, 99.5% delivered</figcaption>
+        </figure>
+      </section>
+
       <section className="windwire-metrics section-shell" aria-label="Campaign results">
         <div className="windwire-section-heading"><p className="windwire-label">Campaign results</p><p>12 weeks · US, UK + emerging global markets</p></div>
         <div className="windwire-metric-grid">{metrics.map(([value, label]) => <div className="windwire-metric" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>
