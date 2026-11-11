@@ -68,14 +68,6 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
-      <section className="windwire-media section-shell" id="workspace">
-        <p className="windwire-label">The workspace</p>
-        <figure>
-          <img src="/images/sample-work/instantly-campaigns.webp" alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns" loading="lazy" decoding="async" width={1600} height={1120} />
-          <figcaption>Instantly workspace · seven founder segments, 600 emails at $0.04 each, 99.5% delivered</figcaption>
-        </figure>
-      </section>
-
       <section className="windwire-metrics section-shell" aria-label="Campaign results">
         <div className="windwire-section-heading"><p className="windwire-label">Campaign results</p><p>12 weeks · US, UK + emerging global markets</p></div>
         <div className="windwire-metric-grid">{metrics.map(([value, label]) => <div className="windwire-metric" key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>
@@ -109,6 +101,14 @@ export default function CaseStudyPage() {
       <section className="windwire-replies section-shell"><p className="windwire-label">04. Real replies</p><h2>Straight from the <em>campaign inbox.</em></h2><div className="windwire-reply-list"><p>&ldquo;This is relevant. Can you send over your Calendly?&rdquo;</p><p>&ldquo;We&apos;re looking for exactly this kind of product partner. Are you free next week?&rdquo;</p><p>&ldquo;Thanks for the thoughtful note. Let&apos;s find a time to talk.&rdquo;</p><p>&ldquo;Hi Stephen, good to connect! Send over some times for next week.&rdquo;</p></div></section>
 
       <section className="windwire-bottom-line section-shell"><p className="windwire-label">05. The bottom line</p><h2>Good data, good timing, and honest messages gave WindWire <em>a pipeline it can rely on.</em></h2><p>The founder no longer depends on bad filters or hours of manual research. The system brought in 231 qualified leads across both campaigns, averaging 2.7 per day over 12 weeks.</p></section>
+
+      <section className="windwire-media section-shell" id="sample-work">
+        <p className="windwire-label">Sample work</p>
+        <figure>
+          <img src="/images/sample-work/instantly-campaigns.webp" alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns" loading="lazy" decoding="async" width={1600} height={1120} />
+          <figcaption>Instantly workspace · seven founder segments, 600 emails at $0.04 each, 99.5% delivered</figcaption>
+        </figure>
+      </section>
 
       <CtaSection kicker="Need more qualified leads?" title={<>Let&apos;s build your <em>next pipeline.</em></>} />
     </main>
