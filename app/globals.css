@@ -324,6 +324,7 @@ ul, ol { margin: 0; }
 .contact-card { display: grid; gap: 10px; padding-block: 22px; border-top: 1px solid var(--line); }
 .contact-card:first-child { padding-top: 0; border-top: 0; }
 .contact-card p:not(.label) { color: var(--muted); font-size: 15px; }
+.contact-card .contact-book-link { justify-self: start; margin-top: 6px; }
 .contact-email { font-size: clamp(18px, 2vw, 22px); font-weight: 600; letter-spacing: -0.02em; overflow-wrap: anywhere; }
 .contact-email:hover { color: var(--brand); }
 .copy-button {
