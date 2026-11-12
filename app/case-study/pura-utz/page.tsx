@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { CaseStudyHeader } from '@/components/case-study-header'
+import { CaseStudyNav } from '@/components/case-study-nav'
 import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
 
@@ -46,6 +47,15 @@ export default function PuraUtzCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
+      <CaseStudyNav
+        sections={[
+          { id: 'overview', label: 'Brand' },
+          { id: 'challenge', label: 'Challenge' },
+          { id: 'strategy', label: 'Strategy' },
+          { id: 'results', label: 'Results' },
+          { id: 'takeaways', label: 'Takeaways' },
+        ]}
+      />
       <main id="main-content" className="ai-case-study support-case-study pura-case-study">
 
       <header className="ai-case-hero">
@@ -54,7 +64,7 @@ export default function PuraUtzCaseStudy() {
         <p className="ai-lead">Pura Utz creates hand-beaded glass accessories and jewelry crafted by a collective of Mayan artisans in Guatemala. Operating with a tiny core team, the storefront initially struggled with low search visibility, massive image file weights that slowed down mobile page speeds, and a completely cold, unoptimized ad account.</p>
       </header>
 
-      <section className="ai-summary ai-section">
+      <section id="overview" className="ai-summary ai-section">
         <p className="ai-label">Brand profile</p>
         <div>
           <p><strong>Brand:</strong> Pura Utz</p>
@@ -65,7 +75,7 @@ export default function PuraUtzCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-section pura-longform">
+      <section id="challenge" className="ai-section pura-longform">
         <p className="ai-label">The challenge</p>
         <div className="ai-copy">
           <p>The 1–2 person founding team spent all their bandwidth on design workflows, artisan logistics, and community ethics. This left the brand with major digital bottlenecks across two major phases:</p>
@@ -76,7 +86,7 @@ export default function PuraUtzCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-highlights ai-section">
+      <section id="strategy" className="ai-highlights ai-section">
         <p className="ai-label">The strategy &amp; execution</p>
         <div className="ai-highlight-list">
           {frameworks.map((framework) => (
@@ -85,9 +95,9 @@ export default function PuraUtzCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-results ai-section"><p className="ai-label">The results &amp; performance metrics</p><div className="pura-table-wrap"><table><thead><tr><th>Metric</th><th>Before Optimization</th><th>After Optimization</th><th>Net Impact</th></tr></thead><tbody><tr><td>Monthly Organic Traffic</td><td>~2,500 Unique Visitors</td><td>~11,250 Unique Visitors</td><td>+350% Growth</td></tr><tr><td>Total Online Store Revenue</td><td>Previous Portfolio Baseline</td><td>2x Previous Baseline</td><td>+200% YOY Growth</td></tr><tr><td>Meta Blended ROAS</td><td>&lt;1.1x (Negative ROI)</td><td>3.5x Sustained ROAS</td><td>Profitable Scale</td></tr><tr><td>E-Commerce Conversion Rate</td><td>1.8%</td><td>2.9%</td><td>+1.1% Increase</td></tr><tr><td>Cart Abandonment Rate</td><td>68%</td><td>53%</td><td>15% Recovery Rate</td></tr></tbody></table></div></section>
+      <section id="results" className="ai-results ai-section"><p className="ai-label">The results &amp; performance metrics</p><div className="pura-table-wrap"><table><thead><tr><th>Metric</th><th>Before Optimization</th><th>After Optimization</th><th>Net Impact</th></tr></thead><tbody><tr><td>Monthly Organic Traffic</td><td>~2,500 Unique Visitors</td><td>~11,250 Unique Visitors</td><td>+350% Growth</td></tr><tr><td>Total Online Store Revenue</td><td>Previous Portfolio Baseline</td><td>2x Previous Baseline</td><td>+200% YOY Growth</td></tr><tr><td>Meta Blended ROAS</td><td>&lt;1.1x (Negative ROI)</td><td>3.5x Sustained ROAS</td><td>Profitable Scale</td></tr><tr><td>E-Commerce Conversion Rate</td><td>1.8%</td><td>2.9%</td><td>+1.1% Increase</td></tr><tr><td>Cart Abandonment Rate</td><td>68%</td><td>53%</td><td>15% Recovery Rate</td></tr></tbody></table></div></section>
 
-      <section className="ai-section pura-longform"><p className="ai-label">Key takeaways</p><div className="ai-copy"><ol><li><strong>Google Images as a Revenue Driver:</strong> Within months of executing the mass alt-tagging framework, over 22% of organic conversions originated directly from Google Image search results for long-tail beadwork queries.</li><li><strong>Lean Team Longevity:</strong> By handling everything from email flows and ad scaling to backend technical SEO and layout administration under a single growth role, the 1–2 person founding team was completely freed from digital operations, allowing them to focus entirely on expanding their artisan network.</li></ol></div></section>
+      <section id="takeaways" className="ai-section pura-longform"><p className="ai-label">Key takeaways</p><div className="ai-copy"><ol><li><strong>Google Images as a Revenue Driver:</strong> Within months of executing the mass alt-tagging framework, over 22% of organic conversions originated directly from Google Image search results for long-tail beadwork queries.</li><li><strong>Lean Team Longevity:</strong> By handling everything from email flows and ad scaling to backend technical SEO and layout administration under a single growth role, the 1–2 person founding team was completely freed from digital operations, allowing them to focus entirely on expanding their artisan network.</li></ol></div></section>
 
       <section className="ai-section pura-tools"><p className="ai-label">Tools used</p><div className="ai-copy"><ul><li><strong>E-Commerce Platform:</strong> Shopify (Liquid Theme Framework)</li><li><strong>SEO Platforms:</strong> SEMrush, Ahrefs, Screaming Frog SEO Spider</li><li><strong>Paid Media &amp; Tracking:</strong> Meta Ads Manager, Google Ads (PMax), GA4, Google Search Console</li><li><strong>Creative Production:</strong> Canva</li></ul></div></section>
 

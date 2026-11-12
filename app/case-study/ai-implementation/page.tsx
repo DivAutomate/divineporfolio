@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { CaseStudyHeader } from '@/components/case-study-header'
+import { CaseStudyNav } from '@/components/case-study-nav'
 import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ZoomableFigure } from '@/components/zoomable-figure'
 
 export const metadata: Metadata = {
   title: 'AI Implementation Case Study',
@@ -16,6 +18,15 @@ export default function AIImplementationCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
+      <CaseStudyNav
+        sections={[
+          { id: 'overview', label: 'Summary' },
+          { id: 'problem', label: 'Problem' },
+          { id: 'build', label: 'How it works' },
+          { id: 'decisions', label: 'Key decisions' },
+          { id: 'results', label: 'Results' },
+        ]}
+      />
       <main id="main-content" className="ai-case-study">
 
       <header className="ai-case-hero">
@@ -24,7 +35,7 @@ export default function AIImplementationCaseStudy() {
         <p className="ai-lead">I built a set of n8n workflows that find property deals, score them, email brokers, and check title documents. It cut document review time by 80%.</p>
       </header>
 
-      <section className="ai-summary ai-section">
+      <section id="overview" className="ai-summary ai-section">
         <p className="ai-label">Summary</p>
         <div>
           <p>Finding property deals in Lagos, Nigeria is hard. Listings are scattered, brokers are slow to reply, and fake titles are a real risk.</p>
@@ -32,7 +43,7 @@ export default function AIImplementationCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-friction ai-section">
+      <section id="problem" className="ai-friction ai-section">
         <p className="ai-label">The problem</p>
         <div className="ai-friction-grid">
           <article><b>01</b><h2>Messy data</h2><p>Deals were found by copying listings from cluttered property sites by hand. The result was messy, inconsistent spreadsheets.</p></article>
@@ -41,11 +52,11 @@ export default function AIImplementationCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-architecture ai-section">
+      <section id="build" className="ai-architecture ai-section">
         <div className="ai-section-intro"><p className="ai-label">How it&apos;s built</p><p>I split the work into two separate workflows. This keeps API limits in check, handles broker replies that come days later, and keeps AI costs down.</p></div>
         <div className="ai-workflow-gallery">
-          <figure><img src={imageA} alt="n8n workflow for finding properties, screening them, and emailing brokers" loading="lazy" decoding="async" /><figcaption>Workflow A · Find, screen, and contact brokers</figcaption></figure>
-          <figure><img src={imageB} alt="n8n workflow for checking title documents with AI" loading="lazy" decoding="async" /><figcaption>Workflow B · Check documents and flag legal risks</figcaption></figure>
+          <ZoomableFigure src={imageA} alt="n8n workflow for finding properties, screening them, and emailing brokers" caption={<>Workflow A · Find, screen, and contact brokers</>} />
+          <ZoomableFigure src={imageB} alt="n8n workflow for checking title documents with AI" caption={<>Workflow B · Check documents and flag legal risks</>} />
         </div>
         <div className="ai-stack"><p className="ai-label">Tools used</p><ul>
           <li><strong>Workflow engine</strong><span>n8n</span></li>
@@ -57,7 +68,7 @@ export default function AIImplementationCaseStudy() {
         </ul></div>
       </section>
 
-      <section className="ai-highlights ai-section">
+      <section id="decisions" className="ai-highlights ai-section">
         <p className="ai-label">Key decisions</p>
         <div className="ai-highlight-list">
           <article><span>01</span><div><h2>Two AI agents, each with one job</h2><p>Sending raw listings to an expensive model wastes money. So I split the work in two:</p><ul>
@@ -69,7 +80,7 @@ export default function AIImplementationCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-results ai-section"><p className="ai-label">Results</p><div className="ai-metrics">
+      <section id="results" className="ai-results ai-section"><p className="ai-label">Results</p><div className="ai-metrics">
         <div><strong>80%</strong><span>Less review time</span><p>Reviewing title deeds, survey maps, and contracts now takes a fraction of the time.</p></div>
         <div><strong>95%</strong><span>Clean data</span><p>Cleanup scripts catch incomplete or badly formatted listings before they reach the AI.</p></div>
         <div><strong>100+</strong><span>Listings handled</span><p>Paging and rate-limit controls let it handle hundreds of listings at once.</p></div>

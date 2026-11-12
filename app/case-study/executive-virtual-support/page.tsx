@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { CaseStudyHeader } from '@/components/case-study-header'
+import { CaseStudyNav } from '@/components/case-study-nav'
 import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ZoomableFigure } from '@/components/zoomable-figure'
 
 export const metadata: Metadata = {
   title: 'Executive & Virtual Support Case Study',
@@ -13,6 +15,16 @@ export default function ExecutiveVirtualSupportCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
+      <CaseStudyNav
+        sections={[
+          { id: 'overview', label: 'At a glance' },
+          { id: 'situation', label: 'Situation' },
+          { id: 'friction', label: 'Friction' },
+          { id: 'framework', label: 'Framework' },
+          { id: 'results', label: 'Outcome' },
+          { id: 'sample-work', label: 'Sample work' },
+        ]}
+      />
       <main id="main-content" className="ai-case-study support-case-study">
 
       <header className="ai-case-hero">
@@ -21,7 +33,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         <p className="ai-lead">A structured Executive &amp; Personal Assistant framework for a General Manager &amp; Business Head managing procurement, FMCG accounts, plant operations, travel, and financial priorities at Prima Corporation Ltd.</p>
       </header>
 
-      <section className="ai-summary ai-section">
+      <section id="overview" className="ai-summary ai-section">
         <p className="ai-label">At a glance</p>
         <div>
           <p><strong>My role</strong> — Executive &amp; Personal Assistant to the General Manager &amp; Business Head, managing the information, schedules, and follow-through behind high-value decisions.</p>
@@ -30,7 +42,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-section">
+      <section id="situation" className="ai-section">
         <p className="ai-label">The situation</p>
         <div className="ai-copy">
           <p>The Executive managed a high-volume operating environment: more than 300 complex B2B emails each day, factory escalations, procurement decisions, FMCG contracts, travel requirements, and financial reporting.</p>
@@ -38,7 +50,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-friction ai-section">
+      <section id="friction" className="ai-friction ai-section">
         <p className="ai-label">What was getting in the way</p>
         <div className="ai-copy">
           <ul>
@@ -50,7 +62,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-highlights ai-section">
+      <section id="framework" className="ai-highlights ai-section">
         <p className="ai-label">How I supported the work</p>
         <div className="ai-copy"><p>The framework connected four support functions: inbox control, schedule protection, travel, personal administration, and executive reporting.</p></div>
         <div className="ai-highlight-list">
@@ -61,7 +73,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-results ai-section">
+      <section id="results" className="ai-results ai-section">
         <p className="ai-label">The outcome</p>
         <div className="ai-copy">
           <p>The framework gave The Executive a reliable operating layer: less time sorting information, more protected strategy time, and faster access to the numbers and decisions that kept the business moving.</p>
@@ -81,19 +93,29 @@ export default function ExecutiveVirtualSupportCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-section support-sample-work">
+      <section id="sample-work" className="ai-section support-sample-work">
         <p className="ai-label">Sample work</p>
         <div className="ai-workflow-gallery">
-          <figure>
-            <img src="/images/sample-work/inbox-triage.webp" alt="Before and after view of an inbox: 47,886 unread messages on the left, and the same inbox rebuilt with labels, filters, and colour-coded tags leaving 24 active messages" loading="lazy" decoding="async" width={1600} height={873} />
-          </figure>
-          <figure>
-            <img src="/images/sample-work/calendar-control.webp" alt="Google Calendar week view with daily briefings, deep work blocks, meeting preparation, reviews, and protected personal time" loading="lazy" decoding="async" width={1400} height={787} />
-          </figure>
+          <ZoomableFigure
+            src="/images/sample-work/inbox-triage.webp"
+            alt="Before and after view of an inbox: 47,886 unread messages on the left, and the same inbox rebuilt with labels, filters, and colour-coded tags leaving 24 active messages"
+            width={1600}
+            height={873}
+          />
+          <ZoomableFigure
+            src="/images/sample-work/calendar-control.webp"
+            alt="Google Calendar week view with daily briefings, deep work blocks, meeting preparation, reviews, and protected personal time"
+            width={1400}
+            height={787}
+          />
         </div>
-        <figure className="support-sample-brief">
-          <img src="/images/sample-work/executive-brief.webp" alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary" loading="lazy" decoding="async" width={800} height={1000} />
-        </figure>
+        <ZoomableFigure
+          className="support-sample-brief"
+          src="/images/sample-work/executive-brief.webp"
+          alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary"
+          width={800}
+          height={1000}
+        />
       </section>
 
       <CtaSection kicker="Need dependable support?" title={<>Let&apos;s make room for<br /><em>the work that matters.</em></>} />

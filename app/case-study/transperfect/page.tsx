@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { CaseStudyHeader } from '@/components/case-study-header'
+import { CaseStudyNav } from '@/components/case-study-nav'
 import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ZoomableFigure } from '@/components/zoomable-figure'
 
 export const metadata: Metadata = {
   title: 'Project Management Case Study',
@@ -13,6 +15,16 @@ export default function TransPerfectCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
+      <CaseStudyNav
+        sections={[
+          { id: 'overview', label: 'At a glance' },
+          { id: 'situation', label: 'Situation' },
+          { id: 'friction', label: 'Friction' },
+          { id: 'system', label: 'The system' },
+          { id: 'routine', label: 'Routine' },
+          { id: 'results', label: 'Results' },
+        ]}
+      />
       <main id="main-content" className="ai-case-study transperfect-case-study">
 
       <header className="ai-case-hero">
@@ -21,7 +33,7 @@ export default function TransPerfectCaseStudy() {
         <p className="ai-lead">I built one place to track 100+ translation projects across three timezones. It kept us on budget and helped us deliver 98% of projects on time.</p>
       </header>
 
-      <section className="ai-summary ai-section">
+      <section id="overview" className="ai-summary ai-section">
         <p className="ai-label">Project at a glance</p>
         <div>
           <p><strong>My role</strong> — I ran translation projects from start to finish. That meant picking vendors, managing timelines, and keeping clients informed.</p>
@@ -30,7 +42,7 @@ export default function TransPerfectCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-section">
+      <section id="situation" className="ai-section">
         <p className="ai-label">The situation</p>
         <div className="ai-copy">
           <p>TransPerfect is the world&apos;s largest language services company, with more than 140 offices. Deadlines are tight, and the teams doing the work are spread across CET, MDT, and IST.</p>
@@ -38,7 +50,7 @@ export default function TransPerfectCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-friction ai-section">
+      <section id="friction" className="ai-friction ai-section">
         <p className="ai-label">What was slowing us down</p>
         <div className="ai-copy">
           <p>Working across continents created the same problems every day:</p>
@@ -51,7 +63,7 @@ export default function TransPerfectCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-highlights ai-section">
+      <section id="system" className="ai-highlights ai-section">
         <p className="ai-label">How I built the Trello system</p>
         <div className="ai-copy"><p>I built a Trello workspace that tied every translation milestone to the client&apos;s launch date.</p></div>
         <div className="ai-highlight-list">
@@ -60,13 +72,17 @@ export default function TransPerfectCaseStudy() {
           <article><span>03</span><div><h2>Problems flagged in minutes, not hours</h2><p><strong>What I did:</strong> I added a &quot;Translation Blocker&quot; trigger. When a vendor flagged a missing file or unclear context, Trello created an urgent task for the account lead right away.</p><p><strong>What changed:</strong> Stuck jobs no longer went unnoticed. We spent less time chasing people and fixed issues much faster.</p></div></article>
           <article><span>04</span><div><h2>Onboarding new hires faster</h2><p><strong>What I did:</strong> I turned our internal processes and account rules into Trello templates. Each one came with training videos and checklists.</p><p><strong>What changed:</strong> New hires learned faster, and onboarding time dropped by 40%.</p></div></article>
         </div>
-        <figure className="transperfect-board">
-          <img src="/transperfect-trello-board.png" alt="Trello board titled Global Localization Pipeline and Timezone Sync, with columns for intake, production, a four-stage QA pipeline, timezone handoffs, and escalations" loading="lazy" decoding="async" width={2419} height={1512} />
-          <figcaption>The live board · Intake, production, QA, timezone handoffs, and escalations</figcaption>
-        </figure>
+        <ZoomableFigure
+          className="transperfect-board"
+          src="/transperfect-trello-board.png"
+          alt="Trello board titled Global Localization Pipeline and Timezone Sync, with columns for intake, production, a four-stage QA pipeline, timezone handoffs, and escalations"
+          caption={<>The live board · Intake, production, QA, timezone handoffs, and escalations</>}
+          width={2419}
+          height={1512}
+        />
       </section>
 
-      <section className="ai-section">
+      <section id="routine" className="ai-section">
         <p className="ai-label">How I kept it running</p>
         <div className="ai-copy">
           <p>A system only works if someone keeps it clean. So I set a regular routine inside Trello.</p>
@@ -82,7 +98,7 @@ export default function TransPerfectCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-results ai-section">
+      <section id="results" className="ai-results ai-section">
         <p className="ai-label">The results</p>
         <div className="ai-copy">
           <p>Here is what changed once the whole team worked from this system:</p>
