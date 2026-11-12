@@ -65,6 +65,14 @@ export default function ContactPage() {
 
             <aside className="contact-aside" aria-label="Other ways to reach me">
               <div className="contact-card">
+                <p className="label">Prefer to talk?</p>
+                <p>Pick a time and we&apos;ll talk through what you need. 30 minutes, no pressure.</p>
+                <a className="btn btn-primary contact-book-link" href={site.booking} target="_blank" rel="noreferrer">
+                  Book a 30-min call <ArrowUpRight size={16} aria-hidden="true" />
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </div>
+              <div className="contact-card">
                 <p className="label">Prefer email?</p>
                 <a className="contact-email" href={`mailto:${site.email}`}>{site.email}</a>
                 <button type="button" className="copy-button" onClick={copyEmail} aria-live="polite">

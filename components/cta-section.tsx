@@ -10,16 +10,17 @@ type CtaSectionProps = {
   secondary?: { label: string; href: string }
 }
 
-export function CtaSection({ kicker, title, secondary = { label: 'About me', href: '/about' } }: CtaSectionProps) {
+export function CtaSection({ kicker, title, secondary = { label: 'Send a message', href: '/contact' } }: CtaSectionProps) {
   return (
     <section className="cta" aria-labelledby="cta-title">
       <div className="container">
         <p className="label cta-kicker">{kicker}</p>
         <h2 id="cta-title">{title}</h2>
         <div className="btn-row">
-          <Link className="btn btn-accent" href="/contact">
-            Contact me <ArrowUpRight size={16} aria-hidden="true" />
-          </Link>
+          <a className="btn btn-accent" href={site.booking} target="_blank" rel="noreferrer">
+            Book a 30-min call <ArrowUpRight size={16} aria-hidden="true" />
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
           <Link className="btn btn-ghost-light" href={secondary.href}>
             {secondary.label} <ArrowUpRight size={16} aria-hidden="true" />
           </Link>
