@@ -11,6 +11,7 @@
   --accent-hover: #e2fa94;
   --accent-ink: #142009;
   --brand: #4a7410;
+  --danger: #a8401c;
   --dark: #171817;
   --dark-muted: #a7aaa0;
   --dark-line: #33352f;
@@ -315,16 +316,34 @@ ul, ol { margin: 0; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--foreground); }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #74766f; }
 .contact-form .btn { justify-self: start; }
+.contact-form .btn:disabled { opacity: 0.65; cursor: progress; }
 .contact-form .form-hint { margin-top: -8px; max-width: 440px; color: var(--muted); font-size: 14px; }
-.form-note {
-  padding: 16px 18px;
-  border-left: 3px solid var(--brand);
+.form-honeypot { display: none; }
+.field-error { color: var(--danger); font-size: 13px; line-height: 1.5; }
+.form-error {
+  margin-top: -8px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--danger);
   border-radius: 0 6px 6px 0;
   background: var(--background);
+  color: var(--danger);
   font-size: 14px;
 }
-.form-note a { text-decoration: underline; text-underline-offset: 2px; }
-.form-note a:hover { color: var(--brand); }
+.form-error a { text-decoration: underline; text-underline-offset: 2px; }
+.form-success { align-content: start; gap: 12px; }
+.form-success-title { margin-top: 2px; font-size: clamp(24px, 3vw, 32px); font-weight: 500; line-height: 1.1; letter-spacing: -0.03em; }
+.form-success-copy { max-width: 420px; color: var(--muted); font-size: 15px; }
+.form-success-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 10px; }
+.form-success-actions .btn { justify-self: auto; }
+.form-success-actions .text-link {
+  padding: 0 0 2px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: none;
+  color: var(--foreground);
+  font-family: inherit;
+  cursor: pointer;
+}
 .contact-steps { display: grid; gap: 8px; padding-left: 20px; list-style: decimal; color: var(--muted); font-size: 15px; }
 .contact-aside { display: grid; gap: 0; }
 .contact-card { display: grid; gap: 10px; padding-block: 22px; border-top: 1px solid var(--line); }
