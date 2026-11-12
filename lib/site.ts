@@ -3,7 +3,7 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://divinejude.v
 export const site = {
   name: 'Divine Jude',
   email: 'judedivine9@gmail.com',
-  booking: 'https://calendly.com/judedivine9/30min',
+  booking: 'https://calendly.com/divinejude/30min',
   location: 'Nigeria · Working remotely worldwide',
   portrait: '/images/portrait.webp',
   socials: [

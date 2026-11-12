@@ -68,7 +68,7 @@ export default function ContactPage() {
                 <p className="label">Prefer to talk?</p>
                 <p>Pick a time and we&apos;ll talk through what you need. 30 minutes, no pressure.</p>
                 <a className="btn btn-primary contact-book-link" href={site.booking} target="_blank" rel="noreferrer">
-                  Book a 30-min call <ArrowUpRight size={16} aria-hidden="true" />
+                  Book an intro call <ArrowUpRight size={16} aria-hidden="true" />
                   <span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </div>
