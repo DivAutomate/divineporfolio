@@ -1,12 +1,14 @@
 import { ImageResponse } from 'next/og'
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
+import { siteUrl } from '@/lib/site'
 
 export const alt = 'Divine Jude — work off your plate, systems in place'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default async function OpengraphImage() {
+  const domain = siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')
   const [manropeMedium, manropeBold, serifItalic] = await Promise.all([
     readFile(join(process.cwd(), 'app/fonts/og/manrope-500.woff')),
     readFile(join(process.cwd(), 'app/fonts/og/manrope-800.woff')),
@@ -75,7 +77,7 @@ export default async function OpengraphImage() {
           }}
         >
           <div style={{ display: 'flex', fontSize: 22, fontWeight: 600, letterSpacing: -0.4 }}>
-            divinejude.vercel.app
+            {domain}
           </div>
           <div
             style={{
