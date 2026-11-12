@@ -53,25 +53,6 @@ export default function Page() {
           </ul>
         </section>
 
-        <section className="section container" id="pricing" aria-labelledby="pricing-title">
-          <div className="section-head">
-            <h2 id="pricing-title">Ways to <em>work together</em></h2>
-            <p className="label">Flat monthly retainers</p>
-          </div>
-          <ul className="pricing-grid">
-            {engagements.map((engagement) => (
-              <li className="pricing-card" key={engagement.name}>
-                <p className="label">{engagement.name}</p>
-                <p className="pricing-price">
-                  <strong>{engagement.price}</strong>
-                  <span>{engagement.cadence}</span>
-                </p>
-                <p className="pricing-scope">{engagement.scope}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
         <section className="section container" id="work" aria-labelledby="work-title">
           <div className="section-head">
             <h2 id="work-title">Selected <em>work</em></h2>
@@ -95,6 +76,25 @@ export default function Page() {
               <Link className="text-link" href="/about">More about me <ArrowUpRight size={15} aria-hidden="true" /></Link>
             </div>
           </div>
+        </section>
+
+        <section className="section container" id="pricing" aria-labelledby="pricing-title">
+          <div className="section-head">
+            <h2 id="pricing-title">Ways to <em>work together</em></h2>
+            <p className="label">Flat monthly retainers</p>
+          </div>
+          <ul className="pricing-grid">
+            {engagements.map((engagement) => (
+              <li className="pricing-card" key={engagement.name}>
+                <p className="label">{engagement.name}</p>
+                <p className="pricing-price">
+                  <strong>{engagement.price}</strong>
+                  <span>{engagement.cadence}</span>
+                </p>
+                <p className="pricing-scope">{engagement.scope}</p>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <CtaSection kicker="Ready when you are" title={<>Let&apos;s take work<br /><em>off your plate.</em></>} secondary={{ label: 'View portfolio', href: '/work' }} />
