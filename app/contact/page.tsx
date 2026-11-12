@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { ArrowUpRight, Check, Copy } from 'lucide-react'
-import { FormEvent, useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
+import { useState } from 'react'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteNav } from '@/components/site-nav'
 import { SocialLinks } from '@/components/social-links'
@@ -10,24 +11,12 @@ import { engagements, site } from '@/lib/site'
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
-  const [drafted, setDrafted] = useState(false)
+  const [state, handleSubmit, reset] = useForm(site.formspreeId)
 
   const copyEmail = async () => {
     await navigator.clipboard.writeText(site.email)
     setCopied(true)
     window.setTimeout(() => setCopied(false), 1800)
-  }
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const form = new FormData(event.currentTarget)
-    const name = String(form.get('name') || '')
-    const email = String(form.get('email') || '')
-    const message = String(form.get('message') || '')
-    const subject = encodeURIComponent(`Project enquiry from ${name}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-    setDrafted(true)
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`
   }
 
   return (
@@ -42,27 +31,59 @@ export default function ContactPage() {
 
         <section className="contact-section section-tight">
           <div className="container contact-layout">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <label>
-                <span className="label">Your name</span>
-                <input name="name" type="text" autoComplete="name" placeholder="Jane Smith" required />
-              </label>
-              <label>
-                <span className="label">Email address</span>
-                <input name="email" type="email" autoComplete="email" placeholder="jane@company.com" required />
-              </label>
-              <label>
-                <span className="label">What do you need help with?</span>
-                <textarea name="message" rows={5} placeholder="Inbox and calendar support, a project to coordinate, a lead list to build..." required />
-              </label>
-              <button className="btn btn-primary" type="submit">Open email draft <ArrowUpRight size={16} aria-hidden="true" /></button>
-              <p className="form-hint">This opens your email app with the message filled in. Nothing sends until you press send there.</p>
-              {drafted && (
-                <div className="form-note" role="status">
-                  <p><strong>Draft ready.</strong> Your email app should be open. If it isn&apos;t, send the same details to <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+            {state.succeeded ? (
+              <div className="contact-form form-success" role="status">
+                <p className="label">Message sent</p>
+                <p className="form-success-title">Thanks — I&apos;ve got it.</p>
+                <p className="form-success-copy">I reply within two working days. If you&apos;d rather talk it through, pick a slot and we&apos;ll go through it together.</p>
+                <div className="form-success-actions">
+                  <a className="btn btn-primary" href={site.booking} target="_blank" rel="noreferrer">
+                    Book an intro call <ArrowUpRight size={16} aria-hidden="true" />
+                    <span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                  <button className="text-link" type="button" onClick={reset}>Send another message</button>
                 </div>
-              )}
-            </form>
+              </div>
+            ) : (
+              <form
+                className="contact-form"
+                action={`https://formspree.io/f/${site.formspreeId}`}
+                method="POST"
+                onSubmit={handleSubmit}
+              >
+                <input type="hidden" name="subject" value="New project enquiry from {{ name }}" />
+                <div className="form-honeypot" aria-hidden="true">
+                  <label>
+                    <span>Leave this field empty</span>
+                    <input name="_gotcha" type="text" tabIndex={-1} autoComplete="off" />
+                  </label>
+                </div>
+                <label>
+                  <span className="label">Your name</span>
+                  <input name="name" type="text" autoComplete="name" placeholder="Jane Smith" required />
+                  <ValidationError className="field-error" prefix="Name" field="name" errors={state.errors} />
+                </label>
+                <label>
+                  <span className="label">Email address</span>
+                  <input name="email" type="email" autoComplete="email" placeholder="jane@company.com" required />
+                  <ValidationError className="field-error" prefix="Email" field="email" errors={state.errors} />
+                </label>
+                <label>
+                  <span className="label">What do you need help with?</span>
+                  <textarea name="message" rows={5} placeholder="Inbox and calendar support, a project to coordinate, a lead list to build..." required />
+                  <ValidationError className="field-error" prefix="Message" field="message" errors={state.errors} />
+                </label>
+                <button className="btn btn-primary" type="submit" disabled={state.submitting}>
+                  {state.submitting ? 'Sending…' : 'Send message'} <ArrowUpRight size={16} aria-hidden="true" />
+                </button>
+                <p className="form-hint">Goes straight to my inbox. I reply within two working days.</p>
+                {state.errors && (
+                  <div className="form-error" role="alert">
+                    <p>That didn&apos;t send. Try again in a moment, or email <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+                  </div>
+                )}
+              </form>
+            )}
 
             <aside className="contact-aside" aria-label="Other ways to reach me">
               <div className="contact-card">
