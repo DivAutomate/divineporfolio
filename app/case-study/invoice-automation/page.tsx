@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { CaseStudyHeader } from '@/components/case-study-header'
+import { CaseStudyNav } from '@/components/case-study-nav'
 import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ZoomableFigure } from '@/components/zoomable-figure'
 
 export const metadata: Metadata = {
   title: 'Invoice Automation Case Study',
@@ -15,6 +17,15 @@ export default function InvoiceAutomationCaseStudy() {
   return (
     <>
       <CaseStudyHeader />
+      <CaseStudyNav
+        sections={[
+          { id: 'overview', label: 'Summary' },
+          { id: 'problem', label: 'Problem' },
+          { id: 'build', label: 'How it works' },
+          { id: 'decisions', label: 'Key decisions' },
+          { id: 'results', label: 'Results' },
+        ]}
+      />
       <main id="main-content" className="ai-case-study invoice-case-study">
 
       <header className="ai-case-hero">
@@ -23,7 +34,7 @@ export default function InvoiceAutomationCaseStudy() {
         <p className="ai-lead">I built an n8n workflow that cut invoice processing from 40 minutes to under 10. Seven in ten invoices now go through without anyone touching them.</p>
       </header>
 
-      <section className="ai-summary ai-section">
+      <section id="overview" className="ai-summary ai-section">
         <p className="ai-label">Summary</p>
         <div>
           <p>Paying invoices by hand is slow and risky. Teams read scanned files, type the numbers into accounting software, chase managers for approval, and sometimes pay the same bill twice.</p>
@@ -31,7 +42,7 @@ export default function InvoiceAutomationCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-friction ai-section">
+      <section id="problem" className="ai-friction ai-section">
         <p className="ai-label">The problem</p>
         <div className="ai-friction-grid">
           <article><b>01</b><h2>Too much time</h2><p>Each invoice took about 40 minutes to check, match line by line, and get signed off.</p></article>
@@ -40,9 +51,15 @@ export default function InvoiceAutomationCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-architecture ai-section">
+      <section id="build" className="ai-architecture ai-section">
         <div className="ai-section-intro"><p className="ai-label">How it&apos;s built</p><p>Invoices move from intake to the accounting system in one flow. Errors are caught along the way, and the workflow pauses when a person needs to step in.</p></div>
-        <figure className="invoice-workflow"><img src={workflowImage} alt="n8n workflow for invoice intake, reading, checks, approvals, and accounting sync" decoding="async" fetchPriority="high" /><figcaption>Workflow · Intake, reading, checks, approvals, accounting sync, and audit log</figcaption></figure>
+        <ZoomableFigure
+          className="invoice-workflow"
+          src={workflowImage}
+          alt="n8n workflow for invoice intake, reading, checks, approvals, and accounting sync"
+          caption={<>Workflow · Intake, reading, checks, approvals, accounting sync, and audit log</>}
+          priority
+        />
         <div className="ai-stack"><p className="ai-label">Tools used</p><ul>
           <li><strong>Workflow engine</strong><span>n8n · Webhooks and error handling</span></li>
           <li><strong>Intake &amp; records</strong><span>Google Drive · Google Sheets</span></li>
@@ -52,7 +69,7 @@ export default function InvoiceAutomationCaseStudy() {
         </ul></div>
       </section>
 
-      <section className="ai-highlights ai-section">
+      <section id="decisions" className="ai-highlights ai-section">
         <p className="ai-label">Key decisions</p>
         <div className="ai-highlight-list">
           <article><span>01</span><div><h2>OCR and AI working together</h2><p>Template-based OCR breaks when the layout changes. So OCR reads the text first, then AI turns it into a fixed format. It pulls out the vendor name, total, tax ID, and due date, no matter what the invoice looks like.</p></div></article>
@@ -61,7 +78,7 @@ export default function InvoiceAutomationCaseStudy() {
         </div>
       </section>
 
-      <section className="ai-results ai-section"><p className="ai-label">Results</p><div className="ai-metrics">
+      <section id="results" className="ai-results ai-section"><p className="ai-label">Results</p><div className="ai-metrics">
         <div><strong>75%</strong><span>Faster processing</span><p>Each invoice went from 40 minutes of manual work to under 10.</p></div>
         <div><strong>70%</strong><span>No human needed</span><p>Clean, standard invoices go from inbox to books with no clicks.</p></div>
         <div><strong>89%</strong><span>Reading accuracy</span><p>Reliable results, even on poor scans and phone photos.</p></div>

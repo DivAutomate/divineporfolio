@@ -1,6 +1,8 @@
 import { CaseStudyHeader } from '@/components/case-study-header'
+import { CaseStudyNav } from '@/components/case-study-nav'
 import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ZoomableFigure } from '@/components/zoomable-figure'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -21,6 +23,16 @@ export default function CaseStudyPage() {
   return (
     <>
       <CaseStudyHeader />
+      <CaseStudyNav
+        sections={[
+          { id: 'overview', label: 'At a glance' },
+          { id: 'challenge', label: 'Challenge' },
+          { id: 'strategy', label: 'Approach' },
+          { id: 'campaign-1', label: 'Results' },
+          { id: 'playbook', label: 'Playbook' },
+          { id: 'sample-work', label: 'Sample work' },
+        ]}
+      />
       <main id="main-content" className="case-study-page windwire-case-study">
 
       <header className="windwire-hero">
@@ -105,9 +117,12 @@ export default function CaseStudyPage() {
 
       <section className="windwire-media section-shell" id="sample-work">
         <p className="windwire-label">Sample work</p>
-        <figure>
-          <img src="/images/sample-work/instantly-campaigns.webp" alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns" loading="lazy" decoding="async" width={1600} height={1120} />
-        </figure>
+        <ZoomableFigure
+          src="/images/sample-work/instantly-campaigns.webp"
+          alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns"
+          width={1600}
+          height={1120}
+        />
       </section>
 
       <CtaSection kicker="Need more qualified leads?" title={<>Let&apos;s build your <em>next pipeline.</em></>} />

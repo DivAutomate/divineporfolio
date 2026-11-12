@@ -545,6 +545,130 @@ main + .site-footer .container { border-top-color: transparent; }
 .windwire-bottom-line h2 { max-width: 860px; margin-bottom: 18px; }
 .windwire-bottom-line > p:not(.windwire-label) { color: var(--muted); }
 
+/* ---------- Case study sub-nav ---------- */
+.cs-subnav {
+  position: sticky;
+  top: 64px;
+  z-index: 40;
+  background: rgb(244 243 239 / 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.cs-subnav-inner { display: flex; align-items: center; gap: 24px; }
+.cs-subnav-label {
+  flex: none;
+  margin: 0;
+  font: 500 11px/1.5 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cs-subnav ul {
+  display: flex;
+  min-width: 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.cs-subnav ul::-webkit-scrollbar { display: none; }
+.cs-subnav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.cs-subnav a:hover { color: var(--foreground); }
+.cs-subnav a[aria-current='true'] { color: var(--foreground); border-bottom-color: var(--brand); }
+.ai-case-study section[id],
+.mahoney-case-study section[id],
+.windwire-case-study section[id] { scroll-margin-top: 40px; }
+
+@media (max-width: 768px) {
+  .cs-subnav-inner { gap: 0; }
+  .cs-subnav-label { display: none; }
+  .cs-subnav a { padding: 0 10px; font-size: 12.5px; }
+}
+
+/* ---------- Tap-to-zoom figures ---------- */
+.zoom-trigger {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: inherit;
+  cursor: zoom-in;
+}
+.zoom-trigger:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.zoom-trigger img { display: block; width: 100%; height: auto; }
+.zoom-hint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgb(23 24 23 / 0.78);
+  color: #fff;
+  font: 500 11px/1.4 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  pointer-events: none;
+}
+.zoom-trigger:hover .zoom-hint,
+.zoom-trigger:focus-visible .zoom-hint { opacity: 1; }
+@media (hover: none) { .zoom-hint { opacity: 1; } }
+
+.zoom-dialog {
+  max-width: 94vw;
+  max-height: 92vh;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  overflow: visible;
+}
+.zoom-dialog::backdrop { background: rgb(12 12 10 / 0.86); }
+.zoom-dialog-inner { position: relative; }
+.zoom-dialog .zoom-dialog-inner img {
+  display: block;
+  width: auto;
+  max-width: 94vw;
+  max-height: 88vh;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+}
+.zoom-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 8px 24px rgb(23 24 23 / 0.18);
+  cursor: pointer;
+}
+.zoom-close:hover { background: var(--accent); color: var(--accent-ink); }
+html:has(.zoom-dialog[open]) { overflow: hidden; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .services-grid, .services-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
