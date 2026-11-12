@@ -39,7 +39,7 @@ export default function ContactPage() {
           <p className="lead">Tell me a little about your business and what you&apos;d like to hand off. I&apos;ll reply within two working days.</p>
         </header>
 
-        <section className="contact-section">
+        <section className="contact-section section-tight">
           <div className="container contact-layout">
             <form className="contact-form" onSubmit={handleSubmit}>
               <label>
