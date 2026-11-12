@@ -105,6 +105,27 @@ export const services = [
   { title: 'Workflow automation', text: 'Practical automations for repetitive tasks, used only where they genuinely save time.' },
 ]
 
+export const engagements = [
+  {
+    name: 'Part-time',
+    price: '$850',
+    cadence: '/month',
+    scope: 'About 20 hours a week. Inbox, calendar, research, project tracking and reporting.',
+  },
+  {
+    name: 'Full-time',
+    price: '$1,500',
+    cadence: '/month',
+    scope: 'About 35–40 hours a week. The same work, with full attention and same-day turnaround.',
+  },
+  {
+    name: 'One-off projects',
+    price: 'Quoted',
+    cadence: 'per project',
+    scope: 'Automations, data cleanups and builds, scoped and priced before we start.',
+  },
+]
+
 export const stats = [
   { value: '98%', label: 'Projects delivered on time' },
   { value: '231', label: 'Qualified leads in 12 weeks' },

@@ -4,7 +4,7 @@ import { CtaSection } from '@/components/cta-section'
 import { ProjectCard } from '@/components/project-card'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteNav } from '@/components/site-nav'
-import { projects, services, site, stats } from '@/lib/site'
+import { engagements, projects, services, site, stats } from '@/lib/site'
 
 export default function Page() {
   return (
@@ -48,6 +48,25 @@ export default function Page() {
                 <span className="label">{String(index + 1).padStart(2, '0')}</span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="section container" id="pricing" aria-labelledby="pricing-title">
+          <div className="section-head">
+            <h2 id="pricing-title">Ways to <em>work together</em></h2>
+            <p className="label">Flat monthly retainers</p>
+          </div>
+          <ul className="pricing-grid">
+            {engagements.map((engagement) => (
+              <li className="pricing-card" key={engagement.name}>
+                <p className="label">{engagement.name}</p>
+                <p className="pricing-price">
+                  <strong>{engagement.price}</strong>
+                  <span>{engagement.cadence}</span>
+                </p>
+                <p className="pricing-scope">{engagement.scope}</p>
               </li>
             ))}
           </ul>
