@@ -1,11 +1,12 @@
 'use client'
 
+import Link from 'next/link'
 import { ArrowUpRight, Check, Copy } from 'lucide-react'
 import { FormEvent, useState } from 'react'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteNav } from '@/components/site-nav'
 import { SocialLinks } from '@/components/social-links'
-import { site } from '@/lib/site'
+import { engagements, site } from '@/lib/site'
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
@@ -64,6 +65,20 @@ export default function ContactPage() {
             </form>
 
             <aside className="contact-aside" aria-label="Other ways to reach me">
+              <div className="contact-card">
+                <p className="label">Monthly retainers</p>
+                <ul className="contact-rates">
+                  {engagements
+                    .filter((engagement) => engagement.cadence === '/month')
+                    .map((engagement) => (
+                      <li key={engagement.name}>
+                        <span>{engagement.name}</span>
+                        <strong>{engagement.price}{engagement.cadence}</strong>
+                      </li>
+                    ))}
+                </ul>
+                <Link className="text-link" href="/#pricing">See what&apos;s included <ArrowUpRight size={14} aria-hidden="true" /></Link>
+              </div>
               <div className="contact-card">
                 <p className="label">Prefer to talk?</p>
                 <p>Pick a time and we&apos;ll talk through what you need. 30 minutes, no pressure.</p>

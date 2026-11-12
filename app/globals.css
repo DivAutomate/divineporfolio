@@ -225,6 +225,22 @@ ul, ol { margin: 0; }
 .service h3 { margin: 36px 0 10px; font-size: 20px; letter-spacing: -0.025em; }
 .service p { color: var(--muted); font-size: 15px; }
 
+/* ---------- Engagements ---------- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  padding: 0;
+  list-style: none;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.pricing-card { display: flex; flex-direction: column; gap: 10px; padding: clamp(22px, 2.6vw, 32px); background: var(--background); }
+.pricing-price { display: flex; align-items: baseline; gap: 7px; margin-top: 18px; }
+.pricing-price strong { font-size: clamp(28px, 3.2vw, 38px); font-weight: 500; line-height: 1; letter-spacing: -0.05em; }
+.pricing-price span { color: var(--muted); font-size: 14px; }
+.pricing-scope { color: var(--muted); font-size: 15px; }
+
 /* ---------- Project cards ---------- */
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(48px, 6vw, 72px) clamp(24px, 3vw, 40px); }
 .project-card.is-featured { grid-column: 1 / -1; }
@@ -315,6 +331,11 @@ ul, ol { margin: 0; }
 .contact-card:first-child { padding-top: 0; border-top: 0; }
 .contact-card p:not(.label) { color: var(--muted); font-size: 15px; }
 .contact-card .contact-book-link { justify-self: start; margin-top: 6px; }
+.contact-rates { display: grid; gap: 8px; padding: 0; list-style: none; }
+.contact-rates li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; font-size: 15px; }
+.contact-rates span { color: var(--muted); }
+.contact-rates strong { font-weight: 600; white-space: nowrap; }
+.contact-card .text-link { justify-self: start; margin-top: 4px; }
 .contact-email { font-size: clamp(18px, 2vw, 22px); font-weight: 600; letter-spacing: -0.02em; overflow-wrap: anywhere; }
 .contact-email:hover { color: var(--brand); }
 .copy-button {
@@ -668,7 +689,7 @@ html:has(.zoom-dialog[open]) { overflow: hidden; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
-  .services-grid, .services-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-grid, .services-grid.three, .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-card.is-featured .project-link { display: flex; }
   .windwire-metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ai-friction-grid, .windwire-steps { grid-template-columns: 1fr; }
@@ -724,7 +745,7 @@ html:has(.zoom-dialog[open]) { overflow: hidden; }
 }
 
 @media (max-width: 520px) {
-  .services-grid, .services-grid.three, .ai-metrics-grid { grid-template-columns: 1fr; }
+  .services-grid, .services-grid.three, .ai-metrics-grid, .pricing-grid { grid-template-columns: 1fr; }
   .btn-row .btn { flex: 1 1 100%; }
   .contact-form .btn { justify-self: stretch; }
 }
