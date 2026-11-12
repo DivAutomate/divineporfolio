@@ -71,7 +71,7 @@ export default function AboutPage() {
               <img src={site.portrait} alt="Divine Jude smiling in a black shirt" width={300} height={300} />
             </div>
             <div className="about-split-copy">
-              <p>I&apos;ve spent the last few years inside other people&apos;s busy weeks. I&apos;ve run executive inboxes and calendars, coordinated global projects across timezones, researched and contacted thousands of prospects, and grown online stores through better SEO and ads.</p>
+              <p>I&apos;ve spent the last 5 years inside other people&apos;s busy weeks. I&apos;ve run executive inboxes and calendars, coordinated global projects across timezones, researched and contacted thousands of prospects, and grown online stores through better SEO and ads.</p>
               <p>The common thread is organization. I like turning scattered tasks into clear routines, keeping information tidy, and making sure nothing slips through the cracks. When a task repeats often enough, I&apos;ll set up a simple automation, but only when it genuinely saves time.</p>
               <p>I work remotely from Nigeria with clients around the world, and I&apos;m comfortable adapting to your tools, your timezone, and the way your team already works.</p>
             </div>
