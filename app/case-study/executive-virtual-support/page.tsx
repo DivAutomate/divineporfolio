@@ -116,6 +116,35 @@ export default function ExecutiveVirtualSupportCaseStudy() {
           width={800}
           height={1000}
         />
+        <p className="ai-label">Travel &amp; personal logistics</p>
+        <div className="ai-workflow-gallery">
+          <ZoomableFigure
+            src="/images/sample-work/travel-reservation-request.webp"
+            alt="Draft email to a hotel concierge requesting early check-in, adjacent rooms with a working desk, kid meal kits, and a play kit for a family stay in Singapore"
+            width={1091}
+            height={593}
+          />
+          <ZoomableFigure
+            src="/images/sample-work/travel-flight-options.webp"
+            alt="Draft email comparing three business class flight options for a conference trip to Singapore, with notes on arrival times, children, and family comfort"
+            width={1068}
+            height={602}
+          />
+        </div>
+        <div className="ai-workflow-gallery">
+          <ZoomableFigure
+            src="/images/sample-work/travel-itinerary.webp"
+            alt="Google Sheets travel plan for a four day Singapore conference trip, with time blocks for work, kids activities, dinners, and meetings"
+            width={1312}
+            height={640}
+          />
+          <ZoomableFigure
+            src="/images/sample-work/travel-checklist.webp"
+            alt="Google Sheets trip checklist with ten items covering intake, flights, hotel requests, transfers, shared calendar, contingency plans, and final confirmations"
+            width={756}
+            height={647}
+          />
+        </div>
       </section>
 
       <CtaSection kicker="Need dependable support?" title={<>Let&apos;s make room for<br /><em>the work that matters.</em></>} />
