@@ -21,9 +21,9 @@ export default function MahoneyEnvironmentalCaseStudy() {
           { id: 'challenge', label: 'Challenge' },
           { id: 'build', label: 'What I built' },
           { id: 'implementation', label: 'How I did it' },
-          { id: 'sample-work', label: 'Sample work' },
           { id: 'decisions', label: 'Decisions' },
           { id: 'results', label: 'Results' },
+          { id: 'sample-work', label: 'Sample work' },
         ]}
       />
       <main id="main-content" className="mahoney-case-study">
@@ -81,18 +81,6 @@ export default function MahoneyEnvironmentalCaseStudy() {
         </ul></div>
       </section>
 
-      <section id="sample-work" className="mahoney-content-section">
-        <p className="mahoney-section-label">Sample work</p>
-        <ZoomableFigure
-          className="mahoney-workflow"
-          src="/images/sample-work/mahoney-workflow.png"
-          alt="n8n workflow for weekly route building, driver log intake, missing-weight exceptions, and rebate reconciliation"
-          width={2880}
-          height={1800}
-          priority
-        />
-      </section>
-
       <section id="decisions" className="mahoney-highlights mahoney-content-section">
         <p className="mahoney-section-label">Key decisions</p>
         <div className="ai-highlight-list">
@@ -106,6 +94,18 @@ export default function MahoneyEnvironmentalCaseStudy() {
         <p className="mahoney-section-label">The results</p>
         <p>Mahoney now has a system it can grow on. Customers get more reliable service, routes scale without extra admin, there is less risk of losing data, and the team finds it easy to use.</p>
         <p>Planning that used to sit with one or two dispatchers now runs on a weekly schedule, and a new site slots into a route instead of starting a fresh list. Rebates come from the same weights drivers submit, so the three-week reconciliation is gone and the quarter closes without chasing paperwork. For drivers, the change is small: they take a weight at the tank, send it from their phone, and the office has it straight away.</p>
+      </section>
+
+      <section id="sample-work" className="mahoney-content-section">
+        <p className="mahoney-section-label">Sample work</p>
+        <ZoomableFigure
+          className="mahoney-workflow"
+          src="/images/sample-work/mahoney-workflow.png"
+          alt="n8n workflow for weekly route building, driver log intake, missing-weight exceptions, and rebate reconciliation"
+          width={2880}
+          height={1800}
+          priority
+        />
       </section>
 
       <CtaSection kicker="Need to digitize a legacy operation?" title={<>Let&apos;s<br /><em>connect.</em></>} />
