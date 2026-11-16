@@ -69,7 +69,7 @@ export const projects: Project[] = [
     slug: 'field-operations',
     title: 'CRM & AI Workflow Automation',
     category: 'Field operations · Route scheduling',
-    description: 'A routing system that moved 2,000+ sites off paper, scheduled 17 daily routes, and cleared a three-week backlog.',
+    description: 'A routing system that replaced manual planning at 200 sites, scheduled 6 daily routes, and cleared a three-week backlog.',
     tags: ['GoHighLevel', 'n8n', 'Webhooks'],
     image: '/images/covers/field-operations.webp',
     imageAlt: 'Illustration of a route schedule and map with connected location pins',
