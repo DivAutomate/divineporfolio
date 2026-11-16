@@ -85,10 +85,10 @@ export default function MahoneyEnvironmentalCaseStudy() {
         <p className="mahoney-section-label">Sample work</p>
         <ZoomableFigure
           className="mahoney-workflow"
-          src="/images/sample-work/mahoney-workflow.webp"
+          src="/images/sample-work/mahoney-workflow.png"
           alt="n8n workflow for weekly route building, driver log intake, missing-weight exceptions, and rebate reconciliation"
-          width={3200}
-          height={1801}
+          width={2880}
+          height={1800}
           priority
         />
       </section>
