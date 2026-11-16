@@ -40,7 +40,7 @@ export default function MahoneyEnvironmentalCaseStudy() {
 
       <section id="scale" className="mahoney-scale mahoney-content-section">
         <p className="mahoney-section-label">The scale</p>
-        <ul><li>200 restaurant sites served</li><li>6 daily routes automated</li><li>3-week rebate backlog cleared</li><li>Manual dispatch → live route tracking</li></ul>
+        <ul><li>200 commercial kitchen sites served</li><li>6 daily routes automated</li><li>3-week rebate backlog cleared</li><li>Manual dispatch → live route tracking</li></ul>
       </section>
 
       <section id="challenge" className="mahoney-content-section mahoney-two-column">
