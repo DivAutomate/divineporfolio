@@ -140,6 +140,7 @@ ul, ol { margin: 0; }
 .nav-links a { color: var(--muted); transition: color 0.2s; }
 .nav-links a:hover, .nav-links a[aria-current='page'] { color: var(--foreground); }
 .nav-links a[aria-current='page'] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+.nav-links .nav-download { display: inline-flex; align-items: center; gap: 4px; }
 .nav-links .nav-cta {
   display: inline-flex;
   align-items: center;
