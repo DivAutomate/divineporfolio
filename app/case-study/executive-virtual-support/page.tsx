@@ -95,12 +95,20 @@ export default function ExecutiveVirtualSupportCaseStudy() {
 
       <section id="sample-work" className="ai-section support-sample-work">
         <p className="ai-label">Sample work</p>
-        <div className="ai-workflow-gallery">
+        <div className="ai-workflow-gallery support-sample-exec">
           <ZoomableFigure
+            className="support-sample-wide"
             src="/images/sample-work/inbox-triage.webp"
             alt="Before and after view of an inbox: 47,886 unread messages on the left, and the same inbox rebuilt with labels, filters, and colour-coded tags leaving 24 active messages"
             width={1600}
             height={873}
+          />
+          <ZoomableFigure
+            className="support-sample-brief"
+            src="/images/sample-work/executive-brief.webp"
+            alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary"
+            width={800}
+            height={1000}
           />
           <ZoomableFigure
             src="/images/sample-work/calendar-control.webp"
@@ -109,13 +117,20 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             height={787}
           />
         </div>
-        <ZoomableFigure
-          className="support-sample-brief"
-          src="/images/sample-work/executive-brief.webp"
-          alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary"
-          width={800}
-          height={1000}
-        />
+        <div className="ai-workflow-gallery">
+          <ZoomableFigure
+            src="/images/sample-work/kpi-master-ytd.webp"
+            alt="Google Sheets KPI report for the full year: net profit 765,741.05, marketing cost 189,743.62, 25 closed deals, 516 leads and 403.57% ROI, with a sales-by-source table, bar chart and lead source pie"
+            width={1600}
+            height={1000}
+          />
+          <ZoomableFigure
+            src="/images/sample-work/kpi-q1.webp"
+            alt="Google Sheets Q1 KPI report: net profit 135,600, marketing cost 44,878.85, 5 closed deals, 90 leads and 302.15% ROI, with sales by source, lead share and lead count tables and charts"
+            width={1600}
+            height={1000}
+          />
+        </div>
         <div className="ai-workflow-gallery support-sample-two">
           <ZoomableFigure
             src="/images/sample-work/travel-reservation-request.webp"
@@ -136,7 +151,6 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             height={640}
           />
           <ZoomableFigure
-            className="support-sample-tall"
             src="/images/sample-work/travel-checklist.webp"
             alt="Google Sheets trip checklist with ten items covering intake, flights, hotel requests, transfers, shared calendar, contingency plans, and final confirmations"
             width={756}
