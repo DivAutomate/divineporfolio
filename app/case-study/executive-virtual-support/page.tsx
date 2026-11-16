@@ -95,7 +95,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
 
       <section id="sample-work" className="ai-section support-sample-work">
         <p className="ai-label">Sample work</p>
-        <div className="ai-workflow-gallery support-samples">
+        <div className="ai-workflow-gallery sample-grid">
           <ZoomableFigure
             src="/images/sample-work/inbox-triage.webp"
             alt="Before and after view of an inbox: 47,886 unread messages on the left, and the same inbox rebuilt with labels, filters, and colour-coded tags leaving 24 active messages"
