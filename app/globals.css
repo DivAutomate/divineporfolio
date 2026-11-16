@@ -493,6 +493,7 @@ main + .site-footer .container { border-top-color: transparent; }
 .ai-friction-grid b { font: 500 12px/1 var(--font-mono); color: var(--muted); }
 .ai-friction-grid h2 { margin: 28px 0 8px; font-size: 19px; letter-spacing: -0.025em; }
 .ai-friction-grid p { color: var(--muted); font-size: 15px; }
+.ai-friction-grid.is-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 /* Architecture & media */
 .ai-section-intro > p:not(.ai-label) { color: var(--foreground); }
@@ -718,7 +719,7 @@ html:has(.zoom-dialog[open]) { overflow: hidden; }
   .services-grid, .services-grid.three, .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project-card.is-featured .project-link { display: flex; }
   .windwire-metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .ai-friction-grid, .windwire-steps { grid-template-columns: 1fr; }
+  .ai-friction-grid, .ai-friction-grid.is-pair, .windwire-steps { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
