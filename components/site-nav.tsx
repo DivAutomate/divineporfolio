@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X } from 'lucide-react'
+import { Download, Menu, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 const links = [
@@ -72,6 +72,10 @@ export function SiteNav() {
               {link.label}
             </Link>
           ))}
+          <a className="nav-download" href="/divine-jude-cv.pdf" download="Divine-Jude-CV.pdf" onClick={closeMenu}>
+            CV <Download size={14} aria-hidden="true" />
+            <span className="sr-only"> (PDF download)</span>
+          </a>
           <Link className="nav-cta" href="/contact" onClick={closeMenu}>
             <span className="status-dot" aria-hidden="true" />
             Available for work

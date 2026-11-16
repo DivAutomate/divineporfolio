@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Download } from 'lucide-react'
 import { CtaSection } from '@/components/cta-section'
 import { ProjectCard } from '@/components/project-card'
 import { SiteFooter } from '@/components/site-footer'
@@ -23,6 +23,10 @@ export default function Page() {
               <div className="btn-row">
                 <Link className="btn btn-primary" href="/contact">Start a conversation <ArrowUpRight size={16} aria-hidden="true" /></Link>
                 <Link className="btn btn-secondary" href="/work">See my work</Link>
+                <a className="btn btn-secondary" href="/divine-jude-cv.pdf" download="Divine-Jude-CV.pdf">
+                  Download CV <Download size={16} aria-hidden="true" />
+                  <span className="sr-only"> (PDF)</span>
+                </a>
               </div>
             </div>
             <img className="hero-portrait" src={site.portrait} alt="Divine Jude smiling in a black shirt" width={260} height={260} fetchPriority="high" />
