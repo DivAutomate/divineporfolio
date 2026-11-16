@@ -7,7 +7,7 @@ import { SiteNav } from '@/components/site-nav'
 import { engagements, projects, services, site, stats } from '@/lib/site'
 
 const clients = ['TransPerfect', 'Mahoney Environmental', 'Pura Utz', 'WindWire Studio', 'Prima Corporation']
-const clientGroups = [0, 1, 2, 3]
+const clientGroups = [0, 1]
 
 export default function Page() {
   return (
