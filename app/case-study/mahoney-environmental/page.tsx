@@ -3,6 +3,7 @@ import { CaseStudyHeader } from '@/components/case-study-header'
 import { CaseStudyNav } from '@/components/case-study-nav'
 import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
+import { ZoomableFigure } from '@/components/zoomable-figure'
 
 export const metadata: Metadata = {
   title: 'Field Operations Case Study',
@@ -20,6 +21,7 @@ export default function MahoneyEnvironmentalCaseStudy() {
           { id: 'challenge', label: 'Challenge' },
           { id: 'build', label: 'What I built' },
           { id: 'implementation', label: 'How I did it' },
+          { id: 'sample-work', label: 'Sample work' },
           { id: 'decisions', label: 'Decisions' },
           { id: 'results', label: 'Results' },
         ]}
@@ -77,6 +79,18 @@ export default function MahoneyEnvironmentalCaseStudy() {
           <li><strong>Collection logging from the road</strong><span>REST endpoint · mobile webhooks</span></li>
           <li><strong>Log validation</strong><span>n8n · checked against account rules</span></li>
         </ul></div>
+      </section>
+
+      <section id="sample-work" className="mahoney-content-section">
+        <p className="mahoney-section-label">Sample work</p>
+        <ZoomableFigure
+          className="mahoney-workflow"
+          src="/images/sample-work/mahoney-workflow.webp"
+          alt="n8n workflow for weekly route building, driver log intake, missing-weight exceptions, and rebate reconciliation"
+          width={3200}
+          height={1801}
+          priority
+        />
       </section>
 
       <section id="decisions" className="mahoney-highlights mahoney-content-section">
