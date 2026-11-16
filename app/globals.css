@@ -496,6 +496,11 @@ main + .site-footer .container { border-top-color: transparent; }
 .ai-workflow-gallery figure { margin: 0; }
 .ai-workflow-gallery img, .invoice-workflow img, .transperfect-board img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .ai-case-study figcaption { margin-top: 12px; }
+.support-sample-two { margin-top: 44px; align-items: start; }
+.support-sample-two img { align-self: start; }
+@media (min-width: 769px) {
+  .support-sample-two .support-sample-tall { justify-self: center; width: 72%; }
+}
 .support-sample-brief { margin: 44px 0 0; max-width: 420px; }
 .support-sample-brief img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .ai-stack { margin-top: 40px; }
@@ -754,6 +759,7 @@ html:has(.zoom-dialog[open]) { overflow: hidden; }
   .site-footer .container { flex-direction: column; align-items: flex-start; }
 
   .ai-metrics, .ai-workflow-gallery, .ai-stack ul, .mahoney-implementation ol, .windwire-reply-list, .windwire-section, .mahoney-two-column { grid-template-columns: 1fr; }
+  .ai-workflow-gallery.support-sample-two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .mahoney-two-column { gap: 0; }
   .mahoney-two-column .mahoney-section-label { margin-bottom: 20px; }
   .mahoney-scale ul, .windwire-metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
