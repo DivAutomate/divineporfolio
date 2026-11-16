@@ -20,6 +20,7 @@ export default function MahoneyEnvironmentalCaseStudy() {
           { id: 'challenge', label: 'Challenge' },
           { id: 'build', label: 'What I built' },
           { id: 'implementation', label: 'How I did it' },
+          { id: 'decisions', label: 'Decisions' },
           { id: 'results', label: 'Results' },
         ]}
       />
@@ -52,7 +53,10 @@ export default function MahoneyEnvironmentalCaseStudy() {
 
       <section id="build" className="mahoney-content-section mahoney-two-column">
         <div><p className="mahoney-section-label">What I built</p></div>
-        <div><p>I built a customized routing system directly inside GoHighLevel, tailored exactly to the team&apos;s existing field workflows. It builds driver schedules every week, lets dispatchers change visit frequency on the spot, and keeps all route data in one simple place. The work that used to be done by hand on a whiteboard now happens on a schedule, and staff needed very little training to use it.</p></div>
+        <div>
+          <p>I built a customized routing system directly inside GoHighLevel, tailored exactly to the team&apos;s existing field workflows. It builds driver schedules every week, lets dispatchers change visit frequency on the spot, and keeps all route data in one simple place. The work that used to be done by hand on a whiteboard now happens on a schedule, and staff needed very little training to use it.</p>
+          <p>Everything lives in Mahoney&apos;s own GoHighLevel account. I kept the structure of their existing accounts, so every site arrived with its service history in place instead of being rebuilt from scratch. Drivers log collections through their own logins, and no route or weight data is copied out to a separate spreadsheet. There is one record to trust instead of several that drift apart.</p>
+        </div>
       </section>
 
       <section id="implementation" className="mahoney-implementation mahoney-content-section">
@@ -65,9 +69,29 @@ export default function MahoneyEnvironmentalCaseStudy() {
         </ol>
       </section>
 
+      <section id="tools" className="mahoney-tools mahoney-content-section">
+        <p className="mahoney-section-label">Tools used</p>
+        <div className="ai-stack"><ul>
+          <li><strong>Customer records, routes, and rebates</strong><span>GoHighLevel</span></li>
+          <li><strong>Weekly scheduling engine</strong><span>n8n · scheduled workflow</span></li>
+          <li><strong>Collection logging from the road</strong><span>REST endpoint · mobile webhooks</span></li>
+          <li><strong>Log validation</strong><span>n8n · checked against account rules</span></li>
+        </ul></div>
+      </section>
+
+      <section id="decisions" className="mahoney-highlights mahoney-content-section">
+        <p className="mahoney-section-label">Key decisions</p>
+        <div className="ai-highlight-list">
+          <article><span>01</span><div><h2>One record per site</h2><p>Each site has a single profile holding its service type, visit frequency, tank details, and rebate rate. The weekly build reads that profile, so a dispatcher changes the frequency in one place and the next schedule follows. There is no route sheet and weight sheet to keep in sync.</p></div></article>
+          <article><span>02</span><div><h2>Check the weight before it reaches the ledger</h2><p>Every collection that comes in from the field is checked against the site and the account rules before anything is written. A log that does not add up gets flagged for a dispatcher instead of quietly turning into a wrong rebate. Finance works from weights the system has already checked.</p></div></article>
+          <article><span>03</span><div><h2>Rebuild weekly, not redraw daily</h2><p>Routes are built on a weekly schedule rather than rewritten every morning. When a site changes its frequency, only the affected route changes. When a truck breaks down, the day&apos;s route is rerun from the same data instead of being redrawn from memory.</p></div></article>
+        </div>
+      </section>
+
       <section id="results" className="mahoney-results mahoney-content-section">
         <p className="mahoney-section-label">The results</p>
         <p>Mahoney now has a system it can grow on. Customers get more reliable service, routes scale without extra admin, there is less risk of losing data, and the team finds it easy to use.</p>
+        <p>Planning that used to sit with one or two dispatchers now runs on a weekly schedule, and a new site slots into a route instead of starting a fresh list. Rebates come from the same weights drivers submit, so the three-week reconciliation is gone and the quarter closes without chasing paperwork. For drivers, the change is small: they take a weight at the tank, send it from their phone, and the office has it straight away.</p>
       </section>
 
       <CtaSection kicker="Need to digitize a legacy operation?" title={<>Let&apos;s<br /><em>connect.</em></>} />
