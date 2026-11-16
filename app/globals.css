@@ -498,13 +498,9 @@ main + .site-footer .container { border-top-color: transparent; }
 .ai-case-study figcaption { margin-top: 12px; }
 .support-sample-two { margin-top: 44px; align-items: start; }
 .support-sample-two img { align-self: start; }
-@media (min-width: 769px) {
-  .support-sample-two .support-sample-tall { justify-self: center; width: 72%; }
-}
 .support-sample-exec { margin-top: 32px; align-items: start; }
 .support-sample-exec .support-sample-wide { grid-column: 1 / -1; }
 .support-sample-brief { margin: 0; }
-.support-sample-side { align-self: center; }
 .ai-stack { margin-top: 40px; }
 .ai-stack ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; padding: 0; list-style: none; }
 .ai-stack li { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; border-top: 1px solid var(--line); font-size: 15px; }

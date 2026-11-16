@@ -111,7 +111,6 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             height={1000}
           />
           <ZoomableFigure
-            className="support-sample-side"
             src="/images/sample-work/calendar-control.webp"
             alt="Google Calendar week view with daily briefings, deep work blocks, meeting preparation, reviews, and protected personal time"
             width={1400}
@@ -152,7 +151,6 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             height={640}
           />
           <ZoomableFigure
-            className="support-sample-tall"
             src="/images/sample-work/travel-checklist.webp"
             alt="Google Sheets trip checklist with ten items covering intake, flights, hotel requests, transfers, shared calendar, contingency plans, and final confirmations"
             width={756}
