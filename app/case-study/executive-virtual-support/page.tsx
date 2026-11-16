@@ -7,7 +7,7 @@ import { ZoomableFigure } from '@/components/zoomable-figure'
 
 export const metadata: Metadata = {
   title: 'Executive & Virtual Support Case Study',
-  description: 'Professional support framework for a General Manager and Business Head covering inbox triage, calendar management, travel logistics, personal administration, and executive reporting.',
+  description: 'How I ran the inbox, calendar, travel, personal admin and weekly reporting for a General Manager at Prima Corporation Ltd.',
   alternates: { canonical: '/case-study/executive-virtual-support' },
 }
 
@@ -28,60 +28,58 @@ export default function ExecutiveVirtualSupportCaseStudy() {
       <main id="main-content" className="ai-case-study support-case-study">
 
       <header className="ai-case-hero">
-        <p className="ai-kicker">Professional support framework · The Executive</p>
+        <p className="ai-kicker">Case study · executive and personal support</p>
         <h1>Executive support that keeps <em>the business moving.</em></h1>
-        <p className="ai-lead">A structured Executive &amp; Personal Assistant framework for a General Manager &amp; Business Head managing procurement, FMCG accounts, plant operations, travel, and financial priorities at Prima Corporation Ltd.</p>
+        <p className="ai-lead">A general manager at Prima Corporation Ltd carried procurement, plant operations, key accounts, travel and reporting at the same time. I built the support system that kept all of it moving.</p>
       </header>
 
       <section id="overview" className="ai-summary ai-section">
         <p className="ai-label">At a glance</p>
         <div>
-          <p><strong>My role</strong> — Executive &amp; Personal Assistant to the General Manager &amp; Business Head, managing the information, schedules, and follow-through behind high-value decisions.</p>
-          <p><strong>The goal</strong> — Protect executive attention while keeping procurement, plant operations, key accounts, travel, and reporting moving.</p>
-          <p><strong>The framework</strong> — Inbox triage, calendar control, travel and personal administration, data entry, executive reporting, and cross-platform task coordination.</p>
+          <p><strong>My role:</strong> Executive and personal assistant to the General Manager and Business Head. I handled the information, the schedule and the follow-through behind their decisions.</p>
+          <p><strong>The goal:</strong> Keep their attention on decisions, not on sorting.</p>
+          <p><strong>The work:</strong> Inbox triage, calendar control, travel and personal administration, data entry, weekly reporting and cross-platform task tracking.</p>
         </div>
       </section>
 
       <section id="situation" className="ai-section">
         <p className="ai-label">The situation</p>
         <div className="ai-copy">
-          <p>The Executive managed a high-volume operating environment: more than 300 complex B2B emails each day, factory escalations, procurement decisions, FMCG contracts, travel requirements, and financial reporting.</p>
-          <p>Without a structured support framework, critical purchase orders could disappear in digital noise, fragmented meetings could consume strategy time, and raw operational data could arrive too late for weekly executive alignment.</p>
+          <p>They ran a busy operation. More than 300 B2B emails arrived each day: factory escalations, procurement decisions, FMCG contracts, travel requests and financial reporting.</p>
+          <p>All of it landed in the same place. A purchase order that needed a same-day approval sat next to a supplier newsletter. A line stop competed with a meeting request. Weekly numbers arrived from three departments in three different formats, often the day before a briefing.</p>
         </div>
       </section>
 
       <section id="friction" className="ai-friction ai-section">
         <p className="ai-label">What was getting in the way</p>
-        <div className="ai-copy">
-          <ul>
-            <li><strong>Inbox overload:</strong> Critical line-stop issues and key client purchase orders competed with routine supplier updates.</li>
-            <li><strong>Fragmented schedules:</strong> Plant, logistics, banking, and account requests left too little uninterrupted strategy time.</li>
-            <li><strong>Travel and personal admin:</strong> Multi-leg itineraries, private estate operations, payroll, utilities, and financial obligations required constant coordination.</li>
-            <li><strong>Scattered reporting:</strong> Production, sales, inventory, and supply data arrived in different formats before executive briefings.</li>
-          </ul>
+        <div className="ai-friction-grid is-pair">
+          <article><b>01</b><h2>Inbox noise</h2><p>Line stops and client purchase orders were buried under routine supplier updates.</p></article>
+          <article><b>02</b><h2>Fragmented days</h2><p>Plant, logistics, banking and account requests filled the week. No uninterrupted time was left for strategy.</p></article>
+          <article><b>03</b><h2>A second job</h2><p>Travel, family logistics, payroll and utilities all ran through the same person at the same time as the business.</p></article>
+          <article><b>04</b><h2>Scattered reporting</h2><p>Production, sales, inventory and supply figures arrived in different formats right before each executive briefing.</p></article>
         </div>
       </section>
 
       <section id="framework" className="ai-highlights ai-section">
         <p className="ai-label">How I supported the work</p>
-        <div className="ai-copy"><p>The framework connected four support functions: inbox control, schedule protection, travel, personal administration, and executive reporting.</p></div>
+        <div className="ai-copy"><p>I built four routines that ran every week: inbox control, schedule protection, travel and personal admin, and executive reporting.</p></div>
         <div className="ai-highlight-list">
-          <article><span>01</span><div><h2>Inbox management</h2><p><strong>Context:</strong> The Executive&apos;s primary corporate inbox received over 300 highly complex emails daily, covering high-value B2B manufacturing contracts, international resin supply chain logistics, and personal administrative dependencies. Critical client purchase orders and time-sensitive approvals were frequently bottlenecked by high volumes of administrative noise.</p><div className="action-list"><strong>Action:</strong><ul><li><strong>Multi-Inbox Framework:</strong> Configured Gmail Enterprise using advanced search operators and Multi-Inboxes to establish a live, color-coded triage workspace structured by urgency.</li><li><strong>Custom Label Hierarchy:</strong> Engineered a system categorized into: 01_CRITICAL (Line Stop / Client POs), 02_EXECUTIVE REVIEW (CAPEX approvals), and 03_EA ACTION (Personal Admin / Logistics).</li><li><strong>Proactive Gatekeeping &amp; Workflow Integration:</strong> Cleared the primary workspace by pairing Gmail with Google Sidebar, pushing actionable items straight into Google Tasks and Google Keep while drafting outbound responses using Gmail Templates for review.</li></ul></div><p><strong>Result:</strong> Reduced The Executive&apos;s daily inbox processing time from 3.5 hours to under 45 minutes, ensuring high-priority key account requests achieved a response turnaround of under 2 hours.</p></div></article>
-          <article><span>02</span><div><h2>Calendar management</h2><p><strong>Context:</strong> The Executive&apos;s schedule suffered from extreme time-fragmentation. Unregulated back-to-back calendar invitations from cross-functional teams (production, plant engineering, sales, and external finance partners) left no dedicated capacity for high-level business development, macro financial planning, or production-floor alignment.</p><div className="action-list"><strong>Action:</strong><ul><li><strong>Thematic Day Architecture:</strong> Structured Google Calendar into functional pillars, creating specific days dedicated to operational plant oversight, external client conferences, and fiscal reviews.</li><li><strong>Focus Time Protection:</strong> Deployed the Google Calendar &apos;Focus Time&apos; feature to systematically block non-negotiable 90-minute daily intervals for strategic oversight, automatically declining conflicting internal requests.</li><li><strong>Meeting Vetting Framework:</strong> Enforced a mandatory agenda policy for all inbound meeting requests, implementing Google Calendar Appointment Slots to let internal teams book short, purposeful syncs.</li></ul></div><p><strong>Result:</strong> Successfully reclaimed 25% of The Executive&apos;s weekly schedule. This newly recovered capacity was directly allocated toward high-level business expansion initiatives, doubling regional plant execution speeds.</p></div></article>
-          <article><span>03</span><div><h2>Travel logistics</h2><p><strong>Context:</strong> Managing complex, international procurement trips and domestic logistics required seamless cross-border coordination. Concurrently, overlapping personal administrative tasks risked diverting The Executive&apos;s attention from core industrial business operations.</p><div className="action-list"><strong>Action:</strong><ul><li><strong>End-to-End Travel Dossiers:</strong> Constructed comprehensive trip dashboards within Google Drive, linking flight itineraries, hotel confirmations, ground transit tracking via Google Maps, and localized backup travel options for offline mobile access.</li><li><strong>Personal Management Security:</strong> Maintained a flawless administrative firewall using Google Forms and Sheets to organize personal invoices, private property maintenance schedules, family event tracking, and domestic payroll.</li><li><strong>Real-Time Crisis Resolution:</strong> Successfully navigated a sudden cross-border flight cancellation by identifying and securing an alternative flight option within 30 minutes, keeping travel updates fully synced to Google Calendar.</li></ul></div><p><strong>Result:</strong> Maintained a perfect zero-delay record across all international itineraries, offloading 100% of personal and logistical friction to give The Executive complete peace of mind during business travel.</p></div></article>
-          <article><span>04</span><div><h2>Data entry</h2><p><strong>Context:</strong> The Executive needed to quickly evaluate disparate production data, resin market prices, and sales performance metrics from multiple departments before weekly board briefings. Sifting through multiple unstructured spreadsheets wasted valuable hours.</p><div className="action-list"><strong>Action Taken (Using Google Workspace Tools):</strong><ul><li><strong>Automated Data Cleanse:</strong> Built a unified metrics hub in Google Sheets, employing advanced relational functions (QUERY, FILTER, XLOOKUP) to automatically clean raw multi-department data points.</li><li><strong>Operational KPI Tracker:</strong> Synthesized thousands of rows of manufacturing logistics and inventory variables into a live, single-page visual dashboard displaying macro margins and unit targets.</li><li><strong>One-Click Slide Integration:</strong> Linked live Google Sheets report charts directly into Google Slides presentation decks, allowing real-time dashboard data refreshes for upcoming board presentations.</li></ul></div><p><strong>Result:</strong> Saved The Executive 4 hours of analytical preparation before every leadership briefing, providing the management team with instant visibility to optimize budget allocations and manufacturing margins.</p></div></article>
+          <article><span>01</span><div><h2>Inbox management</h2><p>Their main inbox took in more than 300 emails a day. Contracts, resin supply logistics and personal admin all shared the same screen, so a client purchase order could sit unnoticed behind routine updates.</p><div className="action-list"><strong>What I did:</strong><ul><li>Set up Gmail multi-inboxes and saved searches so the important mail showed up in one triage view.</li><li>Built three labels that match how work actually moves: 01 Critical for line stops and client purchase orders, 02 Review for approvals, and 03 Action for logistics and personal admin.</li><li>Moved anything that needed doing into Google Tasks or Keep, with a draft reply already written from a template.</li></ul></div><p>Daily email time went from 3.5 hours to under 45 minutes. Key account requests were answered in under 2 hours.</p></div></article>
+          <article><span>02</span><div><h2>Calendar management</h2><p>Production, plant engineering, sales and external finance partners booked back to back. Nothing was left for planning or for time on the factory floor.</p><div className="action-list"><strong>What I did:</strong><ul><li>Grouped the week into themed days: plant oversight, client meetings, and finance reviews.</li><li>Blocked 90 minutes of focus time each day. Conflicting internal invites are declined automatically.</li><li>Asked every meeting request for an agenda, and opened short appointment slots for internal teams to book.</li></ul></div><p>That returned 25% of their week to planning and expansion work.</p></div></article>
+          <article><span>03</span><div><h2>Travel and personal administration</h2><p>International procurement trips needed flights, hotels and ground transport to line up. On the personal side there were estate maintenance, invoices, family events and payroll, all with the same deadlines as the business.</p><div className="action-list"><strong>What I did:</strong><ul><li>Built one trip dashboard per journey in Google Drive: flights, hotel confirmations, ground transport, local backups, all readable offline from a phone.</li><li>Tracked personal admin in Google Forms and Sheets so invoices, maintenance and payroll ran on a schedule instead of from memory.</li><li>When a cross-border flight was cancelled, I found and booked a replacement within 30 minutes and updated their calendar straight away.</li></ul></div></div></article>
+          <article><span>04</span><div><h2>Executive reporting</h2><p>Before each board briefing they needed production figures, resin prices and sales results pulled from separate spreadsheets. The sorting alone ate hours.</p><div className="action-list"><strong>What I did:</strong><ul><li>Built one metrics sheet in Google Sheets that cleans department data on its own with QUERY, FILTER and XLOOKUP.</li><li>Turned thousands of rows of manufacturing and inventory data into a single-page dashboard with margins and unit targets.</li><li>Linked the dashboard charts into Google Slides so the deck updates when the sheet does.</li></ul></div><p>That gave them 4 hours back before every leadership briefing, with numbers they could act on.</p></div></article>
         </div>
       </section>
 
       <section id="results" className="ai-results ai-section">
         <p className="ai-label">The outcome</p>
         <div className="ai-copy">
-          <p>The framework gave The Executive a reliable operating layer: less time sorting information, more protected strategy time, and faster access to the numbers and decisions that kept the business moving.</p>
+          <p>They spent less time sorting and more time deciding. The numbers and documents they needed were in one place before they asked for them.</p>
           <div className="ai-metrics-grid">
-            <article><strong>300+</strong><h2>Daily messages triaged</h2><p>Complex B2B correspondence organized around urgency and ownership.</p></article>
-            <article><strong>45 min</strong><h2>Daily email processing</h2><p>Reduced from 3.5 hours while maintaining zero missed revenue opportunities.</p></article>
-            <article><strong>25%</strong><h2>Calendar capacity reclaimed</h2><p>Time returned to strategy, forecasting, and expansion planning.</p></article>
-            <article><strong>4+ hrs</strong><h2>Saved per briefing</h2><p>Weekly executive reporting became faster through connected live dashboards.</p></article>
+            <article><strong>300+</strong><h2>Daily messages triaged</h2><p>Sorted by urgency and by who owns the next step.</p></article>
+            <article><strong>45 min</strong><h2>Daily email processing</h2><p>Down from 3.5 hours, with no revenue opportunity missed.</p></article>
+            <article><strong>25%</strong><h2>Calendar capacity reclaimed</h2><p>Time returned to strategy, forecasting and expansion planning.</p></article>
+            <article><strong>4+ hrs</strong><h2>Saved per briefing</h2><p>Weekly reporting came from connected dashboards instead of manual sorting.</p></article>
           </div>
         </div>
       </section>
@@ -89,7 +87,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
       <section className="ai-section">
         <p className="ai-label">The takeaway</p>
         <div className="ai-copy">
-          <p>Executive and personal assistance is most valuable when it protects attention across the whole operating environment. By connecting inboxes, calendars, travel, personal administration, data entry, and reporting, I gave the General Manager &amp; Business Head a dependable support framework for making better decisions faster.</p>
+          <p>Executive support works best when it covers the whole week, not one task at a time. Inboxes, calendars, travel, personal admin and reporting were all competing for the same attention. Connecting them gave the General Manager and Business Head one dependable layer underneath every decision.</p>
         </div>
       </section>
 
