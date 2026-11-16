@@ -76,8 +76,10 @@ export default function MahoneyEnvironmentalCaseStudy() {
         <div className="ai-stack"><ul>
           <li><strong>Customer records, routes, and rebates</strong><span>GoHighLevel</span></li>
           <li><strong>Weekly scheduling engine</strong><span>n8n · scheduled workflow</span></li>
+          <li><strong>Driver sheets and rebate report</strong><span>Google Sheets</span></li>
           <li><strong>Collection logging from the road</strong><span>REST endpoint · mobile webhooks</span></li>
           <li><strong>Log validation</strong><span>n8n · checked against account rules</span></li>
+          <li><strong>Dispatch notifications</strong><span>Email · SMTP</span></li>
         </ul></div>
       </section>
 
