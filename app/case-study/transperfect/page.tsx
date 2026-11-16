@@ -122,10 +122,10 @@ export default function TransPerfectCaseStudy() {
       </section>
 
       <section className="ai-section transperfect-client">
-        <p className="ai-label">Client</p>
+        <p className="ai-label">Colleague feedback</p>
         <div className="ai-copy">
           <blockquote>“Divine is an outstanding Operations Assistant who consistently delivers excellence. During our time working together at TransPerfect, I was continually impressed by his organizational skills and his ability to handle complex operational challenges with ease. He acts as a central pillar for the team, keeping communication fluid and workflows running smoothly. I highly recommend Divine for any fast-paced operations role.”</blockquote>
-          <cite>— TransPerfect colleague</cite>
+          <cite>Colleague at TransPerfect</cite>
         </div>
       </section>
 
