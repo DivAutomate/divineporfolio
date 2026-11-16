@@ -95,20 +95,12 @@ export default function ExecutiveVirtualSupportCaseStudy() {
 
       <section id="sample-work" className="ai-section support-sample-work">
         <p className="ai-label">Sample work</p>
-        <div className="ai-workflow-gallery support-sample-exec">
+        <div className="ai-workflow-gallery support-samples">
           <ZoomableFigure
-            className="support-sample-wide"
             src="/images/sample-work/inbox-triage.webp"
             alt="Before and after view of an inbox: 47,886 unread messages on the left, and the same inbox rebuilt with labels, filters, and colour-coded tags leaving 24 active messages"
             width={1600}
             height={873}
-          />
-          <ZoomableFigure
-            className="support-sample-brief"
-            src="/images/sample-work/executive-brief.webp"
-            alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary"
-            width={800}
-            height={1000}
           />
           <ZoomableFigure
             src="/images/sample-work/calendar-control.webp"
@@ -116,8 +108,12 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             width={1400}
             height={787}
           />
-        </div>
-        <div className="ai-workflow-gallery">
+          <ZoomableFigure
+            src="/images/sample-work/executive-brief.webp"
+            alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary"
+            width={800}
+            height={1000}
+          />
           <ZoomableFigure
             src="/images/sample-work/kpi-master-ytd.webp"
             alt="Google Sheets KPI report for the full year: net profit 765,741.05, marketing cost 189,743.62, 25 closed deals, 516 leads and 403.57% ROI, with a sales-by-source table, bar chart and lead source pie"
@@ -130,8 +126,12 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             width={1600}
             height={1000}
           />
-        </div>
-        <div className="ai-workflow-gallery support-sample-two">
+          <ZoomableFigure
+            src="/images/sample-work/travel-itinerary.webp"
+            alt="Google Sheets travel plan for a four day Singapore conference trip, with time blocks for work, kids activities, dinners, and meetings"
+            width={1312}
+            height={640}
+          />
           <ZoomableFigure
             src="/images/sample-work/travel-reservation-request.webp"
             alt="Draft email to a hotel concierge requesting early check-in, adjacent rooms with a working desk, kid meal kits, and a play kit for a family stay in Singapore"
@@ -143,12 +143,6 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             alt="Draft email comparing three business class flight options for a conference trip to Singapore, with notes on arrival times, children, and family comfort"
             width={1068}
             height={602}
-          />
-          <ZoomableFigure
-            src="/images/sample-work/travel-itinerary.webp"
-            alt="Google Sheets travel plan for a four day Singapore conference trip, with time blocks for work, kids activities, dinners, and meetings"
-            width={1312}
-            height={640}
           />
           <ZoomableFigure
             src="/images/sample-work/travel-checklist.webp"
