@@ -126,7 +126,7 @@ export default function ContactPage() {
               </div>
               <div className="contact-card">
                 <p className="label">Availability</p>
-                <p><span className="status-dot" aria-hidden="true" /> Taking new projects for Q4 2026.</p>
+                <p><span className="status-dot" aria-hidden="true" /> Taking new projects.</p>
               </div>
               <div className="contact-card">
                 <p className="label">Elsewhere</p>
