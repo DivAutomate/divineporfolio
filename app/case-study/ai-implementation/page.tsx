@@ -25,6 +25,7 @@ export default function AIImplementationCaseStudy() {
           { id: 'build', label: 'How it works' },
           { id: 'decisions', label: 'Key decisions' },
           { id: 'results', label: 'Results' },
+          { id: 'sample-work', label: 'Sample work' },
         ]}
       />
       <main id="main-content" className="ai-case-study">
@@ -54,10 +55,6 @@ export default function AIImplementationCaseStudy() {
 
       <section id="build" className="ai-architecture ai-section">
         <div className="ai-section-intro"><p className="ai-label">How it&apos;s built</p><p>I split the work into two separate workflows. This keeps API limits in check, handles broker replies that come days later, and keeps AI costs down.</p></div>
-        <div className="ai-workflow-gallery">
-          <ZoomableFigure src={imageA} alt="n8n workflow for finding properties, screening them, and emailing brokers" caption={<>Workflow A · Find, screen, and contact brokers</>} />
-          <ZoomableFigure src={imageB} alt="n8n workflow for checking title documents with AI" caption={<>Workflow B · Check documents and flag legal risks</>} />
-        </div>
         <div className="ai-stack"><p className="ai-label">Tools used</p><ul>
           <li><strong>Workflow engine</strong><span>n8n</span></li>
           <li><strong>Data collection &amp; cleanup</strong><span>HTTP requests · Custom JavaScript</span></li>
@@ -85,6 +82,14 @@ export default function AIImplementationCaseStudy() {
         <div><strong>95%</strong><span>Clean data</span><p>Cleanup scripts catch incomplete or badly formatted listings before they reach the AI.</p></div>
         <div><strong>100+</strong><span>Listings handled</span><p>Paging and rate-limit controls let it handle hundreds of listings at once.</p></div>
       </div></section>
+
+      <section id="sample-work" className="ai-section">
+        <p className="ai-label">Sample work</p>
+        <div className="ai-workflow-gallery">
+          <ZoomableFigure src={imageA} alt="n8n workflow for finding properties, screening them, and emailing brokers" />
+          <ZoomableFigure src={imageB} alt="n8n workflow for checking title documents with AI" />
+        </div>
+      </section>
 
       <CtaSection kicker="Have a complex operational workflow holding you back?" title={<>Let&apos;s automate<br /><em>the slow parts.</em></>} />
     </main>
