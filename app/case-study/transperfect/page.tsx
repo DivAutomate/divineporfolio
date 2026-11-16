@@ -23,6 +23,7 @@ export default function TransPerfectCaseStudy() {
           { id: 'system', label: 'The system' },
           { id: 'routine', label: 'Routine' },
           { id: 'results', label: 'Results' },
+          { id: 'sample-work', label: 'Sample work' },
         ]}
       />
       <main id="main-content" className="ai-case-study transperfect-case-study">
@@ -72,14 +73,6 @@ export default function TransPerfectCaseStudy() {
           <article><span>03</span><div><h2>Problems flagged in minutes, not hours</h2><p><strong>What I did:</strong> I added a &quot;Translation Blocker&quot; trigger. When a vendor flagged a missing file or unclear context, Trello created an urgent task for the account lead right away.</p><p><strong>What changed:</strong> Stuck jobs no longer went unnoticed. We spent less time chasing people and fixed issues much faster.</p></div></article>
           <article><span>04</span><div><h2>Onboarding new hires faster</h2><p><strong>What I did:</strong> I turned our internal processes and account rules into Trello templates. Each one came with training videos and checklists.</p><p><strong>What changed:</strong> New hires learned faster, and onboarding time dropped by 40%.</p></div></article>
         </div>
-        <ZoomableFigure
-          className="transperfect-board"
-          src="/transperfect-trello-board.png"
-          alt="Trello board titled Global Localization Pipeline and Timezone Sync, with columns for intake, production, a four-stage QA pipeline, timezone handoffs, and escalations"
-          caption={<>The live board · Intake, production, QA, timezone handoffs, and escalations</>}
-          width={2419}
-          height={1512}
-        />
       </section>
 
       <section id="routine" className="ai-section">
@@ -127,6 +120,17 @@ export default function TransPerfectCaseStudy() {
           <blockquote>“Divine is an outstanding Operations Assistant who consistently delivers excellence. During our time working together at TransPerfect, I was continually impressed by his organizational skills and his ability to handle complex operational challenges with ease. He acts as a central pillar for the team, keeping communication fluid and workflows running smoothly. I highly recommend Divine for any fast-paced operations role.”</blockquote>
           <cite>Colleague at TransPerfect</cite>
         </div>
+      </section>
+
+      <section id="sample-work" className="ai-section">
+        <p className="ai-label">Sample work</p>
+        <ZoomableFigure
+          className="transperfect-board"
+          src="/transperfect-trello-board.png"
+          alt="Trello board titled Global Localization Pipeline and Timezone Sync, with columns for intake, production, a four-stage QA pipeline, timezone handoffs, and escalations"
+          width={2419}
+          height={1512}
+        />
       </section>
 
       <CtaSection kicker="Running global projects?" title={<>Let&apos;s improve<br /><em>your operations.</em></>} />

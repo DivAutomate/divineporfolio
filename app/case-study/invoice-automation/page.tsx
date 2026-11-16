@@ -24,6 +24,7 @@ export default function InvoiceAutomationCaseStudy() {
           { id: 'build', label: 'How it works' },
           { id: 'decisions', label: 'Key decisions' },
           { id: 'results', label: 'Results' },
+          { id: 'sample-work', label: 'Sample work' },
         ]}
       />
       <main id="main-content" className="ai-case-study invoice-case-study">
@@ -53,13 +54,6 @@ export default function InvoiceAutomationCaseStudy() {
 
       <section id="build" className="ai-architecture ai-section">
         <div className="ai-section-intro"><p className="ai-label">How it&apos;s built</p><p>Invoices move from intake to the accounting system in one flow. Errors are caught along the way, and the workflow pauses when a person needs to step in.</p></div>
-        <ZoomableFigure
-          className="invoice-workflow"
-          src={workflowImage}
-          alt="n8n workflow for invoice intake, reading, checks, approvals, and accounting sync"
-          caption={<>Workflow · Intake, reading, checks, approvals, accounting sync, and audit log</>}
-          priority
-        />
         <div className="ai-stack"><p className="ai-label">Tools used</p><ul>
           <li><strong>Workflow engine</strong><span>n8n · Webhooks and error handling</span></li>
           <li><strong>Intake &amp; records</strong><span>Google Drive · Google Sheets</span></li>
@@ -83,6 +77,16 @@ export default function InvoiceAutomationCaseStudy() {
         <div><strong>70%</strong><span>No human needed</span><p>Clean, standard invoices go from inbox to books with no clicks.</p></div>
         <div><strong>89%</strong><span>Reading accuracy</span><p>Reliable results, even on poor scans and phone photos.</p></div>
       </div></section>
+
+      <section id="sample-work" className="ai-section">
+        <p className="ai-label">Sample work</p>
+        <ZoomableFigure
+          className="invoice-workflow"
+          src={workflowImage}
+          alt="n8n workflow for invoice intake, reading, checks, approvals, and accounting sync"
+          priority
+        />
+      </section>
 
       <CtaSection kicker="Drowning in invoices?" title={<>Let&apos;s automate<br /><em>your back office.</em></>} />
     </main>
