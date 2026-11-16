@@ -19,7 +19,7 @@ export default function Page() {
           <div className="hero-grid">
             <div>
               <h1 id="hero-title">Work off your plate. <em>Systems in place.</em></h1>
-              <p className="hero-lead">I&apos;m Divine, an operations partner for busy teams. I run executive support, project coordination, and lead generation, then set up simple systems so the work stays handled.</p>
+              <p className="hero-lead">I&apos;m Divine, an operations partner for founders and small teams. I run executive support, project coordination, and lead generation, then set up simple systems so the work stays handled.</p>
               <div className="btn-row">
                 <Link className="btn btn-primary" href="/contact">Start a conversation <ArrowUpRight size={16} aria-hidden="true" /></Link>
                 <Link className="btn btn-secondary" href="/work">See my work</Link>
@@ -30,6 +30,16 @@ export default function Page() {
               </div>
             </div>
             <img className="hero-portrait" src={site.portrait} alt="Divine Jude in a white shirt, looking to the side" width={260} height={260} fetchPriority="high" />
+          </div>
+          <div className="hero-clients">
+            <span className="label">Worked with</span>
+            <ul>
+              <li>TransPerfect</li>
+              <li>Mahoney Environmental</li>
+              <li>Pura Utz</li>
+              <li>WindWire Studio</li>
+              <li>Prima Corporation</li>
+            </ul>
           </div>
         </section>
 
