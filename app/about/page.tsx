@@ -69,7 +69,7 @@ export default function AboutPage() {
         <section className="container" aria-label="Profile">
           <div className="about-split">
             <div className="portrait-panel">
-              <img src={site.portrait} alt="Divine Jude smiling in a black shirt" width={300} height={300} />
+              <img src={site.portrait} alt="Divine Jude in a white shirt, looking to the side" width={300} height={300} />
             </div>
             <div className="about-split-copy">
               <p>I&apos;ve spent the last 5 years with founders and teams. I&apos;ve run executive inboxes and calendars, coordinated global projects across timezones, researched and contacted thousands of prospects, and grown online stores through better SEO and ads.</p>
