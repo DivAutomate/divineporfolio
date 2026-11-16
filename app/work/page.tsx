@@ -28,6 +28,14 @@ export default function WorkPage() {
           </div>
         </section>
 
+        <section className="container section-tight quote-block" aria-label="Client feedback">
+          <p className="label">Client feedback</p>
+          <figure className="pull-quote">
+            <blockquote>&ldquo;I was impressed with his ability to step into our field workflows and completely remove our scheduling bottlenecks. Building an automated system that handles complex dispatch logistics from scratch is an incredible feat. I would recommend his development expertise to any scaling logistics company that wants to eliminate manual overhead.&rdquo;</blockquote>
+            <figcaption>Operations manager, Mahoney Environmental</figcaption>
+          </figure>
+        </section>
+
         <CtaSection kicker="Have something on your plate?" title={<>Let&apos;s find what<br /><em>you can hand off.</em></>} />
       </main>
       <SiteFooter />
