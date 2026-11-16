@@ -36,7 +36,7 @@ export default function Page() {
         <section className="container" aria-label="Results at a glance">
           <ul className="stats">
             {stats.map((stat) => (
-              <li key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></li>
+              <li key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span><span className="stat-source">{stat.source}</span></li>
             ))}
           </ul>
         </section>

@@ -212,6 +212,7 @@ ul, ol { margin: 0; }
 .stats li + li { padding-left: 24px; border-left: 1px solid var(--line); }
 .stats strong { font-size: clamp(30px, 3.6vw, 44px); font-weight: 500; line-height: 1; letter-spacing: -0.05em; }
 .stats span { color: var(--muted); font-size: 14px; line-height: 1.4; }
+.stats > li > .stat-source { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
 
 /* ---------- Card grids ---------- */
 .services-grid {
@@ -359,6 +360,7 @@ ul, ol { margin: 0; }
 .contact-rates { display: grid; gap: 8px; padding: 0; list-style: none; }
 .contact-rates li { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; font-size: 15px; }
 .contact-rates span { color: var(--muted); }
+.contact-rates .rate-hours { margin-left: 8px; font-family: inherit; font-size: 12.5px; white-space: nowrap; }
 .contact-rates strong { font-weight: 600; white-space: nowrap; }
 .contact-card .text-link { justify-self: start; margin-top: 4px; }
 .contact-email { font-size: clamp(18px, 2vw, 22px); font-weight: 600; letter-spacing: -0.02em; overflow-wrap: anywhere; }

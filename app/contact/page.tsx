@@ -93,7 +93,10 @@ export default function ContactPage() {
                     .filter((engagement) => engagement.cadence === '/month')
                     .map((engagement) => (
                       <li key={engagement.name}>
-                        <span>{engagement.name}</span>
+                        <span>
+                          {engagement.name}
+                          {engagement.hours ? <span className="rate-hours">{engagement.hours}</span> : null}
+                        </span>
                         <strong>{engagement.price}{engagement.cadence}</strong>
                       </li>
                     ))}

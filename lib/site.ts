@@ -111,25 +111,28 @@ export const engagements = [
     name: 'Part-time',
     price: '$850',
     cadence: '/month',
+    hours: '20 hrs/week',
     scope: 'About 20 hours a week. Inbox, calendar, research, project tracking and reporting.',
   },
   {
     name: 'Full-time',
     price: '$1,500',
     cadence: '/month',
+    hours: '40 hrs/week',
     scope: 'About 35–40 hours a week. The same work, with full attention and same-day turnaround.',
   },
   {
     name: 'One-off projects',
     price: 'Quoted',
     cadence: 'per project',
+    hours: '',
     scope: 'Automations, data cleanups and builds, scoped and priced before we start.',
   },
 ]
 
 export const stats = [
-  { value: '98%', label: 'Projects delivered on time' },
-  { value: '231', label: 'Qualified leads in 12 weeks' },
-  { value: '+350%', label: 'Organic store traffic' },
-  { value: '25%', label: 'Of a leader’s week reclaimed' },
+  { value: '98%', label: 'Projects delivered on time', source: 'TransPerfect' },
+  { value: '231', label: 'Qualified leads in 12 weeks', source: 'WindWire Studio' },
+  { value: '+350%', label: 'Organic store traffic', source: 'Pura Utz' },
+  { value: '25%', label: 'Of a leader’s week reclaimed', source: 'Prima Corporation' },
 ]
