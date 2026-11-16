@@ -191,6 +191,17 @@ ul, ol { margin: 0; }
 .hero h1 { max-width: 900px; font-size: clamp(46px, 7.4vw, 104px); line-height: 0.95; letter-spacing: -0.065em; }
 .hero-lead { max-width: 560px; margin-top: 28px; color: var(--muted); font-size: clamp(16px, 1.5vw, 19px); }
 .hero .btn-row { margin-top: 32px; }
+.hero-clients {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 28px;
+  margin-top: clamp(36px, 4.5vw, 60px);
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.hero-clients ul { display: flex; flex-wrap: wrap; gap: 8px 26px; margin: 0; padding: 0; list-style: none; }
+.hero-clients li { font-size: 15px; letter-spacing: -0.01em; }
 .hero-portrait {
   width: clamp(180px, 20vw, 260px);
   aspect-ratio: 1;
