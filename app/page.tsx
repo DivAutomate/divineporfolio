@@ -29,7 +29,7 @@ export default function Page() {
                 </a>
               </div>
             </div>
-            <img className="hero-portrait" src={site.portrait} alt="Divine Jude smiling in a black shirt" width={260} height={260} fetchPriority="high" />
+            <img className="hero-portrait" src={site.portrait} alt="Divine Jude in a white shirt, looking to the side" width={260} height={260} fetchPriority="high" />
           </div>
         </section>
 
