@@ -116,8 +116,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
           width={800}
           height={1000}
         />
-        <p className="ai-label">Travel &amp; personal logistics</p>
-        <div className="ai-workflow-gallery">
+        <div className="ai-workflow-gallery support-sample-two">
           <ZoomableFigure
             src="/images/sample-work/travel-reservation-request.webp"
             alt="Draft email to a hotel concierge requesting early check-in, adjacent rooms with a working desk, kid meal kits, and a play kit for a family stay in Singapore"
@@ -130,8 +129,6 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             width={1068}
             height={602}
           />
-        </div>
-        <div className="ai-workflow-gallery">
           <ZoomableFigure
             src="/images/sample-work/travel-itinerary.webp"
             alt="Google Sheets travel plan for a four day Singapore conference trip, with time blocks for work, kids activities, dinners, and meetings"
@@ -139,6 +136,7 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             height={640}
           />
           <ZoomableFigure
+            className="support-sample-tall"
             src="/images/sample-work/travel-checklist.webp"
             alt="Google Sheets trip checklist with ten items covering intake, flights, hotel requests, transfers, shared calendar, contingency plans, and final confirmations"
             width={756}
