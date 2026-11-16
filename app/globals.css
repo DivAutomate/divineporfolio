@@ -194,14 +194,38 @@ ul, ol { margin: 0; }
 .hero-clients {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 10px 28px;
   margin-top: clamp(36px, 4.5vw, 60px);
   padding-top: 20px;
   border-top: 1px solid var(--line);
+  --clients-gap: 26px;
 }
-.hero-clients ul { display: flex; flex-wrap: wrap; gap: 8px 26px; margin: 0; padding: 0; list-style: none; }
-.hero-clients li { font-size: 15px; letter-spacing: -0.01em; }
+.clients-marquee {
+  flex: 1 1 220px;
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+}
+.clients-track {
+  display: flex;
+  width: max-content;
+  animation: clients-scroll 30s linear infinite;
+}
+.clients-marquee:hover .clients-track { animation-play-state: paused; }
+.clients-group { display: flex; gap: var(--clients-gap); margin: 0; padding: 0 var(--clients-gap) 0 0; list-style: none; }
+.clients-group li { font-size: 15px; letter-spacing: -0.01em; white-space: nowrap; }
+@keyframes clients-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .clients-marquee { overflow: visible; -webkit-mask-image: none; mask-image: none; }
+  .clients-track { animation: none; width: auto; }
+  .clients-group { flex-wrap: wrap; row-gap: 8px; padding-right: 0; }
+  .clients-group[aria-hidden="true"] { display: none; }
+}
 .hero-portrait {
   width: clamp(180px, 20vw, 260px);
   aspect-ratio: 1;
@@ -767,6 +791,8 @@ html:has(.zoom-dialog[open]) { overflow: hidden; }
   .stats li:nth-child(even) { border-left: 1px solid var(--line); }
   .stats li:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .stats li:nth-child(odd) { padding-left: 0; }
+  .hero-clients { flex-direction: column; align-items: stretch; }
+  .clients-marquee { flex: none; width: 100%; }
 
   .project-grid { grid-template-columns: 1fr; }
   .about-split { grid-template-columns: 1fr; }

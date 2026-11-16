@@ -6,6 +6,9 @@ import { SiteFooter } from '@/components/site-footer'
 import { SiteNav } from '@/components/site-nav'
 import { engagements, projects, services, site, stats } from '@/lib/site'
 
+const clients = ['TransPerfect', 'Mahoney Environmental', 'Pura Utz', 'WindWire Studio', 'Prima Corporation']
+const clientGroups = [0, 1, 2, 3]
+
 export default function Page() {
   return (
     <>
@@ -33,13 +36,15 @@ export default function Page() {
           </div>
           <div className="hero-clients">
             <span className="label">Worked with</span>
-            <ul>
-              <li>TransPerfect</li>
-              <li>Mahoney Environmental</li>
-              <li>Pura Utz</li>
-              <li>WindWire Studio</li>
-              <li>Prima Corporation</li>
-            </ul>
+            <div className="clients-marquee">
+              <div className="clients-track">
+                {clientGroups.map((group) => (
+                  <ul className="clients-group" key={group} aria-hidden={group > 0 ? true : undefined}>
+                    {clients.map((client) => <li key={client}>{client}</li>)}
+                  </ul>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
