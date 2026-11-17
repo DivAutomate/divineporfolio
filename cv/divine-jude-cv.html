@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Divine Jude — CV</title>
+<style>
+  @font-face { font-family: 'Manrope'; src: url('../app/fonts/manrope-variable-latin.woff2') format('woff2'); font-weight: 200 800; font-style: normal; }
+  @font-face { font-family: 'DM Mono'; src: url('../app/fonts/dm-mono-400-latin.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'DM Mono'; src: url('../app/fonts/dm-mono-500-latin.woff2') format('woff2'); font-weight: 500; font-style: normal; }
+
+  :root {
+    --ink: #171817;
+    --muted: #5f615b;
+    --line: #d9d9d2;
+    --accent: #d3f36b;
+    --brand: #3f6b0c;
+  }
+
+  @page { size: letter; margin: 0; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #fff;
+    color: var(--ink);
+    font-family: 'Manrope', system-ui, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    position: relative;
+    width: 8.5in;
+    height: 11in;
+    padding: 0.5in 0.6in 0.62in;
+    overflow: hidden;
+    background: #fff;
+  }
+  .page + .page { break-before: page; }
+
+  .strip {
+    display: flex;
+    justify-content: space-between;
+    gap: 16pt;
+    padding-bottom: 8pt;
+    border-bottom: 0.75pt solid var(--line);
+    font-family: 'DM Mono', monospace;
+    font-size: 7.2pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .name {
+    margin-top: 18pt;
+    font-size: 35pt;
+    font-weight: 500;
+    letter-spacing: -0.055em;
+    line-height: 1;
+  }
+  .name .dot { color: var(--accent); }
+
+  .subtitle {
+    margin-top: 9pt;
+    font-size: 14.5pt;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    color: var(--muted);
+  }
+
+  .profile {
+    max-width: 6.15in;
+    margin-top: 10pt;
+    font-size: 10.3pt;
+    line-height: 1.55;
+    color: #2f302b;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4pt 18pt;
+    margin-top: 10pt;
+    list-style: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.8pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .contact a {
+    color: var(--brand);
+    text-decoration: none;
+    border-bottom: 0.9pt solid rgba(63, 107, 12, 0.45);
+    padding-bottom: 1.2pt;
+  }
+
+  .sec {
+    display: flex;
+    align-items: center;
+    gap: 8pt;
+    margin-top: 17pt;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.8pt;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .sec::before { content: ''; width: 4.5pt; height: 4.5pt; background: var(--accent); flex: none; }
+  .sec::after { content: ''; flex: 1; height: 0.75pt; background: var(--line); }
+
+  .job { margin-top: 11pt; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  .job-head h2 { font-size: 12.4pt; font-weight: 600; letter-spacing: -0.018em; }
+  .dates {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.4pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand);
+    white-space: nowrap;
+  }
+  .role { margin-top: 1.5pt; font-size: 9.4pt; color: var(--muted); }
+
+  .job ul { margin-top: 5pt; list-style: none; }
+  .job li {
+    position: relative;
+    padding-left: 11pt;
+    margin-bottom: 3pt;
+    font-size: 9.4pt;
+    line-height: 1.44;
+    color: #2b2c27;
+  }
+  .job li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5.1pt;
+    width: 3.4pt;
+    height: 3.4pt;
+    background: var(--accent);
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7pt 26pt;
+    margin-top: 9pt;
+  }
+  .skills h3 { font-size: 9.5pt; font-weight: 600; letter-spacing: -0.01em; }
+  .skills p { margin-top: 1pt; font-size: 9pt; line-height: 1.45; color: var(--muted); }
+
+  .edu-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; margin-top: 9pt; }
+  .edu-head h2 { font-size: 10.4pt; font-weight: 600; letter-spacing: -0.015em; }
+  .edu-head span { font-size: 9.4pt; color: var(--muted); }
+  .certs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3pt 26pt;
+    margin-top: 6pt;
+    list-style: none;
+  }
+  .certs li { position: relative; padding-left: 11pt; font-size: 9.4pt; color: #2b2c27; }
+  .certs li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5pt;
+    width: 3.4pt;
+    height: 3.4pt;
+    background: var(--accent);
+  }
+
+  .results { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16pt; margin-top: 8pt; }
+  .results strong { display: block; font-size: 23pt; font-weight: 500; letter-spacing: -0.05em; line-height: 1.05; }
+  .results span { display: block; margin-top: 4pt; font-size: 8.8pt; line-height: 1.4; color: var(--muted); }
+
+  footer {
+    position: absolute;
+    left: 0.6in;
+    right: 0.6in;
+    bottom: 0.3in;
+    display: flex;
+    justify-content: space-between;
+    gap: 12pt;
+    padding-top: 6pt;
+    border-top: 0.75pt solid var(--line);
+    font-family: 'DM Mono', monospace;
+    font-size: 6.8pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7b7d75;
+  }
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="strip">
+    <span>Port Harcourt, Nigeria · Remote</span>
+    <span>WAT / UTC+1</span>
+  </div>
+
+  <h1 class="name">Divine Jude<span class="dot">.</span></h1>
+  <p class="subtitle">Operations &amp; Executive Support · AI &amp; Automation</p>
+
+  <p class="profile">Operations and executive support partner for founders and small teams. I take over inboxes, calendars, projects and research, then build the automations that keep the work moving. Five years across remote operations, lead generation and e-commerce growth.</p>
+
+  <ul class="contact">
+    <li><a href="https://wa.me/2349052885667">WhatsApp</a></li>
+    <li><a href="https://divinejude.vercel.app">Portfolio</a></li>
+    <li><a href="https://www.linkedin.com/in/divinechidubem">LinkedIn</a></li>
+    <li><a href="mailto:judedivine9@gmail.com">Gmail</a></li>
+  </ul>
+
+  <div class="sec">Experience</div>
+
+  <article class="job">
+    <div class="job-head"><h2>WindWire Studio</h2><span class="dates">January 2026 – Present</span></div>
+    <p class="role">Outbound Lead Generation Specialist · Remote</p>
+    <ul>
+      <li>Built a full-funnel outbound engine for the founder, scaling to 1,975+ targeted profiles across two multi-channel campaigns.</li>
+      <li>Set up cold and warm email on secondary domains with SPF, DKIM and DMARC records, so mail reaches the inbox and the domain keeps its reputation.</li>
+      <li>Worked around Sales Navigator filter errors (over 40% inaccurate) by cross-checking Clutch, ZoomInfo and Google X-Ray, which produced 403+ verified agency and tech founder profiles.</li>
+      <li>Used Apollo and Claude to automate research and lead enrichment, cutting manual research time by 60% and making each message specific to the person.</li>
+      <li>Grew outbound to 231 qualified leads and booked calls (2.7 a day, at a 49.7% connection acceptance rate), which closed 3 enterprise clients.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job-head"><h2>Prima Corporation Ltd.</h2><span class="dates">January 2024 – December 2025</span></div>
+    <p class="role">Executive &amp; Personal Assistant · Hybrid</p>
+    <ul>
+      <li>Ran a 300+ daily B2B email stream through Gmail and Asana, with a triage system that cut key account response times to under 2 hours.</li>
+      <li>Freed 25% of the executive's schedule by moving internal meetings to Calendly and keeping pre-read agendas in Notion.</li>
+      <li>Planned complex international trips in TripIt Pro and handled estate admin logistics and household payroll with full discretion.</li>
+      <li>Pulled factory and supply chain data into Google Sheets, saving 4+ hours of manual executive reporting each week.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job-head"><h2>Mahoney Environmental</h2><span class="dates">September 2023 – December 2023</span></div>
+    <p class="role">AI Automation Engineer · Remote</p>
+    <ul>
+      <li>Moved driver dispatch and field collection for 200 commercial kitchen sites out of paper and into GoHighLevel.</li>
+      <li>Built a custom n8n scheduling engine that groups client accounts into 6 daily routes on a weekly trigger.</li>
+      <li>Set up REST endpoints and webhooks so drivers can log collection weights from their phones.</li>
+      <li>Built data checks that compare field logs against account rules, which cleared a 3-week rebate backlog.</li>
+      <li>Kept 99.5% uptime across the n8n workflows, with no manual dispatch bottlenecks.</li>
+    </ul>
+  </article>
+
+  <footer>
+    <span>Divine Jude</span>
+    <span>Operations &amp; Executive Support · AI &amp; Automation</span>
+    <span>01 / 02</span>
+  </footer>
+</section>
+
+<section class="page">
+  <div class="strip">
+    <span>Divine Jude</span>
+    <span>Operations &amp; Executive Support · AI &amp; Automation</span>
+  </div>
+
+  <article class="job" style="margin-top: 12pt">
+    <div class="job-head"><h2>TransPerfect</h2><span class="dates">July 2022 – September 2023</span></div>
+    <p class="role">Operations Assistant · Remote</p>
+    <ul>
+      <li>Ran localization pipelines and document production for 30+ enterprise accounts ($5K to $250K) across EMEA, APAC and North America.</li>
+      <li>Built a Trello workspace for 100+ concurrent multilingual projects across CET, MDT and IST, with a 98% on-time delivery rate.</li>
+      <li>Set up async handoffs and SLA triggers that cleared translation blockers, cutting production errors by 20% and lead times by 15%.</li>
+      <li>Wrote SOP templates and training checklists in Trello, which cut global vendor onboarding and internal team scaling time by 40%.</li>
+      <li>Tracked account budgets and project scope, helping cut production cost losses by 38% through tighter vendor delegation.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job-head"><h2>Pura Utz</h2><span class="dates">November 2021 – June 2022</span></div>
+    <p class="role">E-Commerce Specialist · Remote</p>
+    <ul>
+      <li>Set up post-purchase email flows and landing pages that matched each visitor's source, which turned first-time buyers into repeat orders.</li>
+      <li>Rebuilt a broken Meta Ads account into a CBO testing framework, which reached a 3.5x blended ROAS and doubled store revenue year on year.</li>
+      <li>Compressed 1,200+ product images and tidied duplicate variant pages for faster mobile browsing.</li>
+      <li>Ran early Google Shopping and Instagram tests with broad audiences, keeping acquisition cost low on a small budget.</li>
+      <li>Ran front-end layouts and hero banners in Canva, lifting the store conversion rate from 1.8% to 2.9%.</li>
+    </ul>
+  </article>
+
+  <div class="sec">Core capabilities</div>
+  <div class="skills">
+    <div><h3>Operations &amp; Project Management</h3><p>Operations support, project coordination, process documentation, SOPs</p></div>
+    <div><h3>Automation &amp; AI</h3><p>n8n, Zapier, Make.com, REST APIs, webhooks, LangChain, Claude</p></div>
+    <div><h3>Executive Support</h3><p>Inbox and calendar management, travel, meeting notes, gatekeeping</p></div>
+    <div><h3>E-commerce &amp; Growth</h3><p>Shopify, Meta Ads, Google Shopping, email flows, GA4, outbound lead generation</p></div>
+    <div><h3>CRM &amp; Data</h3><p>GoHighLevel, HubSpot, Airtable, Apollo, reporting, pipeline hygiene</p></div>
+    <div><h3>Productivity Suite</h3><p>Google Workspace, Microsoft 365, Notion, Asana, Calendly, TripIt Pro, Slack</p></div>
+  </div>
+
+  <div class="sec">Education &amp; certifications</div>
+  <div class="edu-head">
+    <h2>Bachelor of Science in Business Administration</h2>
+    <span>University of Port Harcourt · Graduated 2021</span>
+  </div>
+  <ul class="certs">
+    <li>ALX Virtual Assistant (2023)</li>
+    <li>Google Analytics Certificate (2021)</li>
+    <li>IBM Data Analyst Professional Certificate (2022)</li>
+    <li>Advanced Google Sheets &amp; Excel (2025)</li>
+  </ul>
+
+  <div class="sec">Selected results</div>
+  <div class="results">
+    <div><strong>98%</strong><span>on-time delivery across 100+ projects</span></div>
+    <div><strong>231</strong><span>qualified leads booked in 12 weeks</span></div>
+    <div><strong>200</strong><span>sites moved off manual dispatch</span></div>
+    <div><strong>25%</strong><span>of a leader's week reclaimed</span></div>
+  </div>
+
+  <footer>
+    <span>Divine Jude</span>
+    <span>Operations &amp; Executive Support · AI &amp; Automation</span>
+    <span>02 / 02</span>
+  </footer>
+</section>
+
+</body>
+</html>
