@@ -56,13 +56,13 @@ export const projects: Project[] = [
     href: '/case-study/windwire',
   },
   {
-    slug: 'seo-ecommerce',
-    title: 'SEO & E-Commerce',
-    category: 'Shopify SEO · Paid media',
-    description: 'Technical SEO and ad restructuring that grew organic traffic by 350% and lifted ad returns to 3.5x for a small brand.',
-    tags: ['Shopify', 'Ahrefs', 'Meta Ads'],
-    image: '/images/covers/seo-ecommerce.webp',
-    imageAlt: 'Illustration of an online store window with a rising traffic chart',
+    slug: 'ecommerce-growth',
+    title: 'E-Commerce Growth',
+    category: 'Shopify storefront · Paid media',
+    description: 'A rebuilt storefront and ad account that doubled online revenue and lifted ad returns to 3.5x for a small brand.',
+    tags: ['Shopify', 'Meta Ads', 'Email'],
+    image: '/images/covers/ecommerce-growth.webp',
+    imageAlt: 'Illustration of an online store window with a rising sales chart',
     href: '/case-study/pura-utz',
   },
   {
@@ -101,7 +101,7 @@ export const services = [
   { title: 'Executive & virtual assistance', text: 'Inbox and calendar management, travel, research, and follow-ups that protect your time.' },
   { title: 'Project coordination', text: 'Clear timelines, task boards, vendor handoffs, and status updates that keep delivery on track.' },
   { title: 'Lead generation', text: 'Targeted prospect research, verified lists, and personal outreach that fills your pipeline.' },
-  { title: 'SEO & e-commerce', text: 'Store upkeep, technical SEO, product listings, and ad management that turn visits into sales.' },
+  { title: 'E-commerce growth', text: 'Store upkeep, product pages, email flows, and ad management that turn visits into repeat sales.' },
   { title: 'Data & reporting', text: 'Clean spreadsheets, tidy CRMs, and simple dashboards, so decisions start from accurate numbers.' },
   { title: 'Workflow automation', text: 'Practical automations for repetitive tasks, used only where they genuinely save time.' },
 ]
@@ -133,6 +133,6 @@ export const engagements = [
 export const stats = [
   { value: '98%', label: 'Projects delivered on time', source: 'TransPerfect' },
   { value: '231', label: 'Qualified leads in 12 weeks', source: 'WindWire Studio' },
-  { value: '+350%', label: 'Organic store traffic', source: 'Pura Utz' },
+  { value: '2x', label: 'Online store revenue', source: 'Pura Utz' },
   { value: '25%', label: 'Of a leader’s week reclaimed', source: 'Prima Corporation' },
 ]
