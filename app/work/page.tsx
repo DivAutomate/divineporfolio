@@ -7,7 +7,7 @@ import { projects } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Work',
-  description: 'Case studies in executive support, project management, lead generation, SEO, e-commerce, and operations by Divine Jude.',
+  description: 'Case studies in executive support, project management, lead generation, e-commerce, and operations by Divine Jude.',
   alternates: { canonical: '/work' },
 }
 

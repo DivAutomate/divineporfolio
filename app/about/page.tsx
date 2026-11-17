@@ -19,7 +19,7 @@ const principles = [
 const experience = [
   { period: 'Project management', role: 'Project & operations coordinator', text: 'Ran 100+ multilingual projects at once for a global language services provider, across vendors, teams, and three timezones.' },
   { period: 'Executive support', role: 'Executive & personal assistant', text: 'Managed the inbox, calendar, travel, personal administration, and weekly reporting for a manufacturing General Manager.' },
-  { period: 'E-commerce', role: 'Shopify SEO & performance marketing', text: 'Grew a small artisan brand’s organic traffic and ad returns while handling day-to-day store administration.' },
+  { period: 'E-commerce', role: 'Shopify e-commerce & performance marketing', text: 'Grew a small artisan brand’s online sales and ad returns while handling day-to-day store administration.' },
   { period: 'Automation & outreach', role: 'Lead generation, CRM automation & invoice processing', text: 'Built outbound pipelines that turned 1,975+ prospects into 231 qualified leads, moved 200 service sites from manual dispatch onto CRM routing, and cut invoice processing from 40 minutes to under 10.' },
 ]
 
@@ -56,8 +56,6 @@ const tools = [
   { name: 'Klaviyo', src: '/images/tools/klaviyo.png' },
   { name: 'Meta Ads', src: '/images/tools/meta.svg' },
   { name: 'Google Analytics', src: 'https://cdn.jsdelivr.net/npm/simple-icons@16.37.0/icons/googleanalytics.svg' },
-  { name: 'Ahrefs', src: '/images/tools/ahrefs.png' },
-  { name: 'Screaming Frog', src: '/images/tools/screaming-frog.png' },
   { name: 'Canva', src: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@2e6109e60b391e777833f52b63571542b5446e49/public/icons/canva/default.svg' },
   { name: 'Google Workspace', src: '/images/tools/google-workspace.svg' },
   { name: 'Microsoft 365', src: '/images/tools/microsoft-365.svg' },
@@ -83,7 +81,7 @@ export default function AboutPage() {
               <img src={site.portrait} alt="Divine Jude in a white shirt, looking to the side" width={300} height={300} />
             </div>
             <div className="about-split-copy">
-              <p>I&apos;ve spent the last 5 years with founders and teams. I&apos;ve run executive inboxes and calendars, coordinated global projects across timezones, researched and contacted thousands of prospects, and grown online stores through better SEO and ads.</p>
+              <p>I&apos;ve spent the last 5 years with founders and teams, running executive inboxes and calendars, coordinated global projects across timezones, researched and contacted thousands of prospects, and grown online stores through cleaner ads and a storefront that converts.</p>
               <p>The common thread is organization. I like turning scattered tasks into clear routines, keeping information tidy, and making sure nothing slips through the cracks. When a task repeats often enough, I&apos;ll set up a simple automation, but only when it genuinely saves time.</p>
               <p>I work remotely from Nigeria with clients around the world, and I&apos;m comfortable adapting to your tools, your timezone, and the way your team already works.</p>
             </div>

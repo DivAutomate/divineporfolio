@@ -5,8 +5,8 @@ import { CtaSection } from '@/components/cta-section'
 import { SiteFooter } from '@/components/site-footer'
 
 export const metadata: Metadata = {
-  title: 'SEO & E-Commerce Case Study',
-  description: 'How SEO, cleaner ads and daily store admin doubled revenue for a small artisan jewelry brand.',
+  title: 'E-Commerce Growth Case Study',
+  description: 'How a rebuilt Shopify storefront and a cleaner ad account doubled online revenue for a small artisan jewelry brand.',
   alternates: { canonical: '/case-study/pura-utz' },
 }
 
@@ -14,21 +14,21 @@ const frameworks = [
   {
     number: '01',
     title: 'Make the store easier to buy from',
-    eyebrow: 'Store setup and repeat buyers',
+    eyebrow: 'Storefront and repeat buyers',
     items: [
       ['Post-purchase emails', 'I set up automated emails after each order and built landing pages that matched where each customer came from, so a first-time buyer had a reason to come back.'],
+      ['Collections people can follow', 'Dozens of product categories had never been mapped. I rebuilt them as clean, linked collections, so a shopper who liked one piece could find the next one without hunting.'],
       ['Early ad tests', 'I ran the first Google Shopping and Instagram tests with broad audiences. On a small budget, that kept the cost per acquisition low instead of spending on narrow guesses.'],
-      ['Collection structure', 'Dozens of product categories were never mapped. I rebuilt them as clean nested URLs and linked them to each other, which gave the store a stronger starting point in search.'],
     ],
   },
   {
     number: '02',
-    title: 'Fix what search could not see',
-    eyebrow: 'Shopify SEO and site speed',
+    title: 'Make mobile shopping faster',
+    eyebrow: 'Page speed and product pages',
     items: [
-      ['Image weight and alt text', 'I crawled the storefront with Screaming Frog, then compressed and alt-tagged over 1,200 product images. Alt text described the actual product, for example "hand-beaded glass fruit earrings red strawberry," so images could rank on their own.'],
-      ['Duplicate pages and metadata', 'Shopify creates duplicate pages for every product variant. I cleaned those up and wrote meta titles and descriptions for every main collection.'],
-      ['Long-tail keywords', 'Using Ahrefs and SEMrush, I compared the store against larger competitors and mapped terms like "artisan handmade glass jewelry" and "sustainable beaded statement bags" to dedicated blog posts.'],
+      ['Image weight', 'Product photos were heavy enough that mobile pages crawled. I compressed over 1,200 product images, and the storefront started loading at a normal speed.'],
+      ['Variant cleanup', 'Every product had many variants, and each one repeated the same photos and copy. I rebuilt those pages so shoppers saw one clear product with its options, not a wall of near-identical listings.'],
+      ['Checkout friction', 'I mapped the path from product page to payment and tightened the steps where buyers were dropping off. Cart abandonment came down from 68% to 53%.'],
     ],
   },
   {
@@ -60,8 +60,8 @@ export default function PuraUtzCaseStudy() {
 
       <header className="ai-case-hero">
         <p className="ai-kicker">Case study · e-commerce growth</p>
-        <h1>More search traffic, cleaner ads, <em>double the revenue.</em></h1>
-        <p className="ai-lead">Pura Utz makes hand-beaded glass jewelry with a collective of Mayan artisans in Guatemala. A team of one or two handled design, production and community work, so the store came last. I took over SEO, paid ads and daily store admin, and built the channel back up.</p>
+        <h1>A small jewelry brand, rebuilt to sell <em>on repeat.</em></h1>
+        <p className="ai-lead">Pura Utz makes hand-beaded glass jewelry with a collective of Mayan artisans in Guatemala. A team of one or two handled design, production and community work, so the store always came last. I took over the storefront, paid ads and daily admin, and rebuilt the buying experience from the first product page to the second order.</p>
       </header>
 
       <section id="overview" className="ai-summary ai-section">
@@ -70,7 +70,7 @@ export default function PuraUtzCaseStudy() {
           <p><strong>Brand:</strong> Pura Utz</p>
           <p><strong>Platform:</strong> Shopify</p>
           <p><strong>Niche:</strong> Hand-beaded glass jewelry and accessories</p>
-          <p>I worked with the brand in two stages. First I fixed the store basics: collections, checkout and repeat buyers. Then I went after the search and ad problems that appeared as the catalog grew. Over that time organic search traffic rose 350%, online revenue doubled, and Meta ads went from losing money to a 3.5x return.</p>
+          <p>I worked with the brand in two stages. First I fixed the store basics: collections, checkout and repeat buyers. Then I rebuilt the ad account that was supposed to be driving sales. Online revenue doubled, Meta ads went from losing money to a 3.5x return, and conversion moved from 1.8% to 2.9%.</p>
         </div>
       </section>
 
@@ -80,7 +80,7 @@ export default function PuraUtzCaseStudy() {
           <p>With a team this small, the store was always the last thing on the list. Two problems stood out at different stages.</p>
           <ul>
             <li><strong>The basics:</strong> Collections were unorganized, checkout was leaking buyers, and marketing was a set of scattered social posts that never turned into steady monthly orders.</li>
-            <li><strong>The catalog:</strong> Every product had many variants, and the images were so heavy that mobile pages crawled. With almost no metadata or indexing, the store was invisible to high-intent product searches.</li>
+            <li><strong>The catalog:</strong> Every product had many variants, and the photos were so heavy that mobile pages crawled. Browsing felt like work.</li>
           </ul>
         </div>
       </section>
@@ -94,11 +94,11 @@ export default function PuraUtzCaseStudy() {
         </div>
       </section>
 
-      <section id="results" className="ai-results ai-section"><p className="ai-label">The results &amp; performance metrics</p><div className="pura-table-wrap"><table><thead><tr><th>Metric</th><th>Before Optimization</th><th>After Optimization</th><th>Net Impact</th></tr></thead><tbody><tr><td>Monthly Organic Traffic</td><td>~2,500 Unique Visitors</td><td>~11,250 Unique Visitors</td><td>+350% Growth</td></tr><tr><td>Total Online Store Revenue</td><td>Previous Portfolio Baseline</td><td>2x Previous Baseline</td><td>+100% Growth</td></tr><tr><td>Meta Blended ROAS</td><td>&lt;1.1x (Negative ROI)</td><td>3.5x Sustained ROAS</td><td>Profitable Scale</td></tr><tr><td>E-Commerce Conversion Rate</td><td>1.8%</td><td>2.9%</td><td>+1.1% Increase</td></tr><tr><td>Cart Abandonment Rate</td><td>68%</td><td>53%</td><td>15% Recovery Rate</td></tr></tbody></table></div></section>
+      <section id="results" className="ai-results ai-section"><p className="ai-label">The results &amp; performance metrics</p><div className="pura-table-wrap"><table><thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Net Impact</th></tr></thead><tbody><tr><td>Online Store Revenue</td><td>Baseline</td><td>2x Baseline</td><td>+100%</td></tr><tr><td>Meta Blended ROAS</td><td>Below 1.1x (Losing Money)</td><td>3.5x Sustained ROAS</td><td>Profitable at Scale</td></tr><tr><td>E-Commerce Conversion Rate</td><td>1.8%</td><td>2.9%</td><td>+1.1 Points</td></tr><tr><td>Cart Abandonment Rate</td><td>68%</td><td>53%</td><td>15 Points Recovered</td></tr></tbody></table></div></section>
 
-      <section id="takeaways" className="ai-section pura-longform"><p className="ai-label">Key takeaways</p><div className="ai-copy"><ol><li><strong>Google Images became a sales channel.</strong> Within months of the alt-tag work, more than 22% of organic conversions came from Google Images, mostly long-tail beadwork searches that competitors never wrote for.</li><li><strong>One owner for the whole channel helped a tiny team.</strong> Email, ads, technical SEO and store layout sat with one person. That freed the founding team from digital operations so they could put their time into the artisan network.</li></ol></div></section>
+      <section id="takeaways" className="ai-section pura-longform"><p className="ai-label">Key takeaways</p><div className="ai-copy"><ol><li><strong>The second order is the cheapest revenue.</strong> Post-purchase emails and landing pages that matched where each buyer came from did more for the month than any single campaign.</li><li><strong>Ads only worked once the store did.</strong> Rebuilding the storefront first meant the new campaign structure had something to scale. ROAS went from below 1.1x to 3.5x.</li><li><strong>One owner for the whole buying journey.</strong> Email, ads and store layout sat with one person, so a fix in one place did not get undone in another. That freed the founding team to put their time into the artisan network.</li></ol></div></section>
 
-      <section className="ai-section pura-tools"><p className="ai-label">Tools used</p><div className="ai-copy"><ul><li><strong>E-Commerce Platform:</strong> Shopify (Liquid Theme Framework)</li><li><strong>SEO Platforms:</strong> SEMrush, Ahrefs, Screaming Frog SEO Spider</li><li><strong>Paid Media &amp; Tracking:</strong> Meta Ads Manager, Google Ads (PMax), GA4, Google Search Console</li><li><strong>Creative Production:</strong> Canva</li></ul></div></section>
+      <section className="ai-section pura-tools"><p className="ai-label">Tools used</p><div className="ai-copy"><ul><li><strong>E-Commerce Platform:</strong> Shopify (Liquid Theme Framework)</li><li><strong>Paid Media &amp; Tracking:</strong> Meta Ads Manager, Google Ads, GA4</li><li><strong>Email &amp; Retention:</strong> Automated post-purchase flows</li><li><strong>Creative Production:</strong> Canva</li></ul></div></section>
 
       <CtaSection kicker="Need clearer growth operations?" title={<>Let&apos;s improve<br /><em>the path to purchase.</em></>} />
     </main>

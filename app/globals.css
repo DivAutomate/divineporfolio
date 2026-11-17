@@ -317,8 +317,6 @@ ul, ol { margin: 0; }
 .pull-quote { max-width: 900px; margin: 0; padding-left: clamp(20px, 3vw, 40px); border-left: 3px solid var(--accent); }
 .pull-quote blockquote { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: clamp(23px, 2.9vw, 38px); line-height: 1.3; letter-spacing: -0.02em; }
 .pull-quote figcaption { margin-top: 24px; font: 500 11px/1.5 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-.quote-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); }
-.quote-grid .pull-quote blockquote { font-size: clamp(19px, 1.9vw, 26px); line-height: 1.4; }
 .quote-block .label { display: block; margin-bottom: 20px; }
 
 /* ---------- About page ---------- */
@@ -796,8 +794,6 @@ html:has(.zoom-dialog[open]) { overflow: hidden; }
   .stats li:nth-child(odd) { padding-left: 0; }
   .hero-clients { flex-direction: column; align-items: stretch; }
   .clients-marquee { flex: none; width: 100%; }
-  .quote-grid { grid-template-columns: 1fr; gap: 44px; }
-  .quote-grid .pull-quote blockquote { font-size: 21px; }
 
   .project-grid { grid-template-columns: 1fr; }
   .about-split { grid-template-columns: 1fr; }
