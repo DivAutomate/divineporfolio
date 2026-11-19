@@ -29,7 +29,7 @@ export const projects: Project[] = [
     slug: 'executive-support',
     title: 'Executive & Virtual Support',
     category: 'Executive assistance · Personal administration',
-    description: 'A support framework that cut a leader’s daily inbox time from 3.5 hours to 45 minutes and gave back 25% of their week.',
+    description: 'A support framework that cut a leader’s daily inbox time from 3 hours to 45 minutes and gave back 25% of their week.',
     tags: ['Inbox & calendar', 'Travel', 'Reporting'],
     image: '/images/covers/executive-support.webp',
     imageAlt: 'Illustration of a weekly calendar, envelope, travel ticket, and checklist',
