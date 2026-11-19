@@ -485,6 +485,7 @@ main + .site-footer .container { border-top-color: transparent; }
   border-top: 1px solid var(--line);
 }
 .windwire-media figure { margin: 0; }
+.windwire-media-gallery { display: grid; gap: clamp(28px, 4vw, 44px); }
 .windwire-media img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .ai-label, .mahoney-section-label, .windwire-label { margin-bottom: 20px; }
 

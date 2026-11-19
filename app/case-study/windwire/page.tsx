@@ -117,12 +117,20 @@ export default function CaseStudyPage() {
 
       <section className="windwire-media section-shell" id="sample-work">
         <p className="windwire-label">Sample work</p>
-        <ZoomableFigure
-          src="/images/sample-work/instantly-campaigns.webp"
-          alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns"
-          width={1600}
-          height={1120}
-        />
+        <div className="windwire-media-gallery">
+          <ZoomableFigure
+            src="/images/sample-work/instantly-campaigns.webp"
+            alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns"
+            width={1600}
+            height={1120}
+          />
+          <ZoomableFigure
+            src="/images/sample-work/instantly-leads.webp"
+            alt="Instantly lead list for a telehealth campaign showing 20,410 people across 16,893 companies, with country, company size, domain, city, phone and email columns"
+            width={1600}
+            height={1000}
+          />
+        </div>
       </section>
 
       <CtaSection kicker="Need more qualified leads?" title={<>Let&apos;s build your <em>next pipeline.</em></>} />
