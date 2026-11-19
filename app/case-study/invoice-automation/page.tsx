@@ -85,6 +85,7 @@ export default function InvoiceAutomationCaseStudy() {
           src={workflowImage}
           alt="n8n workflow for invoice intake, reading, checks, approvals, and accounting sync"
           priority
+          caption="Invoices read, checked and posted without a person. Intake, reading, checks, approvals and accounting sync in one workflow."
         />
       </section>
 

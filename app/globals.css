@@ -487,6 +487,9 @@ main + .site-footer .container { border-top-color: transparent; }
 .windwire-media figure { margin: 0; }
 .windwire-media-gallery { display: grid; gap: clamp(28px, 4vw, 44px); }
 .windwire-media img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+
+/* Figure captions — one plain line under every sample image. */
+.figure-caption { max-width: 720px; margin-top: 12px; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
 .ai-label, .mahoney-section-label, .windwire-label { margin-bottom: 20px; }
 
 /* Body copy */
@@ -512,7 +515,6 @@ main + .site-footer .container { border-top-color: transparent; }
 .ai-kicker, .mahoney-meta, .windwire-eyebrow, .pura-eyebrow,
 .ai-label, .mahoney-section-label, .windwire-label,
 .windwire-hero-meta span,
-.ai-case-study figcaption,
 .ai-metrics span,
 .pura-table-wrap th,
 .transperfect-client cite, .mahoney-quote > p, .windwire-attribution,
@@ -543,7 +545,6 @@ main + .site-footer .container { border-top-color: transparent; }
 .ai-workflow-gallery figure { margin: 0; }
 .ai-workflow-gallery img, .invoice-workflow img, .transperfect-board img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .mahoney-workflow img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #121213; }
-.ai-case-study figcaption { margin-top: 12px; }
 .support-samples { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
 .support-samples img { aspect-ratio: 16 / 10; object-fit: contain; }
 .ai-stack { margin-top: 40px; }

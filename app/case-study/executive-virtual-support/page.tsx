@@ -110,54 +110,63 @@ export default function ExecutiveVirtualSupportCaseStudy() {
             alt="Before and after view of an inbox: 47,886 unread messages on the left, and the same inbox rebuilt with labels, filters, and colour-coded tags leaving 24 active messages"
             width={1600}
             height={873}
+            caption="The inbox before and after the rebuild. 47,886 unread messages became 24 active items, sorted into three gates: critical, review and action."
           />
           <ZoomableFigure
             src="/images/sample-work/calendar-control.webp"
             alt="Google Calendar week view with daily briefings, deep work blocks, meeting preparation, reviews, and protected personal time"
             width={1400}
             height={787}
+            caption="Themed days, 90 minute focus blocks, one place to book. Daily briefings, meeting prep and personal time on the same week view."
           />
           <ZoomableFigure
             src="/images/sample-work/executive-brief.webp"
             alt="Three-panel workflow: an email asking for a good summary, an excerpt from the source article, and the finished one-page executive summary"
             width={800}
             height={1000}
+            caption="A long read turned into a one page brief. The source goes in, the summary comes back with the points that matter."
           />
           <ZoomableFigure
             src="/images/sample-work/kpi-master-ytd.webp"
             alt="Google Sheets KPI report for the full year: net profit 765,741.05, marketing cost 189,743.62, 25 closed deals, 516 leads and 403.57% ROI, with a sales-by-source table, bar chart and lead source pie"
             width={1600}
             height={1000}
+            caption="A full year of sales, leads and ROI on one sheet. Profit, marketing cost, closed deals and lead source in one report."
           />
           <ZoomableFigure
             src="/images/sample-work/kpi-q1.webp"
             alt="Google Sheets Q1 KPI report: net profit 135,600, marketing cost 44,878.85, 5 closed deals, 90 leads and 302.15% ROI, with sales by source, lead share and lead count tables and charts"
             width={1600}
             height={1000}
+            caption="The same report, cut down to Q1. The quarterly view of the same figures."
           />
           <ZoomableFigure
             src="/images/sample-work/travel-itinerary.webp"
             alt="Google Sheets travel plan for a four day Singapore conference trip, with time blocks for work, kids activities, dinners, and meetings"
             width={1312}
             height={640}
+            caption="A four day conference trip, planned hour by hour. Work blocks, kids activities, dinners and meetings on one sheet."
           />
           <ZoomableFigure
             src="/images/sample-work/travel-reservation-request.webp"
             alt="Draft email to a hotel concierge requesting early check-in, adjacent rooms with a working desk, kid meal kits, and a play kit for a family stay in Singapore"
             width={1091}
             height={593}
+            caption="One email that asks the hotel for everything. Early check in, rooms side by side, a desk and a play kit, asked once."
           />
           <ZoomableFigure
             src="/images/sample-work/travel-flight-options.webp"
             alt="Draft email comparing three business class flight options for a conference trip to Singapore, with notes on arrival times, children, and family comfort"
             width={1068}
             height={602}
+            caption="Three flights, compared for a family trip. Arrival times, comfort and what each option means with children on the booking."
           />
           <ZoomableFigure
             src="/images/sample-work/travel-checklist.webp"
             alt="Google Sheets trip checklist with ten items covering intake, flights, hotel requests, transfers, shared calendar, contingency plans, and final confirmations"
             width={756}
             height={647}
+            caption="A checklist that closes every loop before takeoff. Ten items from intake to the final confirmation."
           />
         </div>
       </section>

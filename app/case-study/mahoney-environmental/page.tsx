@@ -107,6 +107,7 @@ export default function MahoneyEnvironmentalCaseStudy() {
           width={2880}
           height={1800}
           priority
+          caption="Weekly route build, driver log intake, exceptions and rebate checks. The n8n build that replaced paper dispatch."
         />
       </section>
 
