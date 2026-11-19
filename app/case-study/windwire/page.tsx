@@ -119,16 +119,18 @@ export default function CaseStudyPage() {
         <p className="windwire-label">Sample work</p>
         <div className="windwire-media-gallery">
           <ZoomableFigure
-            src="/images/sample-work/instantly-campaigns.webp"
-            alt="Instantly dashboard showing 600 emails sent, 99.5% delivered, one hot lead, and $24 spent across seven segmented campaigns"
-            width={1600}
-            height={1120}
+            src="/images/sample-work/instantly-sending.webp"
+            alt="Instantly sending view: 600 first emails sent and 99.5% delivered across seven segments"
+            width={1624}
+            height={536}
+            caption="What 600 first emails across seven segments look like. One daily cap per segment, 99.5% delivered."
           />
           <ZoomableFigure
             src="/images/sample-work/instantly-leads.webp"
             alt="Instantly lead list for a telehealth campaign showing 20,410 people across 16,893 companies, with country, company size, domain, city, phone and email columns"
             width={1600}
             height={1000}
+            caption="What the pool behind one campaign looks like. Company names stay visible, contact names, emails and phone numbers are masked."
           />
         </div>
       </section>

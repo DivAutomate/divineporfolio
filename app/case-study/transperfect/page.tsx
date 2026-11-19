@@ -130,6 +130,7 @@ export default function TransPerfectCaseStudy() {
           alt="Trello board titled Global Localization Pipeline and Timezone Sync, with columns for intake, production, a four-stage QA pipeline, timezone handoffs, and escalations"
           width={2419}
           height={1512}
+          caption="One board for intake, production, QA and timezone handoffs. A four stage QA pipeline and a handoff across three time zones."
         />
       </section>
 

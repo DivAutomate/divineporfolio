@@ -86,8 +86,8 @@ export default function AIImplementationCaseStudy() {
       <section id="sample-work" className="ai-section">
         <p className="ai-label">Sample work</p>
         <div className="ai-workflow-gallery">
-          <ZoomableFigure src={imageA} alt="n8n workflow for finding properties, screening them, and emailing brokers" />
-          <ZoomableFigure src={imageB} alt="n8n workflow for checking title documents with AI" />
+          <ZoomableFigure src={imageA} alt="n8n workflow for finding properties, screening them, and emailing brokers" caption="Finding, screening and emailing brokers in one workflow. Search, clean up, screen and send, with paging built in." />
+          <ZoomableFigure src={imageB} alt="n8n workflow for checking title documents with AI" caption="Title documents read by AI before a person looks. Contracts, survey maps and title deeds checked for the gaps." />
         </div>
       </section>
 

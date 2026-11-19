@@ -33,7 +33,7 @@ export function ZoomableFigure({ src, alt, width, height, caption, className, pr
         />
         <span className="zoom-hint" aria-hidden="true">View larger</span>
       </button>
-      {caption ? <figcaption>{caption}</figcaption> : null}
+      {caption ? <figcaption className="figure-caption">{caption}</figcaption> : null}
       <dialog
         ref={dialogRef}
         className="zoom-dialog"
