@@ -49,7 +49,7 @@ export const projects: Project[] = [
     slug: 'lead-generation',
     title: 'Lead Generation',
     category: 'Prospect research · Outbound pipeline',
-    description: 'A research-led outreach program that turned 1,975+ prospects into 231 qualified leads in 12 weeks.',
+    description: 'A research-led outreach program that turned 1,975+ prospects into 231 qualified leads, 3 discovery calls a week and 3 clients in 12 weeks.',
     tags: ['Apollo', 'Sales Navigator', 'Email deliverability'],
     image: '/images/covers/lead-generation.webp',
     imageAlt: 'Illustration of contact cards narrowing through a funnel into one qualified lead',
