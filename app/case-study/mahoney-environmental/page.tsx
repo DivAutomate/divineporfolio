@@ -7,7 +7,7 @@ import { ZoomableFigure } from '@/components/zoomable-figure'
 
 export const metadata: Metadata = {
   title: 'Field Operations Case Study',
-  description: 'How I replaced manual route planning at a 200-site field operation with a live digital routing system.',
+  description: 'How I moved a nationwide collector serving 90,000+ commercial kitchens off manual route planning and onto a live digital routing system.',
   alternates: { canonical: '/case-study/mahoney-environmental' },
 }
 
@@ -30,8 +30,8 @@ export default function MahoneyEnvironmentalCaseStudy() {
 
       <header className="mahoney-editorial-hero">
         <p className="mahoney-meta">Case Study</p>
-        <h1>Automating Field Operations for a 200-Site Logistics Operation</h1>
-        <p className="mahoney-intro">Mahoney Environmental planned its routes manually. I replaced that with a digital system that shows every route live.</p>
+        <h1>Automating Field Operations Across 90,000 Kitchens</h1>
+        <p className="mahoney-intro">Mahoney Environmental collects used cooking oil and cleans grease traps for more than 90,000 commercial kitchens across dozens of U.S. metro areas. I replaced the manual planning behind that service with a digital system that shows every route live.</p>
         <p className="mahoney-intro">Here is how I removed the scheduling bottleneck, protected their data, and saved the team hours every week.</p>
       </header>
 
@@ -42,14 +42,14 @@ export default function MahoneyEnvironmentalCaseStudy() {
 
       <section id="scale" className="mahoney-scale mahoney-content-section">
         <p className="mahoney-section-label">The scale</p>
-        <ul><li>200 commercial kitchen sites served</li><li>6 daily routes automated</li><li>3-week rebate backlog cleared</li><li>Manual dispatch → live route tracking</li></ul>
+        <ul><li>90,000+ commercial kitchens</li><li>Dozens of U.S. metro areas</li><li>Routes rebuilt weekly, not daily</li><li>3-week rebate backlog cleared</li></ul>
       </section>
 
       <section id="challenge" className="mahoney-content-section mahoney-two-column">
         <div><p className="mahoney-section-label">The challenge</p></div>
         <div>
-          <p>Mahoney Environmental collects used cooking oil and cleans grease traps for 200 commercial kitchens across the U.S. But day-to-day planning ran on manual work: a whiteboard, handwritten route sheets, and the memory of a few senior dispatchers.</p>
-          <p>Six routes were planned by hand every day. Dispatchers wrote out each driver&apos;s run, then rewrote it whenever a site changed its service frequency or a truck broke down. Collection weights were written at the tank and typed up later. Because of all that manual handling, quarterly rebates took three weeks to calculate. The business could not grow safely like this.</p>
+          <p>Mahoney Environmental collects used cooking oil and cleans grease traps for more than 90,000 commercial kitchens across dozens of U.S. metro areas. Day-to-day planning ran on manual work: a whiteboard, handwritten route sheets, and the memory of a few senior dispatchers.</p>
+          <p>Routes were planned by hand every day. Dispatchers wrote out each driver&apos;s run, then rewrote it whenever a kitchen changed its service frequency or a truck broke down. Collection weights were written at the tank and typed up later. Because of all that manual handling, quarterly rebates took three weeks to calculate. The business could not grow safely like this.</p>
         </div>
       </section>
 
@@ -64,8 +64,8 @@ export default function MahoneyEnvironmentalCaseStudy() {
       <section id="implementation" className="mahoney-implementation mahoney-content-section">
         <p className="mahoney-section-label">How I did it</p>
         <ol>
-          <li><h2>Moved everything into GoHighLevel</h2><p>I imported 200 kitchen profiles, addresses, and service schedules into GoHighLevel. For the first time, the whole team could see every account in one place instead of chasing separate lists.</p></li>
-          <li><h2>Built the scheduling engine in n8n</h2><p>Every week, n8n groups accounts into six daily routes and creates the driver sheets on its own. What used to take a dispatcher hours of manual planning now runs without anyone touching it.</p></li>
+          <li><h2>Moved everything into GoHighLevel</h2><p>I imported the customer accounts, addresses, and service schedules into GoHighLevel. For the first time, the whole team could see every kitchen in one place instead of chasing separate lists.</p></li>
+          <li><h2>Built the scheduling engine in n8n</h2><p>Every week, n8n groups accounts into daily routes and creates the driver sheets on its own. What used to take a dispatcher hours of manual planning now runs without anyone touching it.</p></li>
           <li><h2>Let drivers log collections from the field</h2><p>I set up webhooks so drivers can submit collection weights from their phones. GoHighLevel updates the moment they do.</p></li>
           <li><h2>Cleared the rebate backlog</h2><p>The system now checks driver logs against each account&apos;s rebate rules on its own. Work that took three weeks is now done right away.</p></li>
         </ol>

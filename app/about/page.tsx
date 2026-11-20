@@ -20,7 +20,7 @@ const experience = [
   { period: 'Project management', role: 'Project & operations coordinator', text: 'Ran 100+ multilingual projects at once for a global language services provider, across vendors, teams, and three timezones.' },
   { period: 'Executive support', role: 'Executive & personal assistant', text: 'Managed the inbox, calendar, travel, personal administration, and weekly reporting for a manufacturing General Manager.' },
   { period: 'E-commerce', role: 'Shopify e-commerce & performance marketing', text: 'Grew a small artisan brand’s online sales and ad returns while handling day-to-day store administration.' },
-  { period: 'Automation & outreach', role: 'Lead generation, CRM automation & invoice processing', text: 'Built outbound pipelines that turned 1,975+ prospects into 231 qualified leads, moved 200 service sites from manual dispatch onto CRM routing, and cut invoice processing from 40 minutes to under 10.' },
+  { period: 'Automation & outreach', role: 'Lead generation, CRM automation & invoice processing', text: 'Built outbound pipelines that turned 1,975+ prospects into 231 qualified leads, moved a nationwide collector\'s 90,000+ kitchens from manual dispatch onto CRM routing, and cut invoice processing from 40 minutes to under 10.' },
 ]
 
 const tools = [
