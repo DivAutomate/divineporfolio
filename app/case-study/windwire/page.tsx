@@ -7,16 +7,16 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Lead Generation Case Study',
-  description: 'How Divine Jude turned 1,975+ prospects into a steady outbound sales pipeline in 12 weeks.',
+  description: 'How 1,975 prospects, 3 discovery calls a week and 12 weeks of outreach turned into 3 clients.',
   alternates: { canonical: '/case-study/windwire' },
 }
 
 const metrics = [
   ['1,975+', 'Prospects sourced'],
   ['950', 'Connected'],
-  ['231', 'Qualified leads / booked calls'],
+  ['231', 'Qualified leads'],
+  ['3/wk', 'Discovery calls booked'],
   ['49.7%', 'Connection acceptance rate'],
-  ['2.7/day', 'Qualified leads per day'],
 ]
 
 export default function CaseStudyPage() {
@@ -38,7 +38,7 @@ export default function CaseStudyPage() {
       <header className="windwire-hero">
         <div className="windwire-brand-mark" aria-hidden="true">W</div>
         <p className="windwire-eyebrow">WindWire Studio · Outbound Growth &amp; Revenue Operations Case Study</p>
-        <h1>How I Turned <em>1,975+ Prospects</em> into a Steady Sales Pipeline</h1>
+        <h1>How <em>1,975 Prospects</em> and 3 Discovery Calls a Week Became 3 Clients</h1>
         <div className="windwire-hero-meta"><p><span>Client</span>Founder of WindWire Studio</p><p><span>Timeline</span>12 weeks</p></div>
         <p className="windwire-dek">WindWire Studio designs and builds digital products. Its clients are early-stage founders, fast-growing startups, AI companies, digital health teams, and agencies that need a reliable design and development partner.</p>
       </header>
@@ -62,7 +62,7 @@ export default function CaseStudyPage() {
       <section className="windwire-section windwire-challenge section-shell" id="challenge">
         <div className="windwire-section-intro"><p className="windwire-label">01. The challenge</p><h2>Too many referrals, <em>not enough control.</em></h2></div>
         <div className="windwire-copy">
-          <p>WindWire does strong work. But relying on referrals meant they couldn&apos;t plan ahead. They needed a way to find the right companies, start real conversations, and book meetings every week.</p>
+          <p>WindWire does strong work. But relying on referrals meant they couldn&apos;t plan ahead. They needed a way to find the right companies, start real conversations, and book discovery calls every week.</p>
           <p>The first problem was bad data. The built-in filters couldn&apos;t be trusted, so we had to do better research before sending a single message.</p>
         </div>
       </section>
@@ -91,14 +91,14 @@ export default function CaseStudyPage() {
         <li><span className="ww-hl"><strong>1,125</strong></span> prospects in the list. <span className="ww-dim">1,063</span> connection requests sent.</li>
         <li><span className="ww-hl"><strong>540</strong></span> people accepted, a <span className="ww-hl"><strong>50.8% acceptance rate</strong></span>.</li>
         <li><span className="ww-hl"><strong>136</strong></span> qualified leads came in, a <span className="ww-hl"><strong>25.2% lead rate</strong></span>.</li>
-        <li><span className="ww-hl"><strong>231 qualified leads came in across both campaigns.</strong></span> That&apos;s <span className="ww-hl"><strong>2.7 qualified leads per day</strong></span> for 12 weeks. WindWire closed 3 major enterprise clients from it.</li>
+        <li><span className="ww-hl"><strong>231 qualified leads came in across both campaigns.</strong></span> We booked <span className="ww-hl"><strong>3 discovery calls a week</strong></span>. WindWire closed <span className="ww-hl"><strong>3 clients</strong></span> from it.</li>
       </ul></section>
 
       <section className="windwire-breakdown section-shell campaign-2-breakdown" id="campaign-2"><ul>
         <li><strong>Campaign 2 · AI and digital health startups</strong> We targeted founders and product leads at seed-to-Series A companies building AI and digital health products.</li>
         <li><span className="ww-hl"><strong>850</strong></span> startups matched WindWire&apos;s ideal customer.</li>
         <li><span className="ww-hl"><strong>410</strong></span> people accepted, a <span className="ww-hl"><strong>48.2% acceptance rate</strong></span>.</li>
-        <li><span className="ww-hl"><strong>95</strong></span> discovery calls booked, a <span className="ww-hl"><strong>23.2% lead rate</strong></span>.</li>
+        <li><span className="ww-hl"><strong>95</strong></span> qualified leads came in, a <span className="ww-hl"><strong>23.2% lead rate</strong></span>.</li>
         <li>I found these companies with Sales Navigator searches and web scraping. We looked for teams hiring engineers or launching new AI and health products.</li>
       </ul></section>
 
@@ -113,7 +113,7 @@ export default function CaseStudyPage() {
 
       <section className="windwire-replies section-shell"><p className="windwire-label">04. Real replies</p><h2>Straight from the <em>campaign inbox.</em></h2><div className="windwire-reply-list"><p>&ldquo;This is relevant. Can you send over your Calendly?&rdquo;</p><p>&ldquo;We&apos;re looking for exactly this kind of product partner. Are you free next week?&rdquo;</p><p>&ldquo;Thanks for the thoughtful note. Let&apos;s find a time to talk.&rdquo;</p><p>&ldquo;Good to connect! Send over some times for next week and I&apos;ll set it up.&rdquo;</p></div></section>
 
-      <section className="windwire-bottom-line section-shell"><p className="windwire-label">05. The bottom line</p><h2>Good data, good timing, and honest messages gave WindWire <em>a pipeline it can rely on.</em></h2><p>The founder no longer depends on bad filters or hours of manual research. The system brought in 231 qualified leads across both campaigns, averaging 2.7 per day over 12 weeks.</p></section>
+      <section className="windwire-bottom-line section-shell"><p className="windwire-label">05. The bottom line</p><h2>Good data, good timing, and honest messages gave WindWire <em>a pipeline it can rely on.</em></h2><p>The founder no longer depends on bad filters or hours of manual research. The system brought in 231 qualified leads across both campaigns, 3 discovery calls a week, and 3 clients closed in 12 weeks.</p></section>
 
       <section className="windwire-media section-shell" id="sample-work">
         <p className="windwire-label">Sample work</p>
