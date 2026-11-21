@@ -49,7 +49,7 @@ export const projects: Project[] = [
     slug: 'lead-generation',
     title: 'Lead Generation',
     category: 'Prospect research · Outbound pipeline',
-    description: 'A research-led outreach program that turned 1,975+ prospects into 231 qualified leads, 3 discovery calls a week and 3 clients in 12 weeks.',
+    description: 'Two outbound campaigns, one in Sales Navigator and one built in Apollo with Claude, that turned 1,975+ prospects into 231 replies, 3 discovery calls a week and 3 clients in 12 weeks.',
     tags: ['Apollo', 'Sales Navigator', 'Email deliverability'],
     image: '/images/covers/lead-generation.webp',
     imageAlt: 'Illustration of contact cards narrowing through a funnel into one qualified lead',
@@ -132,7 +132,7 @@ export const engagements = [
 
 export const stats = [
   { value: '98%', label: 'Projects delivered on time', source: 'TransPerfect' },
-  { value: '231', label: 'Qualified leads in 12 weeks', source: 'WindWire Studio' },
+  { value: '231', label: 'Prospect replies in 12 weeks', source: 'WindWire Studio' },
   { value: '2x', label: 'Online store revenue', source: 'Pura Utz' },
   { value: '25%', label: 'Of a leader’s week reclaimed', source: 'Prima Corporation' },
 ]

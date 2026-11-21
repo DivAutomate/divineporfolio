@@ -7,16 +7,16 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Lead Generation Case Study',
-  description: 'How 1,975 prospects, 3 discovery calls a week and 12 weeks of outreach turned into 3 clients.',
+  description: 'How Sales Navigator and Apollo campaigns brought 231 replies and 3 clients in 12 weeks.',
   alternates: { canonical: '/case-study/windwire' },
 }
 
 const metrics = [
   ['1,975+', 'Prospects sourced'],
-  ['950', 'Connected'],
-  ['231', 'Qualified leads'],
+  ['950', 'Connections made'],
+  ['11.7%', 'Reply rate, 231 replies'],
   ['3/wk', 'Discovery calls booked'],
-  ['49.7%', 'Connection acceptance rate'],
+  ['3', 'Clients closed'],
 ]
 
 export default function CaseStudyPage() {
@@ -55,7 +55,7 @@ export default function CaseStudyPage() {
           <p><strong>The problem:</strong> WindWire got most of its work from referrals. Some months were busy. Others were empty.</p>
           <p><strong>What stood in the way:</strong> LinkedIn Sales Navigator&apos;s industry filters were wrong more than 40% of the time. Researching each founder by hand took too long.</p>
           <p><strong>Who we targeted:</strong> Founders and product teams at startups, AI companies, and digital health firms who need design and MVP work. We also targeted agencies and consultants who could send WindWire repeat referrals.</p>
-          <p><strong>What I did:</strong> I set up the email systems so messages landed in inboxes, not spam. I built clean prospect lists from several sources. I automated research with Apollo and Claude. Then I ran outreach across LinkedIn and email.</p>
+          <p><strong>What I did:</strong> I set up the email systems so messages landed in inboxes, not spam. I built one list in Sales Navigator and one in Apollo. I automated the research with Apollo and Claude. Then I ran outreach on LinkedIn and over email.</p>
         </div>
       </section>
 
@@ -74,9 +74,9 @@ export default function CaseStudyPage() {
           <h3>Part A: Getting emails into the inbox</h3>
           <p>I set up sending domains with SPF, DKIM, and DMARC records. This protected WindWire&apos;s reputation and kept emails out of spam.</p>
           <h3>Part B: Building a better prospect list</h3>
-          <p>I used Clutch to find agencies that could send repeat referrals, and ZoomInfo to find tech founders. I also ran Google searches for terms like &ldquo;MVP development,&rdquo; &ldquo;product design,&rdquo; and &ldquo;UI/UX.&rdquo; Then I checked each account by hand. That gave us a combined pool of <strong>nearly 2,000 highly targeted, verified prospects</strong>.</p>
+          <p>I built campaign 1 inside Sales Navigator, where the searches, the list and the requests all live. Each company was checked against Clutch, ZoomInfo and Google before it went in. Campaign 2 started in Apollo, and Claude read each company before a message was written. That gave us a combined pool of <strong>nearly 2,000 highly targeted, verified prospects</strong>.</p>
           <h3>Part C: Automating the research</h3>
-          <p>I connected Apollo and Claude to pull each prospect&apos;s website copy, recent product news, and podcast interviews. This cut manual research time by <strong>60%</strong>. Every message followed one rule: <strong>90% about them, 10% about us.</strong></p>
+          <p>For campaign 2, Apollo and Claude pulled each prospect&apos;s website copy, recent product news, and podcast interviews. That cut manual research time by <strong>60%</strong>. Every message followed one rule: <strong>90% about them, 10% about us.</strong></p>
           <p className="windwire-example"><strong>Example opening line:</strong> &ldquo;Heard the interview you gave on the tech podcast about scaling distributed product teams. I appreciated your insights on choosing development sprints based on immediate user feedback.&rdquo;</p>
         </div>
       </section>
@@ -87,33 +87,35 @@ export default function CaseStudyPage() {
       </section>
 
       <section className="windwire-breakdown section-shell" id="campaign-1"><p className="windwire-label">03. Campaign results</p><ul>
-        <li><strong>Campaign 1 · Agency partners and founders</strong> We targeted the top 1,000 consulting firms, development agencies, founders, and product studios in the U.S. and Canada.</li>
-        <li><span className="ww-hl"><strong>1,125</strong></span> prospects in the list. <span className="ww-dim">1,063</span> connection requests sent.</li>
-        <li><span className="ww-hl"><strong>540</strong></span> people accepted, a <span className="ww-hl"><strong>50.8% acceptance rate</strong></span>.</li>
-        <li><span className="ww-hl"><strong>136</strong></span> qualified leads came in, a <span className="ww-hl"><strong>25.2% lead rate</strong></span>.</li>
-        <li><span className="ww-hl"><strong>231 qualified leads came in across both campaigns.</strong></span> We booked <span className="ww-hl"><strong>3 discovery calls a week</strong></span>. WindWire closed <span className="ww-hl"><strong>3 clients</strong></span> from it.</li>
-      </ul></section>
+        <li><strong>Campaign 1 · Agency partners and founders</strong> This campaign ran entirely in Sales Navigator. We built the list in the same place we sent the requests: consulting firms, development agencies, founders, and product studios in the U.S. and Canada.</li>
+        <li><span className="ww-hl"><strong>1,125</strong></span> prospects sourced. <span className="ww-dim">1,063</span> requests sent.</li>
+        <li><span className="ww-hl"><strong>540</strong></span> connected, a <span className="ww-hl"><strong>50.8% acceptance rate</strong></span>.</li>
+        <li><span className="ww-hl"><strong>136</strong></span> replied, a <span className="ww-hl"><strong>12.1% reply rate</strong></span>.</li>
+              </ul></section>
 
       <section className="windwire-breakdown section-shell campaign-2-breakdown" id="campaign-2"><ul>
-        <li><strong>Campaign 2 · AI and digital health startups</strong> We targeted founders and product leads at seed-to-Series A companies building AI and digital health products.</li>
-        <li><span className="ww-hl"><strong>850</strong></span> startups matched WindWire&apos;s ideal customer.</li>
-        <li><span className="ww-hl"><strong>410</strong></span> people accepted, a <span className="ww-hl"><strong>48.2% acceptance rate</strong></span>.</li>
-        <li><span className="ww-hl"><strong>95</strong></span> qualified leads came in, a <span className="ww-hl"><strong>23.2% lead rate</strong></span>.</li>
-        <li>I found these companies with Sales Navigator searches and web scraping. We looked for teams hiring engineers or launching new AI and health products.</li>
+        <li><strong>Campaign 2 · AI and digital health startups</strong> We built this list in Apollo and used Claude to research each company before writing to them. Outreach started with cold email, and whoever stayed quiet got a LinkedIn request as the follow-up.</li>
+        <li><span className="ww-hl"><strong>850</strong></span> startups sourced and matched to WindWire&apos;s ideal customer.</li>
+        <li><span className="ww-hl"><strong>850</strong></span> LinkedIn follow-up requests sent.</li>
+        <li><span className="ww-hl"><strong>410</strong></span> connected, a <span className="ww-hl"><strong>48.2% acceptance rate</strong></span>.</li>
+        <li><span className="ww-hl"><strong>95</strong></span> replied, an <span className="ww-hl"><strong>11.2% reply rate</strong></span>.</li>
+        <li>We looked for teams hiring engineers or launching new AI and health products.</li>
+        <li><strong>Both campaigns together:</strong> 1,975 prospects sourced, 950 connections, 231 replies, an <span className="ww-hl"><strong>11.7% reply rate</strong></span>.</li>
+        <li>Acceptance rate counts requests that became connections. Reply rate counts replies over the prospects sourced in that campaign.</li>
       </ul></section>
 
       <section className="windwire-playbook section-shell" id="playbook">
         <div className="windwire-section-intro"><p className="windwire-label">The playbook</p><h2>Three steps that made outreach <em>feel human.</em></h2></div>
         <div className="windwire-steps">
           <article><span>01</span><h3>Step 1: Build a list worth contacting</h3><p>The standard filters were wrong over 40% of the time. So I checked companies against Clutch, ZoomInfo, and Google. That left a clean list of startups, AI companies, and health teams with a real reason to need WindWire.</p></article>
-          <article><span>02</span><h3>Step 2: Open with curiosity, not a pitch</h3><p>Each connection request read like the start of a real conversation. Specific enough to get noticed, light enough to invite a reply.</p></article>
+          <article><span>02</span><h3>Step 2: Open with curiosity, not a pitch</h3><p>Each first message read like the start of a real conversation. Specific enough to get noticed, light enough to invite a reply.</p></article>
           <article><span>03</span><h3>Step 3: Let automation do the research</h3><p>Apollo and Claude did the digging and cut manual work by 60%. Most of each message showed we understood their business. Only a small part was about WindWire.</p><p className="windwire-example"><strong>Example:</strong> &ldquo;I noticed your team is expanding the AI product line while the onboarding experience is still being described as an MVP. That gap is exactly where a focused product sprint can smooth out user retention before your main launch.&rdquo;</p></article>
         </div>
       </section>
 
-      <section className="windwire-replies section-shell"><p className="windwire-label">04. Real replies</p><h2>Straight from the <em>campaign inbox.</em></h2><div className="windwire-reply-list"><p>&ldquo;This is relevant. Can you send over your Calendly?&rdquo;</p><p>&ldquo;We&apos;re looking for exactly this kind of product partner. Are you free next week?&rdquo;</p><p>&ldquo;Thanks for the thoughtful note. Let&apos;s find a time to talk.&rdquo;</p><p>&ldquo;Good to connect! Send over some times for next week and I&apos;ll set it up.&rdquo;</p></div></section>
+      <section className="windwire-replies section-shell"><p className="windwire-label">04. Real replies · 4 of 231</p><h2>Straight from the <em>campaign inbox.</em></h2><div className="windwire-reply-list"><p>&ldquo;This is relevant. Can you send over your Calendly?&rdquo;</p><p>&ldquo;We&apos;re looking for exactly this kind of product partner. Are you free next week?&rdquo;</p><p>&ldquo;Thanks for the thoughtful note. Let&apos;s find a time to talk.&rdquo;</p><p>&ldquo;Good to connect! Send over some times for next week and I&apos;ll set it up.&rdquo;</p></div></section>
 
-      <section className="windwire-bottom-line section-shell"><p className="windwire-label">05. The bottom line</p><h2>Good data, good timing, and honest messages gave WindWire <em>a pipeline it can rely on.</em></h2><p>The founder no longer depends on bad filters or hours of manual research. The system brought in 231 qualified leads across both campaigns, 3 discovery calls a week, and 3 clients closed in 12 weeks.</p></section>
+      <section className="windwire-bottom-line section-shell"><p className="windwire-label">05. The bottom line</p><h2>Good data, good timing, and honest messages gave WindWire <em>a pipeline it can rely on.</em></h2><p>The founder no longer depends on bad filters or hours of manual research. One campaign ran entirely in Sales Navigator, the other was built in Apollo and researched with Claude. Together they turned 1,975 prospects into 231 replies from 950 connections, kept 3 discovery calls a week on the calendar, and closed 3 clients in 12 weeks.</p></section>
 
       <section className="windwire-media section-shell" id="sample-work">
         <p className="windwire-label">Sample work</p>
