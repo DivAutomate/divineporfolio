@@ -4,7 +4,7 @@ import { CtaSection } from '@/components/cta-section'
 import { ProjectCard } from '@/components/project-card'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteNav } from '@/components/site-nav'
-import { engagements, projects, services, site, stats } from '@/lib/site'
+import { projects, services, site, stats } from '@/lib/site'
 
 const clients = ['TransPerfect', 'Mahoney Environmental', 'Pura Utz', 'WindWire Studio', 'Prima Corporation']
 const clientGroups = [0, 1]
@@ -106,25 +106,6 @@ export default function Page() {
             <blockquote>&ldquo;Divine didn&apos;t just send more outreach. He gave us a reliable way to find the right companies, start relevant conversations, and turn our lead expectations into a real sales pipeline.&rdquo;</blockquote>
             <figcaption>Stephen, founder of WindWire Studio</figcaption>
           </figure>
-        </section>
-
-        <section className="section container" id="pricing" aria-labelledby="pricing-title">
-          <div className="section-head">
-            <h2 id="pricing-title">Ways to <em>work together</em></h2>
-            <p className="label">Flat monthly retainers</p>
-          </div>
-          <ul className="pricing-grid">
-            {engagements.map((engagement) => (
-              <li className="pricing-card" key={engagement.name}>
-                <p className="label">{engagement.name}</p>
-                <p className="pricing-price">
-                  <strong>{engagement.price}</strong>
-                  <span>{engagement.cadence}</span>
-                </p>
-                <p className="pricing-scope">{engagement.scope}</p>
-              </li>
-            ))}
-          </ul>
         </section>
 
         <CtaSection kicker="Ready when you are" title={<>Let&apos;s take work<br /><em>off your plate.</em></>} secondary={{ label: 'View portfolio', href: '/work' }} />

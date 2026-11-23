@@ -1,13 +1,13 @@
 'use client'
 
-import Link from 'next/link'
 import { ArrowUpRight, Check, Copy } from 'lucide-react'
+import Link from 'next/link'
 import { useForm, ValidationError } from '@formspree/react'
 import { useState } from 'react'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteNav } from '@/components/site-nav'
 import { SocialLinks } from '@/components/social-links'
-import { engagements, site } from '@/lib/site'
+import { site } from '@/lib/site'
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
@@ -26,7 +26,8 @@ export default function ContactPage() {
         <header className="page-hero container">
           <p className="label">Contact</p>
           <h1>Let&apos;s make your week <em>lighter.</em></h1>
-          <p className="lead">Tell me a little about your business and what you&apos;d like to hand off. I&apos;ll reply within two working days.</p>
+          <p className="lead">Tell me a little about your business and what you&apos;d like to hand off. I&apos;ll reply within one working day.</p>
+          <p className="contact-proof">Recently: a leader&apos;s inbox went from 3 hours a day to 45 minutes. <Link href="/case-study/executive-virtual-support">See how</Link>.</p>
         </header>
 
         <section className="contact-section section-tight">
@@ -35,7 +36,7 @@ export default function ContactPage() {
               <div className="contact-form form-success" role="status">
                 <p className="label">Message sent</p>
                 <p className="form-success-title">Thanks — I&apos;ve got it.</p>
-                <p className="form-success-copy">I reply within two working days. If you&apos;d rather talk it through, pick a slot and we&apos;ll go through it together.</p>
+                <p className="form-success-copy">I reply within one working day. If you&apos;d rather talk it through, pick a slot and we&apos;ll go through it together.</p>
                 <div className="form-success-actions">
                   <a className="btn btn-primary" href={site.booking} target="_blank" rel="noreferrer">
                     Book an intro call <ArrowUpRight size={16} aria-hidden="true" />
@@ -76,7 +77,7 @@ export default function ContactPage() {
                 <button className="btn btn-primary" type="submit" disabled={state.submitting}>
                   {state.submitting ? 'Sending…' : 'Send message'} <ArrowUpRight size={16} aria-hidden="true" />
                 </button>
-                <p className="form-hint">Goes straight to my inbox. I reply within two working days.</p>
+                <p className="form-hint">Goes straight to my inbox. I reply within one working day.</p>
                 {state.errors && (
                   <div className="form-error" role="alert">
                     <p>That didn&apos;t send. Try again in a moment, or email <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
@@ -86,23 +87,6 @@ export default function ContactPage() {
             )}
 
             <aside className="contact-aside" aria-label="Other ways to reach me">
-              <div className="contact-card">
-                <p className="label">Monthly retainers</p>
-                <ul className="contact-rates">
-                  {engagements
-                    .filter((engagement) => engagement.cadence === '/month')
-                    .map((engagement) => (
-                      <li key={engagement.name}>
-                        <span>
-                          {engagement.name}
-                          {engagement.hours ? <span className="rate-hours">{engagement.hours}</span> : null}
-                        </span>
-                        <strong>{engagement.price}{engagement.cadence}</strong>
-                      </li>
-                    ))}
-                </ul>
-                <Link className="text-link" href="/#pricing">See what&apos;s included <ArrowUpRight size={14} aria-hidden="true" /></Link>
-              </div>
               <div className="contact-card">
                 <p className="label">Prefer to talk?</p>
                 <p>Pick a time and we&apos;ll talk through what you need. 30 minutes, no pressure.</p>
@@ -123,7 +107,7 @@ export default function ContactPage() {
                 <p className="label">What happens next</p>
                 <ol className="contact-steps">
                   <li>You send the details of what you want to hand off.</li>
-                  <li>I reply within two working days with questions or a time to talk.</li>
+                  <li>I reply within one working day with questions or a time to talk.</li>
                   <li>If it&apos;s a fit, we agree scope and a start date.</li>
                 </ol>
               </div>
